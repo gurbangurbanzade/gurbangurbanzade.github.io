@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100vh;
+  height: 100vh;
+}
+
+.view-developer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid black;
+  width: 50vh;
+  height: 100vh;
+  background-color: yellow;
+  position: relative;
+}
+
+.view-developer .view-developer-info {
+  opacity: 0;
+}
+
+.view-developer:hover .view-developer-info {
+  opacity: 1;
+}
+
+.view-blogger {
+  border: 1px solid black;
+  width: 50vh;
+  height: 100vh;
+  background-color: red;
+  position: relative;
+}
+
+.view-blogger-developer {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view-blogger-developer > i {
+  color: white;
+}
+
+.view-blogger-developer > i:hover {
+  color: black;
+}
+
+.view-blogger-social {
+  position: absolute;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.view-blogger-social > i {
+  color: white;
+}
+
+.view-blogger-social > i:hover {
+  color: black;
+}
