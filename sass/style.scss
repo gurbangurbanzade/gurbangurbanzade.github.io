@@ -1,7 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
+@import "reset";
+
 .view{
     display: flex;
     width: 100%;
@@ -14,6 +13,11 @@
             height: 100vh;
             background-color: yellow;
             position: relative;
+            .qurban{
+                background-color: red;
+              
+                border: 1px solid black;
+            }
                 .view-developer-info{
                     opacity: 1;
                 }
@@ -22,16 +26,18 @@
                     opacity: 1;
                 }
             }
-}
+        }
         .view-blogger{
             float: left;
             border: 1px solid black;
             width: 50%;
             height: 100vh;
-            position: relative;
             background: url(/image/bloggerbck.jpeg);
             background-size: cover;
-            position: relative;
+            display: flex;
+            //flex-direction: row;
+           // justify-content: center;
+            
                 .view-blogger-dark{
                     position: absolute;
                     width: 100%;
@@ -41,25 +47,51 @@
                     z-index: 2;
                     opacity: 0;
                 }
-                .view-blogger-social{
-                    position: absolute;
-                    left: 3%;
-                    top: 50%;
+               
+                .view-blogger-social{  
                     display:flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    border: 1px solid green;
+                    >div{
+                        border: 1px solid black ;
+                        padding: 0 auto;
+                        text-align: center;
+                        border-radius: 0.5rem;
+                        width: 3rem;
+                        height: 3rem;
+                        padding: 0.5rem;
+                       
                         i{
-                            margin-bottom: 2rem;
-                            padding: 20px 5px;
-                            border: 1px solid black;
-                            border-radius: 20%;
+                            color: red;
+                          
+                            background-color: red;
+              
+                border: 1px solid black;
+                        
+                        //     border: 1px solid black ;
                         }
+                    }
+                        
                     
+                }
+                 .view-blogger-info{
+                    text-align: center;
+                    align-self: center;
+                    border: 1px solid red;
+                    border-radius: 0.5rem;
+                    background-color: rgba(128, 128, 128, 0.404);
+                    opacity: 1;
                 }
             &:hover{
                 .view-blogger-dark{
                    opacity: 0;
+                }
+                .view-blogger-info{
+                    align-self: center;
+                    border: 1px solid red;
+                    opacity: 1;
                 }
             }
         }
