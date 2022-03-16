@@ -15,7 +15,8 @@
             position: relative;
             .qurban{
                 background-color: red;
-              
+                margin: 2rem;
+                padding: 2rem;
                 border: 1px solid black;
             }
                 .view-developer-info{
@@ -66,9 +67,7 @@
                         i{
                             color: red;
                           
-                            background-color: red;
-              
-                border: 1px solid black;
+                            
                         
                         //     border: 1px solid black ;
                         }
@@ -95,23 +94,6 @@
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .view-blogger-developer{
     position: absolute;
     top: 50%;
@@ -129,4 +111,15 @@
         }
 }
 
+}
+
+.developer{
+    .developer-leftMenu{
+        background-color: gray;
+            .developer-leftMenu-nav{
+                >ul{
+
+                }            
+            }
+    }
 }

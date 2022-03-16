@@ -34,6 +34,8 @@ body {
 
 .view .view-developer .qurban {
   background-color: red;
+  margin: 2rem;
+  padding: 2rem;
   border: 1px solid black;
 }
 
@@ -97,8 +99,6 @@ body {
 
 .view .view-blogger .view-blogger-social > div i {
   color: red;
-  background-color: red;
-  border: 1px solid black;
 }
 
 .view .view-blogger .view-blogger-info {
@@ -149,4 +149,8 @@ body {
 
 .view .view-blogger-developer > i:hover {
   color: black;
+}
+
+.developer .developer-leftMenu {
+  background-color: gray;
 }
