@@ -2,18 +2,18 @@
 @import "colors";
 
 main {
+  display: flex;
   //
   // Main Header hissəsi. Şəkil, navbar burada
   //
   header {
-    position: fixed;
     background-color: $main-color;
-    width: 20%;
+    width: 18%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     .header-info {
-      background: url(../image/bloggerbck.jpeg);
+      background: url(../image/developerbck.jpeg);
       background-size: cover;
       background-repeat: no-repeat;
       height: 10%;
@@ -22,10 +22,14 @@ main {
       .name {
         align-self: flex-end;
         width: 100%;
-        background-color: rgba($color: $third-color, $alpha: 0.7);
+        background-color: rgba($color: $third-color, $alpha: 0.9);
         h1 {
+          padding: 0.5rem 0;
           font-size: 2rem;
           color: $second-color;
+          //font-family: "Playfair Display SC", serif;
+          font-family: "Roboto", sans-serif;
+          font-weight: 400;
         }
       }
     }
@@ -42,11 +46,13 @@ main {
                 color: $second-color;
               }
             }
+            i {
+              margin-right: 1rem;
+            }
             a {
+              font-size: 1.5rem;
               color: $fifth-color;
-              i {
-                margin-right: 1rem;
-              }
+              font-family: "Roboto", sans-serif;
             }
           }
         }
@@ -63,8 +69,41 @@ main {
           i {
             color: $fifth-color;
           }
-          &:hover {
-            background-color: $second-color;
+        }
+        .fa-githuba:hover {
+          background-color: white;
+          i {
+            color: black;
+          }
+        }
+        .fa-linkedina:hover {
+          background-color: white;
+          i {
+            color: #0a66c2;
+          }
+        }
+        .fa-youtubea:hover {
+          background-color: white;
+          i {
+            color: #ff0000;
+          }
+        }
+        .fa-instagrama:hover {
+          background-color: white;
+          i {
+            color: #c83b84;
+          }
+        }
+        .fa-facebooka:hover {
+          background-color: white;
+          i {
+            color: #0e8ef1;
+          }
+        }
+        .fa-twittera:hover {
+          background-color: white;
+          i {
+            color: #1d9bf0;
           }
         }
       }
@@ -72,6 +111,58 @@ main {
         display: flex;
         flex-direction: column;
         padding: 1rem 0;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  //
+  // main hissəsi
+  //
+  main {
+    flex-grow: 1;
+    .home {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: black;
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../image/bg-home-page-1.jpg);
+        background-size: cover;
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      h1 {
+        position: relative;
+        color: $second-color;
+        font-size: 7rem;
+        font-weight: 200;
+        span {
+          position: relative;
+          color: $third-color;
+          font-weight: bold;
+        }
+      }
+      p {
+        position: relative;
+        font-size: 3rem;
+        color: $second-color;
+
+        span {
+          position: relative;
+          border-bottom: 0.2rem solid $third-color;
+          font-weight: bold;
+        }
       }
     }
   }

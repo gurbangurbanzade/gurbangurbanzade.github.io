@@ -36,10 +36,15 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 main header {
-  position: fixed;
   background-color: #2a2b30;
-  width: 20%;
+  width: 18%;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,7 +56,7 @@ main header {
 }
 
 main header .header-info {
-  background: url(../image/bloggerbck.jpeg);
+  background: url(../image/developerbck.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 10%;
@@ -65,12 +70,15 @@ main header .header-info .name {
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 100%;
-  background-color: rgba(0, 163, 225, 0.7);
+  background-color: rgba(0, 163, 225, 0.9);
 }
 
 main header .header-info .name h1 {
+  padding: 0.5rem 0;
   font-size: 2rem;
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 main header div {
@@ -92,12 +100,14 @@ main header div nav ul li:hover a {
   color: white;
 }
 
-main header div nav ul li a {
-  color: #999999;
+main header div nav ul li i {
+  margin-right: 1rem;
 }
 
-main header div nav ul li a i {
-  margin-right: 1rem;
+main header div nav ul li a {
+  font-size: 1.5rem;
+  color: #999999;
+  font-family: "Roboto", sans-serif;
 }
 
 main header footer {
@@ -115,8 +125,52 @@ main header footer .social a i {
   color: #999999;
 }
 
-main header footer .social a:hover {
+main header footer .social .fa-githuba:hover {
   background-color: white;
+}
+
+main header footer .social .fa-githuba:hover i {
+  color: black;
+}
+
+main header footer .social .fa-linkedina:hover {
+  background-color: white;
+}
+
+main header footer .social .fa-linkedina:hover i {
+  color: #0a66c2;
+}
+
+main header footer .social .fa-youtubea:hover {
+  background-color: white;
+}
+
+main header footer .social .fa-youtubea:hover i {
+  color: #ff0000;
+}
+
+main header footer .social .fa-instagrama:hover {
+  background-color: white;
+}
+
+main header footer .social .fa-instagrama:hover i {
+  color: #c83b84;
+}
+
+main header footer .social .fa-facebooka:hover {
+  background-color: white;
+}
+
+main header footer .social .fa-facebooka:hover i {
+  color: #0e8ef1;
+}
+
+main header footer .social .fa-twittera:hover {
+  background-color: white;
+}
+
+main header footer .social .fa-twittera:hover i {
+  color: #1d9bf0;
 }
 
 main header footer .footer-info {
@@ -128,4 +182,70 @@ main header footer .footer-info {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+
+main main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+main main .home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
+main main .home::before {
+  content: "";
+  position: absolute;
+  background: url(../image/bg-home-page-1.jpg);
+  background-size: cover;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+main main .home h1 {
+  position: relative;
+  color: white;
+  font-size: 7rem;
+  font-weight: 200;
+}
+
+main main .home h1 span {
+  position: relative;
+  color: #00a3e1;
+  font-weight: bold;
+}
+
+main main .home p {
+  position: relative;
+  font-size: 3rem;
+  color: white;
+}
+
+main main .home p span {
+  position: relative;
+  border-bottom: 0.2rem solid #00a3e1;
+  font-weight: bold;
 }
