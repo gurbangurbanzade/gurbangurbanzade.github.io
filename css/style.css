@@ -37,5 +37,95 @@ a {
 }
 
 main header {
+  position: fixed;
   background-color: #2a2b30;
+  width: 20%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main header .header-info {
+  background: url(../image/bloggerbck.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 10%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main header .header-info .name {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 100%;
+  background-color: rgba(0, 163, 225, 0.7);
+}
+
+main header .header-info .name h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+main header div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+main header div nav ul li {
+  padding: 1rem 3rem;
+  border-bottom: 0.1rem solid #202125;
+}
+
+main header div nav ul li:hover {
+  cursor: pointer;
+}
+
+main header div nav ul li:hover a {
+  color: white;
+}
+
+main header div nav ul li a {
+  color: #999999;
+}
+
+main header div nav ul li a i {
+  margin-right: 1rem;
+}
+
+main header footer {
+  color: #999999;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main header footer .social a {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+main header footer .social a i {
+  color: #999999;
+}
+
+main header footer .social a:hover {
+  background-color: white;
+}
+
+main header footer .footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0;
 }

@@ -2,16 +2,76 @@
 @import "colors";
 
 main {
+  //
+  // Main Header hissəsi. Şəkil, navbar burada
+  //
   header {
+    position: fixed;
     background-color: $main-color;
-    div {
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .header-info {
+      background: url(../image/bloggerbck.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 10%;
+      text-align: center;
+      display: flex;
+      .name {
+        align-self: flex-end;
+        width: 100%;
+        background-color: rgba($color: $third-color, $alpha: 0.7);
+        h1 {
+          font-size: 2rem;
+          color: $second-color;
+        }
+      }
     }
-    nav {
-      ul {
-        li {
-          a {
+    div {
+      flex-grow: 1;
+      nav {
+        ul {
+          li {
+            padding: 1rem 3rem;
+            border-bottom: 0.1rem solid $seventh-color;
+            &:hover {
+              cursor: pointer;
+              a {
+                color: $second-color;
+              }
+            }
+            a {
+              color: $fifth-color;
+              i {
+                margin-right: 1rem;
+              }
+            }
           }
         }
+      }
+    }
+    footer {
+      color: $fifth-color;
+      text-align: center;
+      padding: 1rem 0;
+      .social {
+        a {
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          i {
+            color: $fifth-color;
+          }
+          &:hover {
+            background-color: $second-color;
+          }
+        }
+      }
+      .footer-info {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
       }
     }
   }
