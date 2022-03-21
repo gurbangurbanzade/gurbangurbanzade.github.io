@@ -13,144 +13,29 @@ body {
           box-sizing: border-box;
 }
 
-.view {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 100vh;
+a {
+  text-decoration: none;
 }
 
-.view .view-developer {
-  float: right;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid black;
-  width: 50%;
-  height: 100vh;
-  background-color: yellow;
-  position: relative;
 }
 
-.view .view-developer .qurban {
-  background-color: red;
-  margin: 2rem;
-  padding: 2rem;
-  border: 1px solid black;
+a {
+  text-decoration: none;
 }
 
-.view .view-developer .view-developer-info {
-  opacity: 1;
-}
-
-.view .view-developer:hover .view-developer-info {
-  opacity: 1;
-}
-
-.view .view-blogger {
-  float: left;
-  border: 1px solid black;
-  width: 50%;
-  height: 100vh;
-  background: url(/image/bloggerbck.jpeg);
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.view .view-blogger .view-blogger-dark {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: black;
-  z-index: 2;
-  opacity: 0;
-}
-
-.view .view-blogger .view-blogger-social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 1px solid green;
-}
-
-.view .view-blogger .view-blogger-social > div {
-  border: 1px solid black;
-  padding: 0 auto;
-  text-align: center;
-  border-radius: 0.5rem;
-  width: 3rem;
-  height: 3rem;
-  padding: 0.5rem;
-}
-
-.view .view-blogger .view-blogger-social > div i {
-  color: red;
-}
-
-.view .view-blogger .view-blogger-info {
-  text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: 1px solid red;
-  border-radius: 0.5rem;
-  background-color: rgba(128, 128, 128, 0.404);
-  opacity: 1;
-}
-
-.view .view-blogger:hover .view-blogger-dark {
-  opacity: 0;
-}
-
-.view .view-blogger:hover .view-blogger-info {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border: 1px solid red;
-  opacity: 1;
-}
-
-.view .view-blogger-developer {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.view .view-blogger-developer > i {
-  color: white;
-}
-
-.view .view-blogger-developer > i:hover {
-  color: black;
-}
-
-.developer .developer-leftMenu {
-  background-color: gray;
+main header {
+  background-color: #2a2b30;
 }
