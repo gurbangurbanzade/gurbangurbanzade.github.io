@@ -178,11 +178,11 @@ main {
 /////////////////////////////
 // responsive 1200 - 768
 /////////////////////////////
-@media (max-width: 1200px) {
-  body {
-    // font-size: 1.2rem;
-  }
-}
+// @media (max-width: 1200px) {
+//   body {
+//     // font-size: 1.2rem;
+//   }
+// }
 /////////////////////////////
 // responsive 768 -
 /////////////////////////////
@@ -216,6 +216,58 @@ main {
         }
         p {
           font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+///
+///             About Me hissesi
+///
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  color: $third-color;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  .section-info {
+    display: flex;
+    flex-direction: row;
+    flex: 4;
+    .section-info-text {
+      flex: 2;
+    }
+    .section-info-resume {
+      flex: 2;
+      span {
+        display: inline;
+        font-weight: bold;
+        border-bottom: 2px solid $third-color;
+      }
+      p {
+        display: inline-block;
+        font-weight: 100;
+        border-bottom: none !important;
+      }
+      a {
+        border: 2px solid $third-color;
+        color: $third-color;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: small;
+        padding: 1rem;
+        margin-top: 1rem;
+        &:hover {
+          background-color: $third-color;
+          color: $second-color;
         }
       }
     }

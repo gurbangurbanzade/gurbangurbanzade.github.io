@@ -304,3 +304,75 @@ main main .home p span {
     font-size: 1.5em;
   }
 }
+
+.about-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #00a3e1;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .section-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+main .section-info .section-info-text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+main .section-info .section-info-resume {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+main .section-info .section-info-resume span {
+  display: inline;
+  font-weight: bold;
+  border-bottom: 2px solid #00a3e1;
+}
+
+main .section-info .section-info-resume p {
+  display: inline-block;
+  font-weight: 100;
+  border-bottom: none !important;
+}
+
+main .section-info .section-info-resume a {
+  border: 2px solid #00a3e1;
+  color: #00a3e1;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: small;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+main .section-info .section-info-resume a:hover {
+  background-color: #00a3e1;
+  color: white;
+}
