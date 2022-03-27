@@ -228,24 +228,32 @@ main {
 ///
 //////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
-
+.about {
+  padding: 3rem;
+}
 .about-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: $third-color;
+  border-bottom: 1px dashed $text-color;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  padding: 2rem 0rem;
   .section-info {
     display: flex;
     flex-direction: row;
-    flex: 4;
+    align-items: space-between;
+    padding-bottom: 4rem;
+    flex: 5;
     .section-info-text {
-      flex: 2;
+      flex: 3;
     }
     .section-info-resume {
+      margin-left: 2rem;
       flex: 2;
       span {
         display: inline;
@@ -256,6 +264,7 @@ main {
         display: inline-block;
         font-weight: 100;
         border-bottom: none !important;
+        margin-bottom: 0.8rem;
       }
       a {
         border: 2px solid $third-color;
@@ -264,7 +273,7 @@ main {
         font-weight: bold;
         font-size: small;
         padding: 1rem;
-        margin-top: 1rem;
+
         &:hover {
           background-color: $third-color;
           color: $second-color;
@@ -272,4 +281,39 @@ main {
       }
     }
   }
+  /////////////////////////////////////////////
+  //            services hissesi
+  /////////////////////////////////////////////
+  .about-section-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.151);
+    h2 {
+      border-bottom: 2px solid $third-color;
+    }
+    .about-section-services-menu {
+      display: flex;
+      justify-content: space-around;
+      .about-section-services-menu-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i {
+          color: $third-color;
+        }
+        p {
+          font-size: small;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
+/////////////////////////////////////////////
+//            clients hissesi
+/////////////////////////////////////////////
+
+/////////////////////////////////////////////
+//            testimonials hissesi
+/////////////////////////////////////////////

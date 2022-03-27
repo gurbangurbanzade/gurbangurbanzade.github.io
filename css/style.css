@@ -19,6 +19,25 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  color: #222222;
+}
+
+p {
+  color: #555555;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -38,6 +57,25 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h2 {
+  color: #222222;
+}
+
+p {
+  color: #555555;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 main {
@@ -305,6 +343,10 @@ main main .home p span {
   }
 }
 
+.about {
+  padding: 3rem;
+}
+
 .about-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +354,11 @@ main main .home p span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #00a3e1;
+  border-bottom: 1px dashed #555555;
 }
 
 main {
@@ -323,6 +369,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 2rem 0rem;
 }
 
 main .section-info {
@@ -333,18 +380,23 @@ main .section-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  padding-bottom: 4rem;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
 }
 
 main .section-info .section-info-text {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 main .section-info .section-info-resume {
+  margin-left: 2rem;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -360,6 +412,7 @@ main .section-info .section-info-resume p {
   display: inline-block;
   font-weight: 100;
   border-bottom: none !important;
+  margin-bottom: 0.8rem;
 }
 
 main .section-info .section-info-resume a {
@@ -369,10 +422,57 @@ main .section-info .section-info-resume a {
   font-weight: bold;
   font-size: small;
   padding: 1rem;
-  margin-top: 1rem;
 }
 
 main .section-info .section-info-resume a:hover {
   background-color: #00a3e1;
   color: white;
+}
+
+main .about-section-services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.151);
+}
+
+main .about-section-services h2 {
+  border-bottom: 2px solid #00a3e1;
+}
+
+main .about-section-services .about-section-services-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .about-section-services .about-section-services-menu .about-section-services-menu-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .about-section-services .about-section-services-menu .about-section-services-menu-card i {
+  color: #00a3e1;
+}
+
+main .about-section-services .about-section-services-menu .about-section-services-menu-card p {
+  font-size: small;
+  text-align: center;
 }
