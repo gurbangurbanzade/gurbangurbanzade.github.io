@@ -1,0 +1,151 @@
+/* [project]/src/Pages/home/components/intro/intro.scss.css [app-client] (css) */
+body {
+  background-color: #1d1e2c;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, .75, 1);
+  }
+
+  40% {
+    transform: scale3d(.75, 1.45, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, .85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.Main1 .intro, .Main2 .intro {
+  text-align: center;
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.intro-part {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  display: flex;
+}
+
+.left, .right {
+  box-sizing: border-box;
+  width: 40%;
+}
+
+.left .intro-content {
+  color: #fff;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  font-size: 40px;
+  display: flex;
+}
+
+.left .intro-content .word {
+  display: flex;
+}
+
+.left .intro-content h1 {
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.left .intro-content h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand;
+}
+
+.left p:nth-child(2) {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5df8f5 !important;
+}
+
+.right p {
+  color: #fff;
+  text-align: left;
+  z-index: 400;
+  margin-bottom: 14px;
+  font-size: 24px;
+}
+
+.marginRight {
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+  .Main1 .intro, .Main2 .intro {
+    height: auto;
+  }
+
+  .Main1 .intro .intro-part, .Main2 .intro .intro-part {
+    height: auto;
+    padding: 0;
+  }
+
+  .Main1 .intro .intro-part .left, .Main2 .intro .intro-part .left {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    display: flex;
+  }
+
+  .Main1 .intro .intro-part .left .intro-content, .Main2 .intro .intro-part .left .intro-content {
+    margin-bottom: 0;
+  }
+
+  .Main1 .intro .intro-part .left .intro-content .word h1, .Main2 .intro .intro-part .left .intro-content .word h1 {
+    font-size: 25px;
+  }
+
+  .Main1 .intro .intro-part .left .intro-content .word, .Main2 .intro .intro-part .left .intro-content .word {
+    flex-wrap: wrap;
+    font-size: 28px;
+    display: flex;
+  }
+
+  .Main1 .right, .Main2 .right {
+    width: 100%;
+  }
+
+  .Main1 .intro-part, .Main2 .intro-part {
+    --animate-duration: 1s;
+    padding: 30px 0;
+    animation-delay: .5s;
+  }
+
+  .Main1 .intro-part .left p, .Main1 .intro-part .right p, .Main2 .intro-part .left p, .Main2 .intro-part .right p {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=src_Pages_home_components_intro_intro_scss_css_bad6b30c._.single.css.map*/

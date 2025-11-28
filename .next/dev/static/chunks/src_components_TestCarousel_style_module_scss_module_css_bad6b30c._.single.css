@@ -1,0 +1,144 @@
+/* [project]/src/components/TestCarousel/style.module.scss.module.css [app-client] (css) */
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__leftSide {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__leftSide > h2 {
+  color: #fff;
+  letter-spacing: -2%;
+  margin-bottom: 1rem;
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 4.4rem;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__leftSide > p {
+  color: #fff;
+  font-weight: 400;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__btnBox {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3.2rem;
+  display: flex;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__btnBox > button {
+  background-color: #fff;
+  border: .1rem solid #eaecf0;
+  border-radius: 50%;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__btnBox > button.style-module-scss-module__-vjC_q__right {
+  right: 0;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__btnBox > button.style-module-scss-module__-vjC_q__left {
+  left: 0;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div {
+  position: relative;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider {
+  z-index: 2;
+  display: flex;
+  overflow: hidden;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__cards {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3.2rem;
+  transition: transform .5s;
+  display: flex;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__card {
+  border: .1rem solid #d0d5dd;
+  border-radius: 1.6rem;
+  width: 30rem;
+  padding: 2.4rem;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__card > img {
+  width: 100px;
+  height: 100p;
+  border-radius: 50%;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__card > h5 {
+  color: #fff;
+  margin-bottom: .4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__card .style-module-scss-module__-vjC_q__starBox {
+  margin-bottom: .4rem;
+}
+
+#style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__card .style-module-scss-module__-vjC_q__text {
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4.8rem;
+    margin-bottom: 3.2rem;
+    display: flex;
+  }
+
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__leftSide > h2 {
+    margin-bottom: 1.6rem;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.8rem;
+  }
+
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__leftSide > p {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__btnBox {
+    gap: 1.6rem;
+  }
+
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback .style-module-scss-module__-vjC_q__header .style-module-scss-module__-vjC_q__btnBox > button {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__cards {
+    gap: 2.4rem;
+  }
+
+  #style-module-scss-module__-vjC_q__feedbackContainer #style-module-scss-module__-vjC_q__feedback div .style-module-scss-module__-vjC_q__cardSlider .style-module-scss-module__-vjC_q__cards .style-module-scss-module__-vjC_q__card {
+    width: 28.8rem;
+    padding: 2.4rem;
+  }
+}
+
+/*# sourceMappingURL=src_components_TestCarousel_style_module_scss_module_css_bad6b30c._.single.css.map*/

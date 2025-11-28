@@ -1,14 +1,15 @@
+"use client";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import ChevronLeft from "../../assets/img/chevron_left.png";
 import "./style.scss";
 function BackBtn() {
-  const navigate = useNavigate();
+  const router = useRouter();
   return (
     <button
       className="backBtn"
       onClick={() => {
-        navigate("/");
+        router.push("/");
       }}
     >
       <img src={ChevronLeft} />

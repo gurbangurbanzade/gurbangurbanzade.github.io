@@ -1,0 +1,227 @@
+/* [project]/src/Pages/home/components/skills/skills.scss.css [app-client] (css) */
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, .75, 1);
+  }
+
+  40% {
+    transform: scale3d(.75, 1.45, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, .85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.skills-experience {
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+.skills-experience .container {
+  color: #fff;
+  text-align: center;
+  max-width: 80%;
+}
+
+.skills-experience .container .content {
+  margin-bottom: 20px;
+}
+
+.skills-experience .container .content .problem {
+  text-transform: uppercase;
+  color: #d3d3d3;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.skills-experience .container .content .headText {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.skills-experience .container .content .headText .skills, .skills-experience .container .content .headText .experience {
+  display: flex;
+}
+
+.skills-experience .container .content .headText h1 {
+  cursor: pointer;
+  margin-bottom: 0;
+  font-size: 60px;
+}
+
+.skills-experience .container .content .headText h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand;
+}
+
+.skills-experience .container .content .headText span {
+  margin-left: 15px;
+}
+
+.skills-experience .container .content h4 {
+  margin-bottom: 16px;
+  font-weight: 450;
+}
+
+.skills-experience .container .content p {
+  max-width: 700px;
+  margin: 0 auto 16px;
+  font-size: 18px;
+  font-weight: 450;
+  line-height: 24px;
+}
+
+.skills-experience .container .content .visit-linkedin .toGithub {
+  color: #ff3870;
+}
+
+.skills-experience .container .content .visit-linkedin .toGithub:hover {
+  text-decoration: underline;
+}
+
+.skills-experience .container .icons {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 70%;
+  margin: auto;
+  padding: 50px 0;
+  display: flex;
+}
+
+.skills-experience .container .icons svg {
+  margin-bottom: 7px;
+}
+
+.skills-experience .container .icons .javascript {
+  --animate-duration: 1s;
+  animation-delay: .1s;
+}
+
+.skills-experience .container .icons .react {
+  --animate-duration: 1s;
+  animation-delay: .2s;
+}
+
+.skills-experience .container .icons .vue {
+  --animate-duration: 1s;
+  animation-delay: .3s;
+}
+
+.skills-experience .container .icons .node {
+  --animate-duration: 1s;
+  animation-delay: .4s;
+}
+
+.skills-experience .container .icons .wordpress {
+  --animate-duration: 1s;
+  animation-delay: .5s;
+}
+
+.skills-experience .container .icons .sass {
+  --animate-duration: 1s;
+  animation-delay: .6s;
+}
+
+.skills-experience .container .icons .css {
+  --animate-duration: 1s;
+  animation-delay: .7s;
+}
+
+.skills-experience .container .icons .html {
+  --animate-duration: 1s;
+  animation-delay: .8s;
+}
+
+.skills-experience .container .icons .bootstrap {
+  --animate-duration: 1s;
+  animation-delay: .9s;
+}
+
+.skills-experience .container .icons .git {
+  --animate-duration: 1s;
+  animation-delay: 1s;
+}
+
+.skills-experience .container .icons .visual-studio {
+  --animate-duration: 1s;
+  animation-delay: 1.1s;
+}
+
+.skills-experience .container .icons .figma {
+  --animate-duration: 1s;
+  animation-delay: 1.2s;
+}
+
+.Main2 .skills-experience {
+  width: 100%;
+  height: 100%;
+}
+
+.Main2 #projects .seeProj, .Main1 #projects .seeProj {
+  margin: 0 auto;
+}
+
+.Main2 .skills-experience, .Main2 #projects, .Main2 footer {
+  padding: 20px 0;
+}
+
+.headTextMobile {
+  display: none;
+}
+
+@media screen and (max-width: 920px) {
+  .skills-experience .container {
+    max-width: 100%;
+  }
+
+  .skills-experience .container .content .headText {
+    display: none;
+  }
+
+  .skills-experience .container .content .headTextMobile {
+    font-size: 30px;
+    display: block;
+  }
+
+  .skills-experience .container .icons {
+    gap: 10px;
+    max-width: 100%;
+    padding: 0 5px;
+    display: flex;
+  }
+
+  .skills-experience .container .icons .skilBox img {
+    height: "20px";
+    margin-bottom: "5px";
+  }
+
+  .skills-experience .container .icons .skilBox p {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=src_Pages_home_components_skills_skills_scss_css_bad6b30c._.single.css.map*/

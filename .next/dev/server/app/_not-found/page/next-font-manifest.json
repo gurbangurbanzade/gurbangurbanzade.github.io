@@ -1,0 +1,10 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/src/app/_not-found/page": [
+      "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/containers/home/components/feedback/style.scss"],"sourcesContent":[".flexer {\n  padding: 10vh 0;\n  height: 100vh;\n  background: rgb(30, 24, 46);\n  background: linear-gradient(\n    90deg,\n    rgba(30, 24, 46, 1) 42%,\n    rgba(23, 30, 55, 1) 77%\n  );\n  // slider start\n  // .Carousel__Container-sc-hyhecw-0 {\n  //   width: 95%;\n  // }\n\n  // slider end\n\n  .mediaIconsBox {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin-top: 20px;\n\n    .mediaIconsBoxItem {\n      width: 300px !important;\n      text-align: center !important;\n    }\n  }\n}\n\n// @media only screen and (max-width: 992px) {\n//   // .Carousel__Container-sc-hyhecw-0 {\n//   //   width: 100%;\n//   // }\n// }\n"],"names":[],"mappings":"AAAA;;;;;;AAgBE;;;;;;;AAME"}}]
+}

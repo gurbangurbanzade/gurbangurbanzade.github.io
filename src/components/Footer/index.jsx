@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
-import { Link } from "react-router-dom";
-import "../../assets/fonts/Druk Wide Web Bold Regular.ttf";
+import Link from "next/link";
 import "./style.scss";
 import { useState, useEffect } from "react";
+
 
 function Footer({ onButtonClick, activeIndex, context }) {
   const scrollToSection = (sectionId) => {
@@ -43,7 +44,7 @@ function Footer({ onButtonClick, activeIndex, context }) {
           <div className="links">
             <p>
               {" "}
-              <Link to={"contact"} className="p">
+              <Link href="/contact" className="p">
                 Contact
               </Link>
             </p>{" "}
@@ -52,7 +53,7 @@ function Footer({ onButtonClick, activeIndex, context }) {
           <div className="links">
             <p>
               {" "}
-              <Link to={"projects-page"} onClick={onButtonClick} className="p">
+              <Link href="/projects-page" onClick={onButtonClick} className="p">
                 Projects
               </Link>{" "}
             </p>{" "}
@@ -60,28 +61,28 @@ function Footer({ onButtonClick, activeIndex, context }) {
           <div className="links">
             <p>
               {" "}
-              <Link to={"riddle"} className="p">
+              <Link href="/riddle" className="p">
                 Riddle
               </Link>
             </p>{" "}
           </div>
           <div className="links">
             <p>
-              <Link to={"blog"} className="p">
+              <Link href="/blog" className="p">
                 Blog
               </Link>
             </p>{" "}
           </div>
           <div className="links">
             <p>
-              <Link to={"about"} className="p">
+              <Link href="/about" className="p">
                 About
               </Link>
             </p>{" "}
           </div>
           <div className="links">
             <p>
-              <Link to={"career"} className="p">
+              <Link href="/career" className="p">
                 Career
               </Link>
             </p>{" "}

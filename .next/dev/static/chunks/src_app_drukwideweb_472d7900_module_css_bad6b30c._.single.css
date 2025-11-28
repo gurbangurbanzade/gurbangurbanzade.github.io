@@ -1,0 +1,25 @@
+/* [project]/src/app/drukwideweb_472d7900.module.css [app-client] (css) */
+@font-face {
+  font-family: drukWideWeb;
+  src: url("../media/Druk Wide Web Bold Regular-s.p.507252fa.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: drukWideWeb Fallback;
+  src: local(Arial);
+  ascent-override: 49.44%;
+  descent-override: 12.36%;
+  line-gap-override: 0.0%;
+  size-adjust: 161.83%;
+}
+
+.drukwideweb_472d7900-module__9OVsqq__className {
+  font-family: drukWideWeb, drukWideWeb Fallback;
+}
+
+.drukwideweb_472d7900-module__9OVsqq__variable {
+  --font-druk-wide: "drukWideWeb", "drukWideWeb Fallback";
+}
+
+/*# sourceMappingURL=src_app_drukwideweb_472d7900_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,20 @@
+/* [project]/src/containers/home/components/feedback/style.scss.css [app-client] (css) */
+.flexer {
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  height: 100vh;
+  padding: 10vh 0;
+}
+
+.flexer .mediaIconsBox {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+}
+
+.flexer .mediaIconsBox .mediaIconsBoxItem {
+  text-align: center !important;
+  width: 300px !important;
+}
+
+/*# sourceMappingURL=src_containers_home_components_feedback_style_scss_css_bad6b30c._.single.css.map*/

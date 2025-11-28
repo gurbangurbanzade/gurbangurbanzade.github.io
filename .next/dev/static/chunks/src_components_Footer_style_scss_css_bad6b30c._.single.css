@@ -1,0 +1,84 @@
+/* [project]/src/components/Footer/style.scss.css [app-client] (css) */
+footer {
+  color: #f9f5ff;
+  text-align: "end";
+  transform-style: preserve-3d;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  padding-right: 50px;
+  font-size: 8.8vw;
+  font-weight: 900;
+  line-height: .9em;
+  width: 100% !important;
+  font-family: Orbitron !important;
+}
+
+footer .container {
+  margin: 0 auto;
+}
+
+footer .footerItems {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-right: 0 !important;
+}
+
+footer .footerItems .leftFooter {
+  color: #5df8f5;
+  padding-left: 30px;
+  font-size: 6.6vw;
+  font-weight: 600;
+}
+
+footer .footerItems .rightFooter {
+  perspective: 900px;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  display: flex;
+}
+
+footer .footerItems .rightFooter .links {
+  cursor: pointer;
+  transform-origin: 100%;
+  transform-style: preserve-3d;
+  align-items: center;
+  transition: all .2s ease-in-out;
+  display: flex;
+  transform: rotateY(-30deg);
+}
+
+footer .footerItems .rightFooter .links:hover {
+  transform-origin: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(-20deg);
+}
+
+footer .footerItems .rightFooter .links:active {
+  transform-origin: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(0);
+}
+
+footer .footerItems .rightFooter .p:hover {
+  color: #0000;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #00fffb;
+}
+
+footer .footerItems .rightFooter .line {
+  background-color: #fff;
+  width: 2px;
+  height: 8rem;
+  margin-right: 45px;
+  transform: rotate(-160deg);
+}
+
+footer .footerItems .rightFooter .line:hover {
+  background-color: #5df8f5;
+}
+
+/*# sourceMappingURL=src_components_Footer_style_scss_css_bad6b30c._.single.css.map*/

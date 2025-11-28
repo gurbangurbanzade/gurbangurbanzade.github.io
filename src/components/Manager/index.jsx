@@ -1,5 +1,5 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
 import "./style.scss";
 import axios from "axios";
 import { Helmet } from "react-helmet";

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import "./projects.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -5,9 +6,8 @@ import "swiper/swiper-bundle.css";
 import "swiper/css/pagination";
 import { Pagination, Mousewheel } from "swiper/modules";
 import Image from "./../../assets/img/macbook.png";
-import Calculator from "./../../assets/img/pingCalc.png";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import { PiNumberOneBold } from "react-icons/pi";
 import { PiNumberTwoBold } from "react-icons/pi";
@@ -21,7 +21,7 @@ import { useRef } from "react";
 function Projects() {
   const [animationPlayed, setAnimationPlayed] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [swiper, setSwiper] = useState(null);
 
@@ -137,14 +137,14 @@ function Projects() {
                 I have built various different projects to fit different aspects
                 of the client's business. If you want to see more examples of my
                 work than the ones showcased in this site, please{" "}
-                <Link to={"/contact"}>contact me!</Link>
+                <Link href="/contact">contact me!</Link>
               </p>
 
               <a
                 className="seeProj"
                 href=""
                 onClick={() => {
-                  navigate("projects-page");
+                  router.push("projects-page");
                 }}
               >
                 {" "}
@@ -248,7 +248,7 @@ function Projects() {
             </div>
             <div className="right">
               <div className="img-wrapper">
-                <img src={Calculator} alt="" />
+                {/* <img src={Calculator} alt="" /> */}
               </div>
             </div>
           </div>

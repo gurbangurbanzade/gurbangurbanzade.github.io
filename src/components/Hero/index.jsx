@@ -4,13 +4,13 @@ import Github from "../../assets/img/github (1).svg";
 import Instagram from "../../assets/img/instagram.svg";
 import X from "../../assets/img/x-twitter.svg";
 import Youtube from "../../assets/img/youtube.svg";
-import ProfileImg from "../../../src/assets/img/heroBannerImg/profile.png";
-import Arrow1 from "../../../src/assets/img/heroBannerImg/arrow1.png";
-import Arrow2 from "../../../src/assets/img/heroBannerImg/arrow2.png";
-import Arrow3 from "../../../src/assets/img/heroBannerImg/arrow3.png";
-import Arrow4 from "../../../src/assets/img/heroBannerImg/arrow4.png";
-import Slash from "../../../src/assets/img/heroBannerImg/slash.png";
-import Profile1 from "../../../src/assets/img/heroBannerImg/profile1.png";
+import ProfileImg from "../../assets/img/heroBannerImg/profile.png";
+import Arrow1 from "../../assets/img/heroBannerImg/arrow1.png";
+import Arrow2 from "../../assets/img/heroBannerImg/arrow2.png";
+import Arrow3 from "../../assets/img/heroBannerImg/arrow3.png";
+import Arrow4 from "../../assets/img/heroBannerImg/arrow4.png";
+import Slash from "../../assets/img/heroBannerImg/slash.png";
+import Profile1 from "../../assets/img/heroBannerImg/profile1.png";
 import { FaArrowRight } from "react-icons/fa";
 
 const Hero = ({ onButtonClick }) => {
@@ -83,17 +83,17 @@ const Hero = ({ onButtonClick }) => {
       <div className="content grid grid-rows-4">
         <div className="logoBox">
           <div className="imgBox">
-            {/* <img src={ProfileImg} alt="" /> */}
-            <img src={Arrow1} className="arrow1" alt="" />
-            <img src={Arrow2} className="arrow2" alt="" />
-            <img src={Arrow3} className="arrow3" alt="" />
-            <img src={Arrow4} className="arrow4" alt="" />
+            {/* <img src={ProfileImg.src} alt="" /> */}
+            <img src={Arrow1.src} className="arrow1" alt="Arrow 1" />
+            <img src={Arrow2.src} className="arrow2" alt="Arrow 2" />
+            <img src={Arrow3.src} className="arrow3" alt="Arrow 3" />
+            <img src={Arrow4.src} className="arrow4" alt="Arrow 4" />
             <img
-              src={Profile1}
+              src={Profile1.src}
               className="profile1  animate__delay-2s"
-              alt=""
+              alt="Profile"
             />
-            <img src={Slash} className="slash" alt="" />
+            <img src={Slash.src} className="slash" alt="Slash" />
           </div>
         </div>
         <div className="textBox">

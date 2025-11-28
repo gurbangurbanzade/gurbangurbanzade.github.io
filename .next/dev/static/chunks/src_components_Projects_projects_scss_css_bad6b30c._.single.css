@@ -1,0 +1,405 @@
+/* [project]/src/components/Projects/projects.scss.css [app-client] (css) */
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, .75, 1);
+  }
+
+  40% {
+    transform: scale3d(.75, 1.45, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, .85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#projects {
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+}
+
+#projects .container {
+  width: 80%;
+}
+
+#projects .projectsInfo {
+  flex-direction: column;
+  display: flex;
+}
+
+#projects .projectsInfo .portfolio-box {
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+#projects .projectsInfo .portfolio-box .portfolio {
+  justify-content: center;
+  display: flex;
+}
+
+#projects .projectsInfo .portfolio-box .portfolio h1 {
+  color: #f9f5ff;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#projects .projectsInfo .portfolio-box .portfolio h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand;
+}
+
+#projects .projectsInfo .portfolio-box .previous {
+  justify-content: center;
+  display: flex;
+}
+
+#projects .projectsInfo .portfolio-box .previous h1 {
+  color: #f9f5ff;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#projects .projectsInfo .portfolio-box .previous h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand !important;
+}
+
+#projects .projectsInfo .projects {
+  justify-content: center;
+  display: flex;
+}
+
+#projects .projectsInfo h1 {
+  color: #f9f5ff;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+#projects .projectsInfo h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand !important;
+}
+
+#projects .projectsInfo span {
+  margin-left: 10px;
+}
+
+#projects p {
+  color: #f9f5ff;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 20px;
+}
+
+#projects p a {
+  color: #ff3870;
+}
+
+#projects p a:hover {
+  color: #ff3870;
+  text-decoration: underline;
+}
+
+#projects a {
+  color: #5df8f5;
+  width: 200px;
+  font-size: 24px;
+  transition: transform 1s;
+  position: relative;
+}
+
+#projects a span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(0);
+}
+
+#projects a:hover {
+  color: #28d3d1;
+}
+
+#projects a:hover span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(10px);
+}
+
+.Snobella {
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.Snobella .left p:first-child {
+  color: gray;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.Snobella .left .snobella {
+  display: flex;
+}
+
+.Snobella .left .snobella h1 {
+  color: #f9f5ff;
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.Snobella .left .snobella h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand;
+}
+
+.Snobella .left p {
+  color: #f9f5ff;
+}
+
+.Snobella .left .viewCodes {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.Snobella .left .viewCodes a {
+  width: 200px;
+  font-size: 24px;
+  transition: transform 1s;
+  position: relative;
+}
+
+.Snobella .left .viewCodes a span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(0);
+}
+
+.Snobella .left .viewCodes a:hover span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(10px);
+}
+
+.Snobella .left .viewCodes a:first-child {
+  color: #5df8f5;
+}
+
+.Snobella .left .viewCodes a:nth-child(2) {
+  color: #ff3870;
+}
+
+.Snobella .right img {
+  width: 100%;
+  height: 100%;
+}
+
+.Calculator {
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.Calculator .left p:first-child {
+  color: gray;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.Calculator .left .calculator {
+  display: flex;
+}
+
+.Calculator .left .calculator h1 {
+  color: #f9f5ff;
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.Calculator .left .calculator h1:hover {
+  color: #ff3870;
+  animation: 1s infinite rubberBand;
+}
+
+.Calculator .left p {
+  color: #f9f5ff;
+}
+
+.Calculator .left .viewCodes {
+  flex-direction: column;
+  gap: 12px;
+  display: flex;
+}
+
+.Calculator .left .viewCodes a {
+  width: 200px;
+  font-size: 24px;
+  transition: transform 1s;
+  position: relative;
+}
+
+.Calculator .left .viewCodes a span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(0);
+}
+
+.Calculator .left .viewCodes a:hover span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(10px);
+}
+
+.Calculator .left .viewCodes a:first-child {
+  color: #5df8f5;
+}
+
+.Calculator .left .viewCodes a:nth-child(2) {
+  color: #ff3870;
+}
+
+.Calculator .right .img-wrapper {
+  width: 700px;
+  height: 450px;
+}
+
+.Calculator .right .img-wrapper img {
+  width: 500px;
+  height: 100%;
+}
+
+.Main2 .Snobella, .Main2 .Calculator {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.Main2 .Snobella .left, .Main2 .Calculator .left {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.Main2 .Snobella .left p, .Main2 .Calculator .left p {
+  text-align: center;
+}
+
+.Main2 .Snobella .right .img-wrapper, .Main2 .Calculator .right .img-wrapper {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+
+.seeProj {
+  justify-content: center;
+  display: flex;
+}
+
+.Main2 .left p {
+  text-align: center;
+}
+
+.Main2 .Calculator, .Main2 .Snobella {
+  flex-direction: column;
+}
+
+.Main2 .Snobella .right .img-wrapper img {
+  height: 40vh;
+  width: 70vw !important;
+}
+
+@media screen and (max-width: 680px) {
+  ul li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .Main2 .Snobella .right .img-wrapper img {
+    height: 25vh;
+  }
+
+  .Main2 .Calculator .right .img-wrapper img {
+    height: 35vh;
+    width: 60vw !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Main2 .Snobella .right .img-wrapper img {
+    height: 20vh;
+    width: 80vw !important;
+  }
+
+  .Main2 .Calculator .right .img-wrapper img {
+    width: 80vw !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .Main2 .Snobella .right .img-wrapper img {
+    height: 20vh;
+    width: 80vw !important;
+  }
+
+  .Main2 .Calculator .right .img-wrapper img {
+    width: 70vw !important;
+  }
+}
+
+.Snobella .left p, .Snobella .left a, .Snobella .left div h1:first-child, .Calculator .left p, .Calculator .left a, .Calculator .left div h1:first-child {
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 678px) {
+  .Main2 .img-wrapper img, .Snobella .img-wrapper img {
+    width: 70vw !important;
+  }
+}
+
+@media screen and (max-width: 487px) {
+  .Main2 .img-wrapper img {
+    width: 87vw;
+  }
+}
+
+#projects ul, #projects ul li {
+  transition: none !important;
+}
+
+/*# sourceMappingURL=src_components_Projects_projects_scss_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/gurbangurbanzada/Desktop/freelance/gurbangurbanzade.github.io/src/app/not-found.js"],"sourcesContent":["import Nopage from '../Pages/Nopage';\n\nexport default function NotFound() {\n  return <Nopage />;\n}\n"],"names":[],"mappings":";;;;;;;;;;;;AAEe,SAAS;IACtB,qBAAO,8OAAC;;;;;AACV"}}]
+}

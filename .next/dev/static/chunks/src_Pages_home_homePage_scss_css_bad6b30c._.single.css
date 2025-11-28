@@ -1,0 +1,274 @@
+/* [project]/src/Pages/home/homePage.scss.css [app-client] (css) */
+.Home {
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  display: flex;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+
+.Home span {
+  letter-spacing: 5px;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+}
+
+.GithubLink {
+  font-size: 40px;
+  position: absolute;
+  bottom: 32px;
+  left: 50px;
+}
+
+@media (max-width: 1000px) {
+  .GithubLink {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 32px;
+    left: 90%;
+  }
+}
+
+.scrollBtn {
+  color: #568ea3;
+  background: none;
+  border: none;
+  font-size: 20px;
+  transition: transform 1s;
+}
+
+.scrollBtn span {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(0);
+}
+
+.scrollBtn:hover .scrollBottom {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(-10px);
+}
+
+.scrollBtn:hover .scrollTop {
+  transition: transform .5s;
+  display: inline-block;
+  transform: translateX(10px);
+}
+
+ul {
+  color: #568ea3;
+}
+
+ul li {
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  transition: all .5s ease-in-out;
+  display: flex;
+}
+
+ul li.active {
+  color: #ff3870;
+}
+
+.vertical-line {
+  border: 2px solid #ff3870;
+  height: 50px;
+  transition: transform .5s;
+  position: absolute;
+  right: 0;
+}
+
+.active0 {
+  transform: translateY(0);
+}
+
+.active1 {
+  transform: translateY(50px);
+}
+
+.active2 {
+  transform: translateY(100px);
+}
+
+.active3 {
+  transform: translateY(150px);
+}
+
+.active4 {
+  transform: translateY(200px);
+}
+
+.active5 {
+  transform: translateY(250px);
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(.64, .23, .29, .83) !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .Main1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .Main2 {
+    display: none;
+  }
+}
+
+.Main2 footer:before {
+  height: 100% !important;
+}
+
+.Main1 footer {
+  height: 100vh;
+}
+
+.mainswiper {
+  width: 100vw;
+  height: 100vh;
+  max-height: 200vh;
+}
+
+@media (max-width: 600px) {
+  .swiper-wrapper .skillsSlider {
+    height: 110vh !important;
+  }
+}
+
+@keyframes audio-wave {
+  0% {
+    background-color: #ff8e3a;
+    height: 6px;
+    transform: translateY(0);
+  }
+
+  25% {
+    background-color: #ed509e;
+    height: 80px;
+    transform: translateY(-5px)scaleY(1.7);
+  }
+
+  50% {
+    background-color: #9c73f8;
+    height: 6px;
+    transform: translateY(0);
+  }
+
+  100% {
+    background-color: #0fccce;
+    height: 6px;
+    transform: translateY(0);
+  }
+}
+
+.sound-wave {
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  width: 120px;
+  height: 150px;
+  display: flex;
+}
+
+.sound-wave div {
+  background: orange;
+  border-radius: 8px;
+  width: 10px;
+  height: 6px;
+  animation: 2.2s ease-in-out infinite audio-wave;
+  display: block;
+}
+
+.sound-wave div:first-child {
+  animation-delay: .2s;
+  left: 11px;
+}
+
+.sound-wave div:nth-child(2) {
+  animation-delay: .4s;
+  left: 22px;
+}
+
+.sound-wave div:nth-child(3) {
+  animation-delay: .6s;
+  left: 33px;
+}
+
+.sound-wave div:nth-child(4) {
+  animation-delay: .8s;
+  left: 44px;
+}
+
+.sound-wave div:nth-child(5) {
+  animation-delay: 1s;
+  left: 55px;
+}
+
+.paginationMy:before {
+  content: "";
+  filter: blur(1px);
+}
+
+.paginationMy li:before {
+  filter: blur(1px);
+}
+
+.socials {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.socials li {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+}
+
+.socials li:before {
+  z-index: -1;
+  background: #ff3870;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transition: all .5s;
+  display: none;
+  transform: scale(.9);
+}
+
+.socials li:hover:before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ff3870;
+}
+
+.socials li:hover {
+  color: #ff3870;
+  box-shadow: 0 0 15px #ff3870;
+}
+
+.socials svg {
+  width: 30px;
+  height: 30px;
+  transition: all .5s linear;
+}
+
+.socials li svg path {
+  fill: #fff;
+}
+
+.socials li:hover svg path {
+  fill: #ff3870;
+}
+
+/*# sourceMappingURL=src_Pages_home_homePage_scss_css_bad6b30c._.single.css.map*/
