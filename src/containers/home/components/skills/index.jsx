@@ -1,18 +1,44 @@
 "use client";
-import { useState, useEffect } from "react";
 import "./skills.scss";
-import axios from "axios";
 import Link from "next/link";
+import { IconCloud } from "../../../../components/ui/interactive-icon-cloud";
 
 const Skils = () => {
   const headText = "Skills & Experience";
-  const [skills, setSkills] = useState([]);
-  const URL = process.env.NEXT_PUBLIC_SKILLS_URL;
-  useEffect(() => {
-    axios(URL).then((res) => {
-      setSkills(res.data);
-    });
-  }, []);
+
+  const iconSlugs = [
+    "typescript",
+    "javascript",
+    "dart",
+    "java",
+    "react",
+    "flutter",
+    "android",
+    "html5",
+    "css3",
+    "nodedotjs",
+    "express",
+    "nextdotjs",
+    "prisma",
+    "amazonaws",
+    "postgresql",
+    "firebase",
+    "nginx",
+    "vercel",
+    "testinglibrary",
+    "jest",
+    "cypress",
+    "docker",
+    "git",
+    "jira",
+    "github",
+    "gitlab",
+    "visualstudiocode",
+    "androidstudio",
+    "sonarqube",
+    "figma",
+  ];
+
   return (
     <>
       <section className="skills-experience">
@@ -48,29 +74,32 @@ const Skils = () => {
                 className="toGithub"
                 href="https://github.com/gurbangurbanzade"
                 target="_blank"
+                rel="noreferrer"
               >
                 Github
               </Link>{" "}
               for more details
             </p>
           </div>
-          <div className="icons">
-            {skills &&
-              skills.map((skill, i) => {
-                return (
-                  <div
-                    className="animate__animated animate__fadeInUp skilBox"
-                    key={i}
-                  >
-                    <img
-                      style={{ height: "70px", marginBottom: "10px" }}
-                      src={skill.path}
-                      alt=""
-                    />
-                    <p>{skill.name}</p>
-                  </div>
-                );
-              })}
+          <div
+            className="icon-cloud-container"
+            style={{
+              position: "relative",
+              display: "flex",
+              width: "100%",
+              maxWidth: "800px",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
+              borderRadius: "8px",
+              // border: "1px solid rgba(255, 255, 255, 0.1)",
+              // backgroundColor: "rgba(30, 24, 46, 0.6)",
+              padding: "20px",
+              minHeight: "500px",
+              margin: "0 auto",
+            }}
+          >
+            <IconCloud iconSlugs={iconSlugs} />
           </div>
         </div>
       </section>

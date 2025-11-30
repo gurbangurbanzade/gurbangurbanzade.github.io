@@ -69,7 +69,7 @@
 }
 
 #projects .projectsInfo .portfolio-box .portfolio h1:hover {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
   animation: 1s infinite rubberBand;
 }
 
@@ -87,7 +87,7 @@
 }
 
 #projects .projectsInfo .portfolio-box .previous h1:hover {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
   animation: 1s infinite rubberBand !important;
 }
 
@@ -105,7 +105,7 @@
 }
 
 #projects .projectsInfo h1:hover {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
   animation: 1s infinite rubberBand !important;
 }
 
@@ -121,17 +121,17 @@
 }
 
 #projects p a {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
 }
 
 #projects p a:hover {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
   text-decoration: underline;
 }
 
 #projects a {
-  color: #5df8f5;
   width: 200px;
+  color: var(--primary-green, #1fea64);
   font-size: 24px;
   transition: transform 1s;
   position: relative;
@@ -180,7 +180,7 @@
 }
 
 .Snobella .left .snobella h1:hover {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
   animation: 1s infinite rubberBand;
 }
 
@@ -214,11 +214,11 @@
 }
 
 .Snobella .left .viewCodes a:first-child {
-  color: #5df8f5;
+  color: var(--primary-green, #1fea64);
 }
 
 .Snobella .left .viewCodes a:nth-child(2) {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
 }
 
 .Snobella .right img {
@@ -253,7 +253,7 @@
 }
 
 .Calculator .left .calculator h1:hover {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
   animation: 1s infinite rubberBand;
 }
 
@@ -287,11 +287,11 @@
 }
 
 .Calculator .left .viewCodes a:first-child {
-  color: #5df8f5;
+  color: var(--primary-green, #1fea64);
 }
 
 .Calculator .left .viewCodes a:nth-child(2) {
-  color: #ff3870;
+  color: var(--accent-color, #a21eff);
 }
 
 .Calculator .right .img-wrapper {

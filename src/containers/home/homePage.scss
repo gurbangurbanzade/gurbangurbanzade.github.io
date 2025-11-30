@@ -22,7 +22,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap");
 
-
 @media (max-width: 1000px) {
   .GithubLink {
     position: absolute;
@@ -106,6 +105,40 @@ ul li.active {
 
 .swiper-wrapper {
   transition-timing-function: cubic-bezier(0.64, 0.23, 0.29, 0.83) !important;
+}
+
+.gsap-scroll-container {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  min-height: 100vh;
+}
+
+.scroll-section {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-horizontal-container {
+  display: flex;
+  width: 300vw;
+  will-change: transform;
+  position: relative;
+}
+
+.projects-wrapper {
+  display: flex;
+  width: 300vw;
+  will-change: transform;
 }
 
 @media screen and (max-width: 1000px) {

@@ -111,6 +111,39 @@ ul li.active {
   transition-timing-function: cubic-bezier(.64, .23, .29, .83) !important;
 }
 
+.gsap-scroll-container {
+  height: auto;
+  min-height: 100vh;
+  overflow: hidden auto;
+}
+
+.scroll-section {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+}
+
+.projects-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-horizontal-container {
+  will-change: transform;
+  width: 300vw;
+  display: flex;
+  position: relative;
+}
+
+.projects-wrapper {
+  will-change: transform;
+  width: 300vw;
+  display: flex;
+}
+
 @media screen and (max-width: 1000px) {
   .Main1 {
     display: none;

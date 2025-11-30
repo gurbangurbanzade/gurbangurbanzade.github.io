@@ -1,139 +1,301 @@
-/* eslint-disable react/prop-types */
+"use client";
+import { useState, useRef } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "./Avatar";
+import { Card, CardContent } from "./Card";
+import { Marquee } from "./Marquee";
+import CustomerModal from "./CustomerModal";
+import PropTypes from "prop-types";
+import "./style.module.scss";
 
-import { useRef, useState } from "react";
-import styles from "./style.module.scss";
-import { v4 as uuuidv4 } from "uuid";
+function TestimonialCard({ customer, onCardClick }) {
+  const cardRef = useRef(null);
+  const name = customer.name || "";
+  const surname = customer.surname || "";
+  const fullName = `${name} ${surname}`.trim();
+  const image = customer.img || "";
+  const text = customer.body || "";
+  const position = customer.position || "";
 
-const TestCarousel = ({ customers }) => {
-  const sliderRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const handleMouseDown = (e) => {
-    if (sliderRef.current) {
-      setIsDragging(true);
-      setStartX(e.pageX - sliderRef.current.offsetLeft);
-      setScrollLeft(sliderRef.current.scrollLeft);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    if (sliderRef.current) {
-      const x = e.pageX - sliderRef.current.offsetLeft;
-      const walk = (x - startX) * 2; // Hız çarpanı
-      sliderRef.current.scrollLeft = scrollLeft - walk;
-    }
-  };
-
-  const handleSlide = (direction) => {
-    if (sliderRef.current) {
-      const cards = sliderRef.current;
-      let cardWidth = cards.firstElementChild?.clientWidth || 0;
-      const offset = direction === "left" ? -cardWidth : cardWidth;
-      const currentTransform = cards.style.transform
-        ? parseInt(
-            cards.style.transform.replace("translateX(", "").replace("px)", "")
-          )
-        : 0;
-      const newTransform = currentTransform + offset;
-
-      const minTransform = -cards.scrollWidth + cardWidth;
-      const maxTransform = 0;
-      if (newTransform >= minTransform && newTransform <= maxTransform) {
-        cards.style.transition = "transform 0.5s ease-in-out";
-        cards.style.transform = `translateX(${newTransform}px)`;
-      }
+  const handleClick = () => {
+    if (onCardClick) {
+      onCardClick(customer);
     }
   };
 
   return (
-    <section>
-      <div id={styles.feedbackContainer} className="container">
-        <div id={styles.feedback}>
-          <div className={styles.header}>
-            <div className={styles.leftSide}>
-              <h2>Don’t just take our word for it</h2>
-              <p>
-                Hear from some of our amazing customers who are building faster.
-              </p>
-            </div>
-            <div className={styles.btnBox}>
-              <button
-                className={styles.left}
-                onClick={() => handleSlide("left")}
-              >
-                -
-              </button>
-              <button
-                className={styles.right}
-                onClick={() => handleSlide("right")}
-              >
-                +{" "}
-              </button>
-            </div>
-          </div>
-          <div>
-            <div
-              className={styles.cardSlider}
-              onMouseDown={handleMouseDown}
-              onMouseLeave={handleMouseLeave}
-              onMouseUp={handleMouseUp}
-              onMouseMove={handleMouseMove}
+    <Card
+      ref={cardRef}
+      onClick={handleClick}
+      style={{
+        width: "300px",
+        minWidth: "200px",
+        cursor: "pointer",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.transform = "translateY(-5px) scale(1.02)";
+        e.currentTarget.style.boxShadow = "0 10px 30px rgba(31, 234, 100, 0.3)";
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.transform = "translateY(0) scale(1)";
+        e.currentTarget.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
+      }}
+    >
+      <CardContent
+        style={{
+          padding: "24px",
+          paddingTop: "0",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+          }}
+        >
+          <Avatar
+            style={{
+              width: "36px",
+              height: "36px",
+            }}
+          >
+            <AvatarImage src={image} alt={fullName} />
+            <AvatarFallback>{name[0] || "U"}</AvatarFallback>
+          </Avatar>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <figcaption
+              style={{
+                fontSize: "14px",
+                fontWeight: "500",
+                color: "#f9f5ff",
+                display: "flex",
+                alignItems: "center",
+                gap: "4px",
+              }}
             >
-              <div className={styles.cards} ref={sliderRef}>
-                {customers.map((customer) => {
-                  console.log(customer);
-                  return (
-                    <div key={uuuidv4()} className={styles.card}>
-                      {/* <Image
-                      src={customer.img}
-                      alt={customer.name}
-                      width={92}
-                      height={92}
-                    /> */}
-                      <img
-                        className={styles.cardImg}
-                        src={customer.image}
-                        alt=""
-                      />
-
-                      <h5>
-                        {customer.name} {customer.surname}
-                      </h5>
-                      <p>{customer.position}</p>
-                      {/* <div className={styles.starBox}>
-                      {[1, 2, 3, 4, 5].map((star) =>
-                        star <= customer.starCount ? (
-                          <Image
-                            key={uuuidv4()}
-                            src={starIcon}
-                            alt="star icon"
-                          />
-                        ) : null
-                      )}
-                    </div> */}
-                      <p className={styles.text}>{customer.text}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+              {fullName}
+              {position && (
+                <span style={{ fontSize: "12px", opacity: 0.7 }}>
+                  ({position})
+                </span>
+              )}
+            </figcaption>
           </div>
         </div>
-      </div>
-    </section>
+        <blockquote
+          style={{
+            marginTop: "12px",
+            fontSize: "14px",
+            color: "#f9f5ff",
+            opacity: 0.9,
+          }}
+        >
+          {text}
+        </blockquote>
+      </CardContent>
+    </Card>
   );
+}
+
+TestimonialCard.propTypes = {
+  customer: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    name: PropTypes.string,
+    surname: PropTypes.string,
+    image: PropTypes.string,
+    img: PropTypes.string,
+    text: PropTypes.string,
+    body: PropTypes.string,
+    position: PropTypes.string,
+    country: PropTypes.string,
+  }).isRequired,
+  onCardClick: PropTypes.func,
 };
 
-export default TestCarousel;
+export default function TestCarousel({ customers = [] }) {
+  const [selectedCustomer, setSelectedCustomer] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Transform customers array to testimonials format if needed
+  const testimonials = customers.map((customer, index) => ({
+    id: customer.id || index,
+    name: customer.name || "",
+    surname: customer.surname || "",
+    username: `@${(customer.name || "user").toLowerCase().replace(/\s/g, "")}`,
+    body: customer.text || "",
+    img: customer.image || "",
+    position: customer.position || "",
+    country: customer.country || "",
+    mapUrl: customer.mapUrl || customer.map || "",
+    guideUrl: customer.guideUrl || customer.guide || "",
+  }));
+
+  const handleCardClick = (customer) => {
+    setSelectedCustomer(customer);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => {
+      setSelectedCustomer(null);
+    }, 600);
+  };
+
+  return (
+    <div
+      style={{
+        border: "1px solid rgba(255, 255, 255, 0.1)",
+        borderRadius: "8px",
+        position: "relative",
+        display: "flex",
+        height: "90vh",
+        width: "100vw",
+        // maxWidth: "800px",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        gap: "6px",
+        perspective: "300px",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "16px",
+          width: "100%",
+          transform:
+            "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-10deg) rotateZ(20deg)",
+        }}
+      >
+        {/* Vertical Marquee 1 (downwards) */}
+        <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+          {testimonials.map((review) => (
+            <TestimonialCard
+              key={`col1-${review.id}`}
+              customer={review}
+              onCardClick={handleCardClick}
+            />
+          ))}
+        </Marquee>
+
+        {/* Vertical Marquee 2 (upwards) */}
+        <Marquee
+          vertical
+          pauseOnHover
+          reverse
+          repeat={3}
+          className="[--duration:40s]"
+        >
+          {testimonials.map((review) => (
+            <TestimonialCard
+              key={`col2-${review.id}`}
+              customer={review}
+              onCardClick={handleCardClick}
+            />
+          ))}
+        </Marquee>
+
+        {/* Vertical Marquee 3 (downwards) */}
+        <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
+          {testimonials.map((review) => (
+            <TestimonialCard
+              key={`col3-${review.id}`}
+              customer={review}
+              onCardClick={handleCardClick}
+            />
+          ))}
+        </Marquee>
+
+        {/* Vertical Marquee 4 (upwards) */}
+        <Marquee
+          vertical
+          pauseOnHover
+          reverse
+          repeat={3}
+          className="[--duration:40s]"
+        >
+          {testimonials.map((review) => (
+            <TestimonialCard
+              key={`col4-${review.id}`}
+              customer={review}
+              onCardClick={handleCardClick}
+            />
+          ))}
+        </Marquee>
+
+        {/* Gradient overlays for vertical marquee */}
+        <div
+          style={{
+            pointerEvents: "none",
+            position: "absolute",
+            inset: "0 0 auto 0",
+            height: "25%",
+            background:
+              "linear-gradient(to bottom, rgba(30, 24, 46, 1), transparent)",
+          }}
+        ></div>
+        <div
+          style={{
+            pointerEvents: "none",
+            position: "absolute",
+            inset: "auto 0 0 0",
+            height: "25%",
+            background:
+              "linear-gradient(to top, rgba(30, 24, 46, 1), transparent)",
+          }}
+        ></div>
+        <div
+          style={{
+            pointerEvents: "none",
+            position: "absolute",
+            inset: "0 auto 0 0",
+            width: "25%",
+            background:
+              "linear-gradient(to right, rgba(30, 24, 46, 1), transparent)",
+          }}
+        ></div>
+        <div
+          style={{
+            pointerEvents: "none",
+            position: "absolute",
+            inset: "0 0 0 auto",
+            width: "25%",
+            background:
+              "linear-gradient(to left, rgba(30, 24, 46, 1), transparent)",
+          }}
+        ></div>
+      </div>
+
+      <CustomerModal
+        customer={selectedCustomer}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
+    </div>
+  );
+}
+
+TestCarousel.propTypes = {
+  customers: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      name: PropTypes.string,
+      surname: PropTypes.string,
+      image: PropTypes.string,
+      text: PropTypes.string,
+      position: PropTypes.string,
+      country: PropTypes.string,
+    })
+  ),
+};

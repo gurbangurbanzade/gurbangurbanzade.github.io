@@ -1,364 +1,263 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./projects.scss";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import "swiper/css/pagination";
-import { Pagination, Mousewheel } from "swiper/modules";
 import Image from "./../../assets/img/macbook.png";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import PropTypes from "prop-types";
+import { DynamicFrameLayout } from "./DynamicFrameLayout";
 
-import { PiNumberOneBold } from "react-icons/pi";
-import { PiNumberTwoBold } from "react-icons/pi";
-import { PiNumberThreeBold } from "react-icons/pi";
 import { HiChevronDoubleRight } from "react-icons/hi";
 import { HiChevronDoubleLeft } from "react-icons/hi";
 import { HiChevronLeft } from "react-icons/hi";
 import { HiChevronRight } from "react-icons/hi";
-import { useRef } from "react";
 
-function Projects() {
-  const [animationPlayed, setAnimationPlayed] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+gsap.registerPlugin(ScrollTrigger);
+
+function Projects({
+  activeIndex: propActiveIndex,
+  containerRef: externalContainerRef,
+}) {
+  const [animationPlayed] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(propActiveIndex || 0);
   const router = useRouter();
+  const internalContainerRef = useRef(null);
+  const projectsContainerRef = externalContainerRef || internalContainerRef;
 
-  const [swiper, setSwiper] = useState(null);
+  // 15 elementlik projects array
+  const projects = [
+    {
+      id: 1,
+      type: "video-grid",
+      name: "Video Grid",
+      description: "Interactive video grid layout with hover effects.",
+    },
+    {
+      id: 2,
+      type: "video-grid",
+      name: "Video Grid",
+      description: "Interactive video grid layout with hover effects.",
+    },
+    {
+      id: 3,
+      type: "video-grid",
+      name: "Video Grid",
+      description: "Interactive video grid layout with hover effects.",
+    },
+  ];
 
-  const sliderGoDefault = () => {
-    if (swiper) {
-      swiper.slideTo(0);
+  const demoFrames = [
+    {
+      id: 1,
+      video:
+        "https://static.cdn-luma.com/files/981e483f71aa764b/Company%20Thing%20Exported.mp4",
+      defaultPos: { x: 0, y: 0, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 2,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/WebGL%20Exported%20(1).mp4",
+      defaultPos: { x: 4, y: 0, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 3,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Jitter%20Exported%20Poster.mp4",
+      defaultPos: { x: 8, y: 0, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 4,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Exported%20Web%20Video.mp4",
+      defaultPos: { x: 0, y: 4, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 5,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Logo%20Exported.mp4",
+      defaultPos: { x: 4, y: 4, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 6,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Animation%20Exported%20(4).mp4",
+      defaultPos: { x: 8, y: 4, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 7,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Illustration%20Exported%20(1).mp4",
+      defaultPos: { x: 0, y: 8, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 8,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Art%20Direction%20Exported.mp4",
+      defaultPos: { x: 4, y: 8, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+    {
+      id: 9,
+      video:
+        "https://static.cdn-luma.com/files/58ab7363888153e3/Product%20Video.mp4",
+      defaultPos: { x: 8, y: 8, w: 4, h: 4 },
+      mediaSize: 1,
+      isHovered: false,
+    },
+  ];
+
+  const totalSlides = projects.length - 2;
+
+  useEffect(() => {
+    if (propActiveIndex !== undefined) {
+      setActiveIndex(propActiveIndex);
     }
+  }, [propActiveIndex]);
+
+  const renderProjectName = (name) => {
+    return name.split("").map((letter, idx) => (
+      <h1 key={idx} className={letter === " " ? "marginRight" : ""}>
+        {letter === " " ? "\u00A0" : letter}
+      </h1>
+    ));
   };
 
-  const sliderGoSnobella = () => {
-    if (swiper) {
-      swiper.slideTo(1);
-    }
-  };
-
-  const sliderGoCalculator = () => {
-    if (swiper) {
-      swiper.slideTo(2);
-    }
-  };
-
-  const sliderGoBack = () => {
-    if (swiper) {
-      if (activeIndex > 0) {
-        swiper.slideTo(activeIndex - 1);
-      }
-    }
-  };
-
-  const sliderGoForward = () => {
-    if (swiper) {
-      if (activeIndex < 2) {
-        swiper.slideTo(activeIndex + 1);
-      }
-    }
-  };
-
-  const sliderGoBackDefault = () => {
-    if (swiper) {
-      swiper.slideTo(0);
-    }
-  };
-
-  const sliderGoForwardDefault = () => {
-    if (swiper) {
-      swiper.slideTo(2);
-    }
-  };
   return (
     <>
-      <Swiper
-        onSwiper={setSwiper}
-        modules={[Pagination]}
-        style={{
-          width: "100vw",
-          height: "100vh",
-          position: "relative",
-        }}
-        slidesPerView={1}
-        autoplay={{ delay: 2000 }}
-        speed={2000}
-        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      <div
+        ref={projectsContainerRef}
+        className="projects-wrapper projects-horizontal-container"
+        style={{ display: "flex", width: `${totalSlides * 100}vw` }}
       >
-        <SwiperSlide>
-          <div id="projects" style={{ width: "100%" }}>
-            <div className="container">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="project-slide"
+            style={{ width: "100vw", height: "100vh", flexShrink: 0 }}
+          >
+            {project.type === "intro" ? (
+              <div id="projects" style={{ width: "100%", height: "100%" }}>
+                <div
+                  className={`${
+                    animationPlayed
+                      ? " animate__animated animate__slideInUp"
+                      : " "
+                  } projectsInfo`}
+                >
+                  <div className="portfolio-box">
+                    <div className="portfolio">
+                      {renderProjectName("Portfolio")}
+                    </div>
+                    <span> </span>
+                    <h1> & </h1>
+                    <span> </span>
+                    <div className="previous">
+                      {renderProjectName("Previous")}
+                    </div>
+                  </div>
+                  <div className="projects">
+                    {renderProjectName(project.subtitle)}
+                  </div>
+                </div>
+                <p>
+                  {project.description} <Link href="/contact">contact me!</Link>
+                </p>
+
+                <a
+                  className="seeProj"
+                  href=""
+                  onClick={() => {
+                    router.push("projects-page");
+                  }}
+                >
+                  {" "}
+                  See Projects <span className="projSpan"> {">"} </span>
+                </a>
+              </div>
+            ) : project.type === "video-grid" ? (
+              <div
+                style={{
+                  width: "100%",
+                  height: "100vh",
+                  backgroundColor: "#18181b",
+                }}
+              >
+                <DynamicFrameLayout
+                  frames={demoFrames}
+                  className="w-full h-full"
+                  hoverSize={6}
+                  gapSize={4}
+                />
+              </div>
+            ) : (
               <div
                 className={`${
                   animationPlayed
-                    ? " animate__animated animate__slideInUp"
+                    ? " animate__animated animate__slideInLeft"
                     : " "
-                } projectsInfo`}
+                } Snobella`}
               >
-                <div className="portfolio-box">
-                  <div className="portfolio">
-                    <h1>P</h1>
-                    <h1>o</h1>
-                    <h1>r</h1>
-                    <h1>t</h1>
-                    <h1>f</h1>
-                    <h1>o</h1>
-                    <h1>l</h1>
-                    <h1>i</h1>
-                    <h1>o</h1>
+                <div className="left">
+                  <p>{project.category}</p>
+                  <div className="snobella">
+                    {renderProjectName(project.name)}
                   </div>
-                  <span> </span>
-                  <h1> & </h1>
-                  <span> </span>
-                  <div className="previous">
-                    <h1>P</h1>
-                    <h1>r</h1>
-                    <h1>e</h1>
-                    <h1>v</h1>
-                    <h1>i</h1>
-                    <h1>o</h1>
-                    <h1>u</h1>
-                    <h1>s</h1>
+                  <p>{project.description}</p>
+                  <br />
+                  <p>
+                    <span style={{ fontWeight: "bold" }}>Built with:</span>{" "}
+                    {project.technologies.join(", ")}.
+                  </p>
+                  <br />
+                  <div className="viewCodes">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {" "}
+                      View the code <span>{">"}</span>
+                    </a>
+                    <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                      Visit the App <span>{">"}</span>
+                      <img src="" alt="" />
+                    </a>
                   </div>
                 </div>
-
-                <div className="projects">
-                  <h1>P</h1>
-                  <h1>r</h1>
-                  <h1>o</h1>
-                  <h1>j</h1>
-                  <h1>e</h1>
-                  <h1>c</h1>
-                  <h1>t</h1>
-                  <h1>s</h1>
+                <div className="right">
+                  <div className="img-wrapper">
+                    <img src={project.image} alt={project.name} />
+                  </div>
                 </div>
               </div>
-              <p>
-                I have built various different projects to fit different aspects
-                of the client's business. If you want to see more examples of my
-                work than the ones showcased in this site, please{" "}
-                <Link href="/contact">contact me!</Link>
-              </p>
-
-              <a
-                className="seeProj"
-                href=""
-                onClick={() => {
-                  router.push("projects-page");
-                }}
-              >
-                {" "}
-                See Projects <span className="projSpan"> {">"} </span>
-              </a>
-            </div>
+            )}
           </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div
-            className={`${
-              animationPlayed ? " animate__animated animate__slideInLeft" : " "
-            } Snobella`}
-          >
-            <div className="left">
-              <p>E-COMMERCE APPLICATION</p>
-              <div className="snobella">
-                <h1>S</h1>
-                <h1>N</h1>
-                <h1>O</h1>
-                <h1>B</h1>
-                <h1>E</h1>
-                <h1>L</h1>
-                <h1>L</h1>
-                <h1>A</h1>
-              </div>
-              <p>Online store for selling different types of clothes.</p>
-              <br />
-              <p>
-                <span style={{ fontWeight: "bold" }}>Built with:</span> React,
-                Redux, Node, JavaScript, SASS, Custom Stripe Integration,
-                Firebase (NoSQL Database, Cloud Functions, Cloud Storage,
-                Hosting).
-              </p>
-              <br />
-              <div className="viewCodes">
-                <a href="https://github.com/" target="_blank">
-                  {" "}
-                  View the code <span>{">"}</span>
-                </a>
-                <a
-                  href="https://ecommercefullwebsite.onrender.com/"
-                  target="_blank"
-                >
-                  Visit the App <span>{">"}</span>
-                  <img src="" alt="" />
-                </a>
-              </div>
-            </div>
-            <div className="right">
-              <div className="img-wrapper">
-                <img src={Image} alt="" />
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        {/* Slide 3 */}
-        <SwiperSlide>
-          <div
-            className={`${
-              animationPlayed ? " animate__animated animate__slideInLeft" : " "
-            } Calculator`}
-          >
-            <div className="left">
-              <p>REACT CALCULATOR APP</p>
-              <div className="calculator">
-                <h1>C</h1>
-                <h1>A</h1>
-                <h1>L</h1>
-                <h1>C</h1>
-                <h1>U</h1>
-                <h1>L</h1>
-                <h1>A</h1>
-                <h1>T</h1>
-                <h1>O</h1>
-                <h1>R</h1>
-              </div>
-              <p>
-                Simple Calculator for calculating simple arithmetic operations.
-              </p>
-              <br />
-              <p>
-                <span style={{ fontWeight: "bold" }}>Built with:</span> React,
-                Redux, Node, JavaScript, SASS, Custom Stripe Integration,
-                Firebase (NoSQL Database, Cloud Functions, Cloud Storage,
-                Hosting).
-              </p>
-              <br />
-              <div className="viewCodes">
-                <a href="https://github.com/" target="_blank">
-                  {" "}
-                  View the code <span>{">"}</span>
-                </a>
-                <a href="https://simplecalc-kq0f.onrender.com/" target="_blank">
-                  Visit the App <span>{">"}</span>
-                  <img src="" alt="" />
-                </a>
-              </div>
-            </div>
-            <div className="right">
-              <div className="img-wrapper">
-                {/* <img src={Calculator} alt="" /> */}
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <div
-          style={{
-            width: "100vw",
-            zIndex: "1",
-            position: "absolute",
-            bottom: 30,
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <ul
-            style={{
-              fontSize: "20px",
-              color: "#ff3870",
-              display: "flex",
-              gap: "5px",
-              transition: "none",
-            }}
-          >
-            <li
-              onClick={() => {
-                sliderGoBackDefault();
-              }}
-              style={{
-                cursor: activeIndex === 0 ? "not-allowed" : "pointer",
-                opacity: activeIndex === 0 ? 0.5 : 1,
-                pointerEvents: activeIndex === 0 ? "none" : "auto",
-              }}
-            >
-              <HiChevronDoubleLeft />
-            </li>
-            <li
-              onClick={() => {
-                sliderGoBack();
-              }}
-              style={{
-                cursor: activeIndex === 0 ? "not-allowed" : "pointer",
-                opacity: activeIndex === 0 ? 0.5 : 1,
-                pointerEvents: activeIndex === 0 ? "none" : "auto",
-              }}
-            >
-              <HiChevronLeft />
-            </li>
-            <li
-              onClick={() => {
-                sliderGoDefault();
-              }}
-              style={{
-                border: activeIndex === 0 ? "1px solid #ff3870" : "none",
-                borderRadius: "7px",
-              }}
-            >
-              <PiNumberOneBold />
-            </li>
-            <li
-              onClick={() => {
-                sliderGoSnobella();
-              }}
-              style={{
-                border: activeIndex === 1 ? "1px solid #ff3870" : "none",
-                borderRadius: "7px",
-              }}
-            >
-              <PiNumberTwoBold />
-            </li>
-            <li
-              onClick={() => {
-                sliderGoCalculator();
-              }}
-              style={{
-                border: activeIndex === 2 ? "1px solid #ff3870" : "none",
-                borderRadius: "7px",
-              }}
-            >
-              <PiNumberThreeBold />
-            </li>
-            <li
-              onClick={() => {
-                sliderGoForward();
-              }}
-              style={{
-                cursor: activeIndex === 2 ? "not-allowed" : "pointer",
-                opacity: activeIndex === 2 ? 0.5 : 1,
-                pointerEvents: activeIndex === 2 ? "none" : "auto",
-              }}
-            >
-              <HiChevronRight />
-            </li>
-            <li
-              onClick={() => {
-                sliderGoForwardDefault();
-              }}
-              style={{
-                cursor: activeIndex === 2 ? "not-allowed" : "pointer",
-                opacity: activeIndex === 2 ? 0.5 : 1,
-                pointerEvents: activeIndex === 2 ? "none" : "auto",
-              }}
-            >
-              <HiChevronDoubleRight />
-            </li>
-          </ul>
-        </div>
-      </Swiper>
+        ))}
+      </div>
     </>
   );
 }
+
+Projects.propTypes = {
+  activeIndex: PropTypes.number,
+  containerRef: PropTypes.shape({ current: PropTypes.any }),
+};
 
 export default Projects;

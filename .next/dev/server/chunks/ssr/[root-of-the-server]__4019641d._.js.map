@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/gurbangurbanzada/Desktop/freelance/gurbangurbanzade.github.io/src/app/career/page.js"],"sourcesContent":["import Career from '../../Pages/Career'; export default function Page() { return <Career />; }\n"],"names":[],"mappings":";;;;;;;;;;;;AAAwD,SAAS;IAAS,qBAAO,8OAAC;;;;;AAAW"}}]
+}

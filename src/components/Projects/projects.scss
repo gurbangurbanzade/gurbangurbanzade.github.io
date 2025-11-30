@@ -70,7 +70,7 @@
           margin-bottom: 0px;
 
           &:hover {
-            color: #ff3870;
+            color: var(--accent-color, #a21eff);
             animation: rubberBand 1s infinite;
           }
         }
@@ -89,7 +89,7 @@
           margin-bottom: 0px;
 
           &:hover {
-            color: #ff3870;
+            color: var(--accent-color, #a21eff);
             animation: rubberBand 1s infinite !important;
           }
         }
@@ -110,7 +110,7 @@
       margin-bottom: 0px;
 
       &:hover {
-        color: #ff3870;
+        color: var(--accent-color, #a21eff);
         animation: rubberBand 1s infinite !important;
       }
     }
@@ -127,19 +127,19 @@
     text-align: center;
 
     a {
-      color: #ff3870;
+      color: var(--accent-color, #a21eff);
     }
 
     a:hover {
       text-decoration: underline;
-      color: #ff3870;
+      color: var(--accent-color, #a21eff);
     }
   }
 
   a {
     width: 200px;
     font-size: 24px;
-    color: #5df8f5;
+    color: var(--primary-green, #1fea64);
     position: relative;
     transition: transform 1s ease;
   }
@@ -191,7 +191,7 @@
         cursor: pointer;
 
         &:hover {
-          color: #ff3870;
+          color: var(--accent-color, #a21eff);
           animation: rubberBand 1s infinite;
         }
       }
@@ -227,11 +227,11 @@
       }
 
       a:nth-child(1) {
-        color: #5df8f5;
+        color: var(--primary-green, #1fea64);
       }
 
       a:nth-child(2) {
-        color: #ff3870;
+        color: var(--accent-color, #a21eff);
       }
     }
   }
@@ -274,7 +274,7 @@
         cursor: pointer;
 
         &:hover {
-          color: #ff3870;
+          color: var(--accent-color, #a21eff);
           animation: rubberBand 1s infinite;
         }
       }
@@ -310,11 +310,11 @@
       }
 
       a:nth-child(1) {
-        color: #5df8f5;
+        color: var(--primary-green, #1fea64);
       }
 
       a:nth-child(2) {
-        color: #ff3870;
+        color: var(--accent-color, #a21eff);
       }
     }
   }
@@ -361,17 +361,6 @@
   display: flex;
   justify-content: center;
 }
-
-// .Main2 .Snobella {
-//   .right {
-//     .img-wrapper {
-//       img {
-//         width: 70%;
-//         height: 70%;
-//       }
-//     }
-//   }
-// }
 
 .Main2 .left {
   p {
@@ -422,17 +411,6 @@
     width: 70vw !important;
   }
 }
-
-// @media screen and (max-width: "480px") {
-//   .Main2 .Calculator .right .img-wrapper img {
-//     transform: scale(1.4);
-//   }
-// }
-// @media screen and (max-width: "360px") {
-//   .Main2 .Calculator .right .img-wrapper img {
-//     transform: scale(1.8);
-//   }
-// }
 
 .Snobella .left {
   p {
