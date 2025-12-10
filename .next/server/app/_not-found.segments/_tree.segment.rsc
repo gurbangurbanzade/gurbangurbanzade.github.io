@@ -1,0 +1,9 @@
+:HL["/_next/static/chunks/14f1e908bbde7cb2.css","style"]
+:HL["/_next/static/chunks/086ac3ae3af4a5a7.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap","style"]
+:HL["http://salehriaz.com/404Page/img/404.svg","image"]
+:HL["http://salehriaz.com/404Page/img/rocket.svg","image"]
+:HL["http://salehriaz.com/404Page/img/earth.svg","image"]
+:HL["http://salehriaz.com/404Page/img/moon.svg","image"]
+:HL["http://salehriaz.com/404Page/img/astronaut.svg","image"]
+0:{"buildId":"arVpc4KHUoT0Z3KAtUZHr","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

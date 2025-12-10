@@ -1,0 +1,102 @@
+/* [project]/src/components/layout-navbar/navbar.module.scss.module.css [app-client] (css) */
+.navbar-module-scss-module__BKoIhG__navbar {
+  z-index: 2;
+  position: fixed;
+  top: 32px;
+  left: 32px;
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__socials {
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__social {
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #ffffff0d;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  transition: all .3s ease-in-out;
+  display: flex;
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__social:hover {
+  background: #ffffff1a;
+  transform: translateY(-2px);
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__social:hover .navbar-module-scss-module__BKoIhG__navbar__icon {
+  transform: scale(1.1);
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__social:active {
+  transform: translateY(0);
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__link {
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.navbar-module-scss-module__BKoIhG__navbar__icon {
+  fill: #fff;
+  transition: transform .3s;
+}
+
+@media (max-width: 768px) {
+  .navbar-module-scss-module__BKoIhG__navbar {
+    top: 16px;
+    left: 16px;
+  }
+
+  .navbar-module-scss-module__BKoIhG__navbar__socials {
+    gap: 8px;
+  }
+
+  .navbar-module-scss-module__BKoIhG__navbar__social {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-module-scss-module__BKoIhG__navbar__icon {
+    width: auto;
+    height: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-module-scss-module__BKoIhG__navbar {
+    top: 12px;
+    left: 12px;
+  }
+
+  .navbar-module-scss-module__BKoIhG__navbar__socials {
+    gap: 6px;
+  }
+
+  .navbar-module-scss-module__BKoIhG__navbar__social {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar-module-scss-module__BKoIhG__navbar__icon {
+    width: auto;
+    height: 12px;
+  }
+}
+
+/*# sourceMappingURL=src_components_layout-navbar_navbar_module_scss_module_css_bad6b30c._.single.css.map*/

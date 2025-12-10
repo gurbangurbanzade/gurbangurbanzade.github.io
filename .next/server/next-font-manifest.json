@@ -1,0 +1,19 @@
+{
+  "app": {
+    "[project]/src/app/_not-found/page": [
+      "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
+    ],
+    "[project]/src/app/career/page": [
+      "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
+    ],
+    "[project]/src/app/page": [
+      "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
+    ],
+    "[project]/src/app/projects/page": [
+      "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

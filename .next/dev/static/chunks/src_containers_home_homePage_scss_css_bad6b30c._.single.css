@@ -1,33 +1,316 @@
 /* [project]/src/containers/home/homePage.scss.css [app-client] (css) */
-.Home {
-  align-items: center;
-  gap: 12px;
-  font-size: 32px;
-  display: flex;
+.home-background {
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.home-background__gradient-mesh {
+  filter: blur(60px);
+  background: radial-gradient(circle at 20%, #a21eff26 0%, #0000 50%), radial-gradient(circle at 80% 80%, #1fea6426 0%, #0000 50%), radial-gradient(circle at 40% 20%, #5df8f51a 0%, #0000 50%);
+  width: 200%;
+  height: 200%;
+  animation: 20s ease-in-out infinite gradient-move;
   position: absolute;
-  top: 32px;
-  left: 32px;
+  top: -50%;
+  left: -50%;
 }
 
-.Home span {
-  letter-spacing: 5px;
-  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
-}
-
-.GithubLink {
-  font-size: 40px;
+.home-background__shapes {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 32px;
-  left: 50px;
+  top: 0;
+  left: 0;
 }
 
-@media (max-width: 1000px) {
-  .GithubLink {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 32px;
-    left: 90%;
+.home-background__shape {
+  opacity: .3;
+  filter: blur(1px);
+  animation: 15s ease-in-out infinite float-shape;
+  position: absolute;
+}
+
+.home-background__shape:first-child {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 30px;
+  height: 30px;
+  animation-duration: 12s;
+  animation-delay: 0s;
+  top: 15%;
+  left: 10%;
+}
+
+.home-background__shape:nth-child(2) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 40px;
+  height: 40px;
+  animation-duration: 15s;
+  animation-delay: .5s;
+  top: 30%;
+  left: 25%;
+}
+
+.home-background__shape:nth-child(3) {
+  background: linear-gradient(135deg, #a21eff66, #1fea6433);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 18s;
+  animation-delay: 1s;
+  top: 50%;
+  left: 40%;
+}
+
+.home-background__shape:nth-child(4) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 50px;
+  height: 50px;
+  animation-duration: 14s;
+  animation-delay: 1.5s;
+  top: 70%;
+  left: 60%;
+}
+
+.home-background__shape:nth-child(5) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 25px;
+  height: 25px;
+  animation-duration: 16s;
+  animation-delay: 2s;
+  top: 20%;
+  left: 75%;
+}
+
+.home-background__shape:nth-child(6) {
+  background: linear-gradient(135deg, #a21eff66, #1fea6433);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 13s;
+  animation-delay: .3s;
+  top: 45%;
+  left: 15%;
+}
+
+.home-background__shape:nth-child(7) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 30px;
+  height: 30px;
+  animation-duration: 17s;
+  animation-delay: .8s;
+  top: 65%;
+  left: 30%;
+}
+
+.home-background__shape:nth-child(8) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 40px;
+  height: 40px;
+  animation-duration: 11s;
+  animation-delay: 1.2s;
+  top: 10%;
+  left: 50%;
+}
+
+.home-background__shape:nth-child(9) {
+  background: linear-gradient(135deg, #a21eff66, #1fea6433);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 19s;
+  animation-delay: 1.8s;
+  top: 35%;
+  left: 70%;
+}
+
+.home-background__shape:nth-child(10) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 50px;
+  height: 50px;
+  animation-duration: 14s;
+  animation-delay: 2.3s;
+  top: 55%;
+  left: 85%;
+}
+
+.home-background__shape:nth-child(11) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 25px;
+  height: 25px;
+  animation-duration: 16s;
+  animation-delay: .2s;
+  top: 80%;
+  left: 5%;
+}
+
+.home-background__shape:nth-child(12) {
+  background: linear-gradient(135deg, #a21eff66, #1fea6433);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 12s;
+  animation-delay: .7s;
+  top: 25%;
+  left: 35%;
+}
+
+.home-background__shape:nth-child(13) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 30px;
+  height: 30px;
+  animation-duration: 15s;
+  animation-delay: 1.3s;
+  top: 60%;
+  left: 55%;
+}
+
+.home-background__shape:nth-child(14) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 40px;
+  height: 40px;
+  animation-duration: 18s;
+  animation-delay: 1.9s;
+  top: 85%;
+  left: 80%;
+}
+
+.home-background__shape:nth-child(15) {
+  background: linear-gradient(135deg, #a21eff66, #1fea6433);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 13s;
+  animation-delay: 2.4s;
+  top: 5%;
+  left: 20%;
+}
+
+.home-background__shape:nth-child(16) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 50px;
+  height: 50px;
+  animation-duration: 17s;
+  animation-delay: .4s;
+  top: 40%;
+  left: 45%;
+}
+
+.home-background__shape:nth-child(17) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 25px;
+  height: 25px;
+  animation-duration: 14s;
+  animation-delay: .9s;
+  top: 75%;
+  left: 65%;
+}
+
+.home-background__shape:nth-child(18) {
+  background: linear-gradient(135deg, #a21eff66, #1fea6433);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 16s;
+  animation-delay: 1.4s;
+  top: 12%;
+  left: 90%;
+}
+
+.home-background__shape:nth-child(19) {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: linear-gradient(135deg, #5df8f566, #a21eff33);
+  width: 30px;
+  height: 30px;
+  animation-duration: 12s;
+  animation-delay: 2.1s;
+  top: 38%;
+  left: 12%;
+}
+
+.home-background__shape:nth-child(20) {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  background: linear-gradient(135deg, #1fea6466, #5df8f533);
+  width: 40px;
+  height: 40px;
+  animation-duration: 15s;
+  animation-delay: .6s;
+  top: 68%;
+  left: 38%;
+}
+
+.home-background__grid {
+  opacity: .5;
+  background-image: linear-gradient(#a21eff08 1px, #0000 1px), linear-gradient(90deg, #a21eff08 1px, #0000 1px);
+  background-size: 50px 50px;
+  width: 100%;
+  height: 100%;
+  animation: 20s linear infinite grid-move;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes gradient-move {
+  0%, 100% {
+    transform: translate(0)scale(1);
+  }
+
+  33% {
+    transform: translate(10%, 10%)scale(1.1);
+  }
+
+  66% {
+    transform: translate(-10%, 5%)scale(.9);
+  }
+}
+
+@keyframes float-shape {
+  0%, 100% {
+    opacity: .3;
+    transform: translate(0)rotate(0);
+  }
+
+  25% {
+    opacity: .5;
+    transform: translate(20px, -30px)rotate(90deg);
+  }
+
+  50% {
+    opacity: .4;
+    transform: translate(-15px, 20px)rotate(180deg);
+  }
+
+  75% {
+    opacity: .6;
+    transform: translate(30px, 10px)rotate(270deg);
+  }
+}
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(50px, 50px);
   }
 }
 
@@ -252,56 +535,6 @@ ul li.active {
 
 .paginationMy li:before {
   filter: blur(1px);
-}
-
-.socials {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.socials li {
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  padding: 10px;
-  display: flex;
-}
-
-.socials li:before {
-  z-index: -1;
-  background: #ff3870;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  transition: all .5s;
-  display: none;
-  transform: scale(.9);
-}
-
-.socials li:hover:before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #ff3870;
-}
-
-.socials li:hover {
-  color: #ff3870;
-  box-shadow: 0 0 15px #ff3870;
-}
-
-.socials svg {
-  width: 30px;
-  height: 30px;
-  transition: all .5s linear;
-}
-
-.socials li svg path {
-  fill: #fff;
-}
-
-.socials li:hover svg path {
-  fill: #ff3870;
 }
 
 /*# sourceMappingURL=src_containers_home_homePage_scss_css_bad6b30c._.single.css.map*/

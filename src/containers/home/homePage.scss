@@ -1,34 +1,156 @@
-.Home {
-  position: absolute;
-  font-size: 32px;
-  top: 32px;
-  left: 32px;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.Home span {
-  letter-spacing: 5px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-.GithubLink {
-  position: absolute;
-  font-size: 40px;
-  bottom: 32px;
-  left: 50px;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap");
 
-@media (max-width: 1000px) {
-  .GithubLink {
+.home-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+
+  &__gradient-mesh {
     position: absolute;
-    top: 32px;
-    left: 90%;
-    width: 50px;
-    height: 50px;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at 20% 50%,
+        rgba(162, 30, 255, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        rgba(31, 234, 100, 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 40% 20%,
+        rgba(93, 248, 245, 0.1) 0%,
+        transparent 50%
+      );
+    animation: gradient-move 20s ease-in-out infinite;
+    filter: blur(60px);
+  }
+
+  &__shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__shape {
+    position: absolute;
+    opacity: 0.3;
+    animation: float-shape 15s ease-in-out infinite;
+    filter: blur(1px);
+
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) {
+        $sizes: 30px, 40px, 35px, 50px, 25px, 45px, 30px, 40px, 35px, 50px, 25px,
+          45px, 30px, 40px, 35px, 50px, 25px, 45px, 30px, 40px;
+        $lefts: 10%, 25%, 40%, 60%, 75%, 15%, 30%, 50%, 70%, 85%, 5%, 35%, 55%,
+          80%, 20%, 45%, 65%, 90%, 12%, 38%;
+        $tops: 15%, 30%, 50%, 70%, 20%, 45%, 65%, 10%, 35%, 55%, 80%, 25%, 60%,
+          85%, 5%, 40%, 75%, 12%, 38%, 68%;
+        $delays: 0s, 0.5s, 1s, 1.5s, 2s, 0.3s, 0.8s, 1.2s, 1.8s, 2.3s, 0.2s,
+          0.7s, 1.3s, 1.9s, 2.4s, 0.4s, 0.9s, 1.4s, 2.1s, 0.6s;
+        $durations: 12s, 15s, 18s, 14s, 16s, 13s, 17s, 11s, 19s, 14s, 16s, 12s,
+          15s, 18s, 13s, 17s, 14s, 16s, 12s, 15s;
+
+        width: nth($sizes, $i);
+        height: nth($sizes, $i);
+        left: nth($lefts, $i);
+        top: nth($tops, $i);
+        animation-delay: nth($delays, $i);
+        animation-duration: nth($durations, $i);
+
+        @if $i % 3 == 0 {
+          background: linear-gradient(
+            135deg,
+            rgba(162, 30, 255, 0.4),
+            rgba(31, 234, 100, 0.2)
+          );
+          border-radius: 50%;
+        } @else if $i % 3 == 1 {
+          background: linear-gradient(
+            135deg,
+            rgba(93, 248, 245, 0.4),
+            rgba(162, 30, 255, 0.2)
+          );
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        } @else {
+          background: linear-gradient(
+            135deg,
+            rgba(31, 234, 100, 0.4),
+            rgba(93, 248, 245, 0.2)
+          );
+          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+      }
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(162, 30, 255, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(162, 30, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
+    opacity: 0.5;
+  }
+}
+
+@keyframes gradient-move {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(10%, 10%) scale(1.1);
+  }
+  66% {
+    transform: translate(-10%, 5%) scale(0.9);
+  }
+}
+
+@keyframes float-shape {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(20px, -30px) rotate(90deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-15px, 20px) rotate(180deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(30px, 10px) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes grid-move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
   }
 }
 
@@ -244,61 +366,4 @@ ul li.active {
   li::before {
     filter: blur(1);
   }
-}
-
-.socials {
-  display: flex;
-  // flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  li {
-    padding: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 50%;
-    margin: 10px 0;
-  }
-
-  li::before {
-    display: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ff3870;
-    transition: 0.5s;
-    transform: scale(0.9);
-    z-index: -1;
-  }
-
-  li:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #ff3870;
-  }
-
-  li:hover {
-    color: #ff3870;
-    box-shadow: 0 0 15px #ff3870;
-  }
-
-  svg {
-    height: 30px;
-    width: 30px;
-    transition: 0.5s linear;
-  }
-
-  li svg path {
-    fill: white;
-  }
-
-  li:hover svg path {
-    fill: #ff3870;
-  }
-
-  // svg:hover {
-  //   box-shadow: 0 0 5px #ff3870;
-  //   text-shadow: 0 0 5px #ff3870;
-  // }
 }

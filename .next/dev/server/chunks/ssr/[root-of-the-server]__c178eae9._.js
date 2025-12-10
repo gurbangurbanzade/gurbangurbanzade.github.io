@@ -1783,10 +1783,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Project
 ;
 ;
 ;
-;
-;
-;
-;
 __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__["gsap"].registerPlugin(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$gsap$2f$ScrollTrigger$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ScrollTrigger"]);
 function Projects({ activeIndex: propActiveIndex, containerRef: externalContainerRef }) {
     const [animationPlayed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1939,7 +1935,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                 children: letter === " " ? "\u00A0" : letter
             }, idx, false, {
                 fileName: "[project]/src/components/Projects/index.jsx",
-                lineNumber: 136,
+                lineNumber: 131,
                 columnNumber: 7
             }, this));
     };
@@ -1976,28 +1972,28 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                 children: renderProjectName("Portfolio")
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 165,
+                                                lineNumber: 160,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: " "
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 168,
+                                                lineNumber: 163,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                                 children: " & "
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 169,
+                                                lineNumber: 164,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 children: " "
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 170,
+                                                lineNumber: 165,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2005,13 +2001,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                 children: renderProjectName("Previous")
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 171,
+                                                lineNumber: 166,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 164,
+                                        lineNumber: 159,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2019,13 +2015,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         children: renderProjectName(project.subtitle)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 175,
+                                        lineNumber: 170,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                lineNumber: 157,
+                                lineNumber: 152,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2037,13 +2033,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         children: "contact me!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 180,
+                                        lineNumber: 175,
                                         columnNumber: 41
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                lineNumber: 179,
+                                lineNumber: 174,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2064,19 +2060,19 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 191,
+                                        lineNumber: 186,
                                         columnNumber: 32
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                lineNumber: 183,
+                                lineNumber: 178,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Projects/index.jsx",
-                        lineNumber: 156,
+                        lineNumber: 151,
                         columnNumber: 15
                     }, this) : project.type === "video-grid" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         style: {
@@ -2091,12 +2087,12 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                             gapSize: 4
                         }, void 0, false, {
                             fileName: "[project]/src/components/Projects/index.jsx",
-                            lineNumber: 202,
+                            lineNumber: 197,
                             columnNumber: 17
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/index.jsx",
-                        lineNumber: 195,
+                        lineNumber: 190,
                         columnNumber: 15
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: `${animationPlayed ? " animate__animated animate__slideInLeft" : " "} Snobella`,
@@ -2108,7 +2104,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         children: project.category
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 218,
+                                        lineNumber: 213,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2116,19 +2112,19 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         children: renderProjectName(project.name)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 219,
+                                        lineNumber: 214,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: project.description
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 222,
+                                        lineNumber: 217,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 223,
+                                        lineNumber: 218,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2140,7 +2136,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                 children: "Built with:"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 225,
+                                                lineNumber: 220,
                                                 columnNumber: 21
                                             }, this),
                                             " ",
@@ -2149,12 +2145,12 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 224,
+                                        lineNumber: 219,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 228,
+                                        lineNumber: 223,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2171,13 +2167,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                         children: ">"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                                        lineNumber: 236,
+                                                        lineNumber: 231,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 230,
+                                                lineNumber: 225,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -2190,7 +2186,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                         children: ">"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                                        lineNumber: 239,
+                                                        lineNumber: 234,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -2198,25 +2194,25 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                         alt: ""
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                                        lineNumber: 240,
+                                                        lineNumber: 235,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                                lineNumber: 238,
+                                                lineNumber: 233,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 229,
+                                        lineNumber: 224,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                lineNumber: 217,
+                                lineNumber: 212,
                                 columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2228,33 +2224,33 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                         alt: project.name
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.jsx",
-                                        lineNumber: 246,
+                                        lineNumber: 241,
                                         columnNumber: 21
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects/index.jsx",
-                                    lineNumber: 245,
+                                    lineNumber: 240,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Projects/index.jsx",
-                                lineNumber: 244,
+                                lineNumber: 239,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Projects/index.jsx",
-                        lineNumber: 210,
+                        lineNumber: 205,
                         columnNumber: 15
                     }, this)
                 }, project.id, false, {
                     fileName: "[project]/src/components/Projects/index.jsx",
-                    lineNumber: 150,
+                    lineNumber: 145,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/components/Projects/index.jsx",
-            lineNumber: 144,
+            lineNumber: 139,
             columnNumber: 7
         }, this)
     }, void 0, false);

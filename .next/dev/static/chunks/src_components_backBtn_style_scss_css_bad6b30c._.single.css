@@ -1,0 +1,39 @@
+/* [project]/src/components/backBtn/style.scss.css [app-client] (css) */
+.backBtn {
+  cursor: pointer;
+  color: #fff;
+  z-index: 900;
+  background-color: #0000;
+  border: 1px solid #0000;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all .3s linear;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.backBtn img {
+  filter: brightness() invert();
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  position: relative;
+}
+
+/*# sourceMappingURL=src_components_backBtn_style_scss_css_bad6b30c._.single.css.map*/

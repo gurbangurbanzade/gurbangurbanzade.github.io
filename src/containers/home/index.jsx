@@ -4,7 +4,7 @@ import Intro from "./components/intro/index";
 import Footer from "../../components/Footer";
 import Skills from "./components/skills";
 import "animate.css";
-import Hero from "../../components/Hero";
+import Hero from "../../components/pages/home/hero";
 import Projects from "../../components/Projects";
 import Feedback from "./components/feedback";
 import { useState, useEffect, useRef } from "react";

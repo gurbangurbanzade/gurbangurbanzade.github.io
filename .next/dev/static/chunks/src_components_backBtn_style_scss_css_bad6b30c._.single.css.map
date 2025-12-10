@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/components/backBtn/style.scss"],"sourcesContent":[".backBtn {\n  cursor: pointer;\n  padding: 10px 20px;\n  background-color: transparent;\n  margin-top: 20px;\n  margin-left: 20px;\n  border-radius: 5px;\n  border: 1px solid transparent;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: white;\n  font-size: 16px;\n  transition: 300ms linear;\n  font-weight: 500;\n  position: absolute;\n  left: 10;\n  top: 10;\n  z-index: 900;\n\n  img {\n    width: 20px;\n    height: 20px;\n    filter: brightness(1) invert(1);\n    margin-right: 5px;\n  }\n}\n\n#root {\n  width: 100vw;\n  height: 100vh;\n}\n\nbody {\n  position: relative;\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;;AAoBE;;;;;;;AAQF;;;;;AAKA"}}]
+}

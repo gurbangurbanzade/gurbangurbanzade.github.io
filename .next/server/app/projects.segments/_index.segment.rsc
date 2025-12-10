@@ -1,0 +1,13 @@
+1:"$Sreact.fragment"
+2:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+3:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+4:I[22016,["/_next/static/chunks/796e69ae18b2784c.js"],""]
+:HL["/_next/static/chunks/14f1e908bbde7cb2.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap","style"]
+:HL["http://salehriaz.com/404Page/img/404.svg","image"]
+:HL["http://salehriaz.com/404Page/img/rocket.svg","image"]
+:HL["http://salehriaz.com/404Page/img/earth.svg","image"]
+:HL["http://salehriaz.com/404Page/img/moon.svg","image"]
+:HL["http://salehriaz.com/404Page/img/astronaut.svg","image"]
+:HL["/_next/static/chunks/086ac3ae3af4a5a7.css","style"]
+0:{"buildId":"arVpc4KHUoT0Z3KAtUZHr","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/14f1e908bbde7cb2.css","precedence":"next"}]],["$","html",null,{"lang":"en","className":"drukwideweb_60f60550-module__NVQ5JG__variable","children":[["$","head",null,{"children":["$","link",null,{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap"}]}],["$","body",null,{"children":["$","div",null,{"id":"root","children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":[["$","div",null,{"className":"stars404","children":[["$","div",null,{"className":"central-body","children":[["$","img",null,{"className":"image-404","src":"http://salehriaz.com/404Page/img/404.svg","width":"300px"}],["$","a",null,{"className":"btn-go-home","target":"_blank","children":["$","$L4",null,{"href":"/","children":"Return to website"}]}]]}],["$","div",null,{"className":"objects","children":[["$","img",null,{"className":"object_rocket","src":"http://salehriaz.com/404Page/img/rocket.svg","width":"40px"}],["$","div",null,{"className":"earth-moon","children":[["$","img",null,{"className":"object_earth","src":"http://salehriaz.com/404Page/img/earth.svg","width":"100px"}],["$","img",null,{"className":"object_moon","src":"http://salehriaz.com/404Page/img/moon.svg","width":"80px"}]]}],["$","div",null,{"className":"box_astronaut","children":["$","img",null,{"className":"object_astronaut","src":"http://salehriaz.com/404Page/img/astronaut.svg","width":"140px"}]}]]}]]}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/086ac3ae3af4a5a7.css","precedence":"next"}]]]}]}]}]]}]]}],"loading":null,"isPartial":false}
