@@ -12,7 +12,7 @@ type TProps = {
   onButtonClick?: () => void;
 };
 
-const Hero = ({ onButtonClick }: TProps = {}) => {
+const Hero = ({ onButtonClick }: TProps) => {
   return (
     <section className={styles["hero__section"]}>
       <div className={styles["hero__content"]}>
