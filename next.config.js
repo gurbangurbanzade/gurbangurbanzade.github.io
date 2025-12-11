@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'export',
+  output: "export",
   sassOptions: {
-    includePaths: ['./src'],
+    includePaths: ["./src"],
   },
   // Empty turbopack config to silence the warning
   // Turbopack handles fonts and assets by default
