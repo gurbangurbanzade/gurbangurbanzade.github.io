@@ -1,0 +1,73 @@
+/* [project]/src/containers/home/components/skills/index.module.scss.module.css [app-client] (css) */
+.index-module-scss-module__itB2DG__skills-experience {
+  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  position: relative;
+}
+
+.index-module-scss-module__itB2DG__skills-experience__container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.index-module-scss-module__itB2DG__skills-experience__title {
+  color: #f9f5ff;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.index-module-scss-module__itB2DG__skills-experience__subtitle {
+  color: #f9f5ffb3;
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+}
+
+.index-module-scss-module__itB2DG__skills-experience__grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+  display: grid;
+}
+
+@media (max-width: 992px) {
+  .index-module-scss-module__itB2DG__skills-experience__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.index-module-scss-module__itB2DG__skills-experience__features {
+  order: 1;
+}
+
+@media (max-width: 992px) {
+  .index-module-scss-module__itB2DG__skills-experience__features {
+    order: 2;
+  }
+}
+
+.index-module-scss-module__itB2DG__skills-experience__icons {
+  order: 2;
+}
+
+@media (max-width: 992px) {
+  .index-module-scss-module__itB2DG__skills-experience__icons {
+    order: 1;
+  }
+}
+
+/*# sourceMappingURL=src_containers_home_components_skills_index_module_scss_module_css_bad6b30c._.single.css.map*/

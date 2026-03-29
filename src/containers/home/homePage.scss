@@ -248,18 +248,18 @@ ul li.active {
 .projects-section {
   position: relative;
   overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .projects-horizontal-container {
   display: flex;
-  width: 300vw;
   will-change: transform;
   position: relative;
 }
 
 .projects-wrapper {
   display: flex;
-  width: 300vw;
   will-change: transform;
 }
 

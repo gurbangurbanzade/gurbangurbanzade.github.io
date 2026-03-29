@@ -7,7 +7,6 @@ import "animate.css";
 import Hero from "../../components/pages/home/hero";
 import Projects from "../../components/Projects";
 import Feedback from "./components/feedback";
-import Navbar from "../../components/layout/navbar";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

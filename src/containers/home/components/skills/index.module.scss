@@ -1,0 +1,69 @@
+.skills-experience {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(30, 24, 46);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 24, 46, 1) 42%,
+    rgba(23, 30, 55, 1) 77%
+  );
+  width: 100%;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.skills-experience__container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.skills-experience__title {
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 700;
+  color: #f9f5ff;
+  text-align: center;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.skills-experience__subtitle {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(249, 245, 255, 0.7);
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.skills-experience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.skills-experience__features {
+  order: 1;
+
+  @media (max-width: 992px) {
+    order: 2;
+  }
+}
+
+.skills-experience__icons {
+  order: 2;
+
+  @media (max-width: 992px) {
+    order: 1;
+  }
+}

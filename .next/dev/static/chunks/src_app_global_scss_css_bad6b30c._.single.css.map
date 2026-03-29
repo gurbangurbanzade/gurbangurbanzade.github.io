@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/app/global.scss"],"sourcesContent":["body {\n  background-color: #1d1e2c;\n}\n"],"names":[],"mappings":"AAAA"}}]
+}

@@ -1,113 +1,80 @@
 "use client";
-import "./skills.scss";
-import Link from "next/link";
-import { IconCloud } from "../../../../components/ui/interactive-icon-cloud";
+import styles from "./index.module.scss";
+import { FeatureSteps } from "./FeatureSteps";
+import { IconCloudSection } from "./IconCloudSection";
 
 interface SkillsProps {
   activeIndex?: number;
 }
 
+const features = [
+  {
+    step: "Step 1",
+    title: "Front-end Development",
+    content:
+      "Building responsive, interactive web applications with React, Next.js, and TypeScript. Creating modern UI/UX with animations and smooth user experiences.",
+  },
+  {
+    step: "Step 2",
+    title: "Mobile Development",
+    content:
+      "Developing cross-platform mobile applications with React Native and Flutter. Delivering native performance and seamless user experiences across iOS and Android.",
+  },
+  {
+    step: "Step 3",
+    title: "AI Integration",
+    content:
+      "Integrating AI capabilities using OpenAI, Gemini APIs. Building intelligent applications, educational tools, and interactive learning systems.",
+  },
+  {
+    step: "Step 4",
+    title: "Full Stack Solutions",
+    content:
+      "End-to-end development from frontend to backend. Working with Node.js, databases, cloud services, and DevOps tools to deliver complete solutions.",
+  },
+];
+
+const iconSlugs = [
+  "typescript",
+  "javascript",
+  "react",
+  "nextdotjs",
+  "react",
+  "flutter",
+  "tailwindcss",
+  "css3",
+  "git",
+  "github",
+  "nodedotjs",
+  "openai",
+  "firebase",
+  "postgresql",
+  "docker",
+  "vercel",
+];
+
 const Skils = ({ activeIndex }: SkillsProps = {}) => {
-  const headText = "Skills & Experience";
-
-  const iconSlugs = [
-    "typescript",
-    "javascript",
-    "dart",
-    "java",
-    "react",
-    "flutter",
-    "android",
-    "html5",
-    "css3",
-    "nodedotjs",
-    "express",
-    "nextdotjs",
-    "prisma",
-    "amazonaws",
-    "postgresql",
-    "firebase",
-    "nginx",
-    "vercel",
-    "testinglibrary",
-    "jest",
-    "cypress",
-    "docker",
-    "git",
-    "jira",
-    "github",
-    "gitlab",
-    "visualstudiocode",
-    "androidstudio",
-    "sonarqube",
-    "figma",
-  ];
-
   return (
-    <>
-      <section className="skills-experience">
-        <div className="container">
-          <div className="content">
-            <h2 className="problem">
-              a problem is a change for you to do your best
-            </h2>
-            <div className="headText">
-              {headText.split("").map((letter, i) => {
-                return (
-                  <h1
-                    key={i}
-                    className={letter === " " ? "bounce marginRight" : "bounce"}
-                  >
-                    {letter}
-                  </h1>
-                );
-              })}
-            </div>
-            <h1 className="headTextMobile">Skills & Experience</h1>
-            <h4>
-              The main area of expertise is front end development (client side
-              of the web).
-            </h4>
-            <p>
-              HTML , CSS ,JS , building web applications with React , features,
-              animations, and coding interactive layouts .
-            </p>
-            <p className="visit-linkedin">
-              Visit my{" "}
-              <Link
-                className="toGithub"
-                href="https://github.com/gurbangurbanzade"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Github
-              </Link>{" "}
-              for more details
-            </p>
+    <section className={styles["skills-experience"]}>
+      <div className={styles["skills-experience__container"]}>
+        <h2 className={styles["skills-experience__title"]}>
+          Tech Stack & Tools
+        </h2>
+        <p className={styles["skills-experience__subtitle"]}>
+          I enjoy building interactive, fast, and accessible user interfaces.
+        </p>
+
+        <div className={styles["skills-experience__grid"]}>
+          <div className={styles["skills-experience__features"]}>
+            <FeatureSteps features={features} autoPlayInterval={4000} />
           </div>
-          <div
-            className="icon-cloud-container"
-            style={{
-              position: "relative",
-              display: "flex",
-              width: "100%",
-              maxWidth: "800px",
-              alignItems: "center",
-              justifyContent: "center",
-              overflow: "hidden",
-              borderRadius: "8px",
-              // border: "1px solid rgba(255, 255, 255, 0.1)",
-              // backgroundColor: "rgba(30, 24, 46, 0.6)",
-              padding: "20px",
-              minHeight: "500px",
-              margin: "0 auto",
-            }}
-          >
-            <IconCloud iconSlugs={iconSlugs} />
+
+          <div className={styles["skills-experience__icons"]}>
+            <IconCloudSection iconSlugs={iconSlugs} />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

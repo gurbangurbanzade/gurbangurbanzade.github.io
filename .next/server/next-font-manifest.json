@@ -9,6 +9,9 @@
     "[project]/src/app/page": [
       "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
     ],
+    "[project]/src/app/projects/[slug]/page": [
+      "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
+    ],
     "[project]/src/app/projects/page": [
       "static/media/Druk Wide Web Bold Regular-s.p.507252fa.ttf"
     ]

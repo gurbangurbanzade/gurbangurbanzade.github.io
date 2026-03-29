@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/containers/home/components/skills/IconCloudSection.module.scss"],"sourcesContent":[".icon-cloud-section {\n  position: relative;\n  height: 100%;\n  min-height: 500px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  @media (max-width: 992px) {\n    min-height: 400px;\n  }\n\n  @media (max-width: 768px) {\n    min-height: 300px;\n  }\n}\n\n.icon-cloud-section__container {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: visible;\n  border-radius: 16px;\n  padding: 20px;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;AAQE;EARF;;;;;AAYE;EAZF;;;;;AAiBA"}}]
+}

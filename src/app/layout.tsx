@@ -9,7 +9,8 @@ const drukWideWeb = localFont({
 
 export const metadata = {
   title: "Portfolio",
-  description: "Explore collection of my work in web development, design, and more. View my portfolio to discover creative solutions, innovative projects, and my skills in building unique digital experiences.",
+  description:
+    "Explore collection of my work in web development, design, and more. View my portfolio to discover creative solutions, innovative projects, and my skills in building unique digital experiences.",
 };
 
 export default function RootLayout({ children }) {

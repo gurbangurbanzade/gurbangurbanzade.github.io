@@ -410,20 +410,20 @@ ul li.active {
 }
 
 .projects-section {
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
   overflow: hidden;
 }
 
 .projects-horizontal-container {
   will-change: transform;
-  width: 300vw;
   display: flex;
   position: relative;
 }
 
 .projects-wrapper {
   will-change: transform;
-  width: 300vw;
   display: flex;
 }
 
