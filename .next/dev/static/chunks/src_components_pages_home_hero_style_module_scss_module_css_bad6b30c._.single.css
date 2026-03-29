@@ -1,11 +1,87 @@
 /* [project]/src/components/pages/home/hero/style.module.scss.module.css [app-client] (css) */
+@keyframes style-module-scss-module__l_86eG__flyFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-220px)scale(.8);
+  }
+
+  70% {
+    transform: translateX(12px)scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)scale(1);
+  }
+}
+
+@keyframes style-module-scss-module__l_86eG__flyFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(220px)scale(.8);
+  }
+
+  70% {
+    transform: translateX(-12px)scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0)scale(1);
+  }
+}
+
+@keyframes style-module-scss-module__l_86eG__flyFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-240px)scale(.85);
+  }
+
+  70% {
+    transform: translateY(10px)scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)scale(1);
+  }
+}
+
+@keyframes style-module-scss-module__l_86eG__flyFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(240px)scale(.85);
+  }
+
+  70% {
+    transform: translateY(-10px)scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)scale(1);
+  }
+}
+
+@keyframes style-module-scss-module__l_86eG__fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .style-module-scss-module__l_86eG__hero__section {
-  width: 100%;
-  height: 100vh;
-  position: "relative";
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  position: relative;
   overflow: hidden;
 }
 
@@ -29,73 +105,74 @@
   position: relative;
 }
 
+.style-module-scss-module__l_86eG__hero__slash {
+  z-index: 1;
+  opacity: 0;
+  height: 450px;
+  animation: .75s cubic-bezier(.22, 1, .36, 1) .1s forwards style-module-scss-module__l_86eG__flyFromTop;
+  position: absolute;
+  top: 30px;
+  left: 265px;
+}
+
 .style-module-scss-module__l_86eG__hero__profile {
-  opacity: 1;
   z-index: 2;
-  --animate-delay: 2s;
+  opacity: 0;
   height: 400px;
-  animation: 1s style-module-scss-module__l_86eG__bounceInUp;
+  animation: .75s cubic-bezier(.22, 1, .36, 1) .35s forwards style-module-scss-module__l_86eG__flyFromBottom;
   position: absolute;
   top: 20px;
   left: 200px;
 }
 
 .style-module-scss-module__l_86eG__hero__arrow1 {
-  opacity: 1;
   z-index: 1;
+  opacity: 0;
   height: 130px;
-  animation: 1s style-module-scss-module__l_86eG__backInLeft;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromLeft;
   position: absolute;
   top: 150px;
   left: 100px;
 }
 
 .style-module-scss-module__l_86eG__hero__arrow2 {
-  opacity: 1;
   z-index: 3;
+  opacity: 0;
   height: 130px;
-  animation: 1s style-module-scss-module__l_86eG__backInLeft;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromLeft;
   position: absolute;
   top: 273px;
   left: 100px;
 }
 
 .style-module-scss-module__l_86eG__hero__arrow3 {
-  opacity: 1;
   z-index: 1;
+  opacity: 0;
   height: 130px;
-  animation: 1s style-module-scss-module__l_86eG__backInRight;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromRight;
   position: absolute;
   top: 229px;
   left: 370px;
 }
 
 .style-module-scss-module__l_86eG__hero__arrow4 {
-  opacity: 1;
   z-index: 3;
+  opacity: 0;
   height: 130px;
-  animation: 1s style-module-scss-module__l_86eG__backInRight;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromRight;
   position: absolute;
   top: 353px;
   left: 370px;
 }
 
-.style-module-scss-module__l_86eG__hero__slash {
-  opacity: 1;
-  z-index: 1;
-  height: 450px;
-  animation: 1s style-module-scss-module__l_86eG__bounceInDown;
-  position: absolute;
-  top: 30px;
-  left: 265px;
-}
-
 .style-module-scss-module__l_86eG__hero__text-box {
+  opacity: 0;
   flex-direction: column;
   justify-content: center;
   width: 50vw;
   height: 100vh;
   padding-left: 30px;
+  animation: .7s cubic-bezier(.22, 1, .36, 1) 1s forwards style-module-scss-module__l_86eG__fadeSlideIn;
   display: flex;
 }
 

@@ -2,7 +2,7 @@
 import "./homePage.scss";
 import Intro from "./components/intro/index";
 import Footer from "../../components/Footer";
-import Skills from "./components/skills";
+import HomeBackground from "../../components/HomeBackground";
 import "animate.css";
 import Hero from "../../components/pages/home/hero";
 import Projects from "../../components/Projects";
@@ -38,7 +38,7 @@ function HomePage() {
     }
   };
 
-  const slideToProjects = () => scrollToSection(3);
+  const slideToProjects = () => scrollToSection(2);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -61,7 +61,7 @@ function HomePage() {
     // Scroll progress tracking for all sections except projects (index 2)
     // Sections order: 0=Hero, 1=Intro, 2=Projects, 3=Feedback, 4=Footer
     sections.forEach((section, index) => {
-      if (index === 2) return; // Skip projects section (index 2) for vertical scroll tracking
+      if (index === 2) return; // Projects öz horizontal scroll setup-una sahib, buradan keç
 
       ScrollTrigger.create({
         trigger: section,
@@ -161,15 +161,7 @@ function HomePage() {
       ) : (
         <>
           {/* <Navbar /> */}
-          <div className="home-background">
-            <div className="home-background__gradient-mesh"></div>
-            <div className="home-background__shapes">
-              {Array.from({ length: 20 }).map((_, index) => (
-                <div key={index} className="home-background__shape"></div>
-              ))}
-            </div>
-            <div className="home-background__grid"></div>
-          </div>
+          <HomeBackground />
           <div
             ref={containerRef}
             className="Main1 gsap-scroll-container"
@@ -180,9 +172,6 @@ function HomePage() {
             </div>
             <div className="scroll-section">
               <Intro activeIndex={activeIndex} />
-            </div>
-            <div className="scroll-section skillsSlider">
-              <Skills activeIndex={activeIndex} />
             </div>
             <div
               ref={projectsSectionRef}
@@ -208,7 +197,6 @@ function HomePage() {
           <div className="Main2">
             <Hero />
             <Intro />
-            <Skills />
             <Projects />
             <Feedback />
             <Footer context="main2" />

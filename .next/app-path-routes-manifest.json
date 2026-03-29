@@ -4,5 +4,6 @@
   "/career/page": "/career",
   "/page": "/",
   "/projects/[slug]/page": "/projects/[slug]",
-  "/projects/page": "/projects"
+  "/projects/page": "/projects",
+  "/skills/page": "/skills"
 }

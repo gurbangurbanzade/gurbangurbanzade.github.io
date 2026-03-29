@@ -12,32 +12,35 @@
 }
 
 .style-module-scss-module__obNWfW__intro {
-  text-align: center;
   background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 60px;
   width: 100%;
   min-height: 100vh;
-  padding: 80px 20px;
-  display: flex;
+  padding: 80px 40px;
+  display: grid;
   position: relative;
   overflow: hidden;
 }
 
-.style-module-scss-module__obNWfW__intro-part {
+@media (max-width: 1024px) {
+  .style-module-scss-module__obNWfW__intro {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 60px 24px;
+  }
+}
+
+.style-module-scss-module__obNWfW__info-side {
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 60px;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+  gap: 40px;
+  padding-top: 16px;
   display: flex;
 }
 
 .style-module-scss-module__obNWfW__intro-header {
-  text-align: center;
-  margin-bottom: 20px;
   animation: .8s ease-out style-module-scss-module__obNWfW__fadeInUp;
 }
 
@@ -46,17 +49,17 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   opacity: .9;
-  margin-bottom: 16px;
-  font-size: 16px;
+  margin-bottom: 14px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .style-module-scss-module__obNWfW__intro-title {
   color: #f9f5ff;
-  margin-bottom: 24px;
-  font-size: clamp(42px, 8vw, 72px);
+  margin-bottom: 20px;
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .style-module-scss-module__obNWfW__intro-title .style-module-scss-module__obNWfW__title-accent {
@@ -67,25 +70,23 @@
 }
 
 .style-module-scss-module__obNWfW__intro-description {
-  color: #f9f5ffb3;
-  max-width: 600px;
-  margin: 0 auto;
-  font-size: clamp(16px, 2vw, 20px);
-  line-height: 1.6;
+  color: #f9f5ffa6;
+  max-width: 520px;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.7;
 }
 
 .style-module-scss-module__obNWfW__services-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  width: 100%;
+  grid-template-columns: 1fr;
+  gap: .75rem;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   list-style: none;
   display: grid;
 }
 
 .style-module-scss-module__obNWfW__grid-item {
-  min-height: 14rem;
+  min-height: 10rem;
   list-style: none;
   animation: .8s ease-out backwards style-module-scss-module__obNWfW__fadeInUp;
 }
@@ -111,13 +112,6 @@
   position: relative;
 }
 
-@media (min-width: 768px) {
-  .style-module-scss-module__obNWfW__grid-item-wrapper {
-    border-radius: 1.5rem;
-    padding: 12px;
-  }
-}
-
 .style-module-scss-module__obNWfW__grid-item-wrapper:hover {
   border-color: #fff3;
   transform: translateY(-4px);
@@ -131,26 +125,20 @@
   border-radius: .75rem;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1rem;
   height: 100%;
-  padding: 1.5rem;
+  padding: 1.25rem;
   display: flex;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 1px 3px #0000001a;
-}
-
-@media (min-width: 768px) {
-  .style-module-scss-module__obNWfW__grid-item-content {
-    padding: 1.5rem;
-  }
+  box-shadow: 0 1px 3px #00000026;
 }
 
 .style-module-scss-module__obNWfW__grid-item-inner {
-  flex-direction: column;
+  flex-direction: row;
   flex: 1;
-  justify-content: space-between;
-  gap: .75rem;
+  align-items: flex-start;
+  gap: 1rem;
   display: flex;
 }
 
@@ -158,6 +146,7 @@
   background: #ffffff0d;
   border: .75px solid #ffffff1a;
   border-radius: .5rem;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: fit-content;
@@ -173,112 +162,60 @@
 
 .style-module-scss-module__obNWfW__service-text {
   flex-direction: column;
-  gap: .75rem;
+  gap: .4rem;
   display: flex;
 }
 
 .style-module-scss-module__obNWfW__service-title {
-  letter-spacing: -.04em;
   color: #f9f5ff;
+  letter-spacing: -.02em;
   margin: 0;
-  padding-top: .125rem;
-  font-family: sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 1.375rem;
-}
-
-@media (min-width: 768px) {
-  .style-module-scss-module__obNWfW__service-title {
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-  }
 }
 
 .style-module-scss-module__obNWfW__service-description {
-  color: #f9f5ffb3;
+  color: #f9f5ffa6;
   margin: 0;
-  font-family: sans-serif;
-  font-size: .875rem;
-  line-height: 1.125rem;
+  font-size: .85rem;
+  line-height: 1.45;
 }
 
-@media (min-width: 768px) {
-  .style-module-scss-module__obNWfW__service-description {
-    font-size: 1rem;
-    line-height: 1.25rem;
+.style-module-scss-module__obNWfW__timeline-side {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.style-module-scss-module__obNWfW__timeline-side .design-section {
+  min-height: unset;
+  width: 100%;
+  padding: 20px 0;
+}
+
+@media (max-width: 1024px) {
+  .style-module-scss-module__obNWfW__info-side {
+    gap: 28px;
   }
-}
 
-@media (max-width: 767px) {
   .style-module-scss-module__obNWfW__services-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .style-module-scss-module__obNWfW__intro {
-    min-height: auto;
-    padding: 60px 20px;
-  }
-
-  .style-module-scss-module__obNWfW__intro-part {
-    gap: 40px;
-  }
-
-  .style-module-scss-module__obNWfW__services-grid {
-    padding: 0;
-  }
-
-  .style-module-scss-module__obNWfW__grid-item {
-    min-height: 12rem;
-  }
-
-  .style-module-scss-module__obNWfW__grid-item-content {
-    padding: 1.25rem;
-  }
-
-  .style-module-scss-module__obNWfW__intro-title {
-    font-size: clamp(36px, 10vw, 56px);
-  }
-
-  .style-module-scss-module__obNWfW__intro-description {
-    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
-  .style-module-scss-module__obNWfW__intro-header {
-    margin-bottom: 10px;
+  .style-module-scss-module__obNWfW__intro {
+    gap: 36px;
+    padding: 48px 16px;
   }
 
-  .style-module-scss-module__obNWfW__intro-subtitle {
-    letter-spacing: 2px;
-    font-size: 14px;
+  .style-module-scss-module__obNWfW__grid-item {
+    min-height: auto;
   }
 
-  .style-module-scss-module__obNWfW__grid-item-content {
-    padding: 1rem;
-  }
-
-  .style-module-scss-module__obNWfW__service-icon-wrapper {
-    padding: .375rem;
-  }
-
-  .style-module-scss-module__obNWfW__service-icon {
-    width: .875rem;
-    height: .875rem;
-  }
-
-  .style-module-scss-module__obNWfW__service-title {
-    font-size: 1.125rem;
-    line-height: 1.25rem;
-  }
-
-  .style-module-scss-module__obNWfW__service-description {
-    font-size: .8125rem;
-    line-height: 1rem;
+  .style-module-scss-module__obNWfW__timeline-card {
+    max-width: 100%;
   }
 }
 

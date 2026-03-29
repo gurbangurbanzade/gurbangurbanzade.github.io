@@ -40,7 +40,7 @@ const Hero = ({ onButtonClick }: TProps) => {
             />
             <img
               src={Profile1.src}
-              className={`${styles["hero__profile"]} animate__delay-2s`}
+              className={styles["hero__profile"]}
               alt="Profile"
             />
             <img

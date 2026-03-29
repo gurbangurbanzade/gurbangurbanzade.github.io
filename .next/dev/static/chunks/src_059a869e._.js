@@ -192,10 +192,10 @@ __turbopack_context__.v({
   "grid-item-content": "style-module-scss-module__obNWfW__grid-item-content",
   "grid-item-inner": "style-module-scss-module__obNWfW__grid-item-inner",
   "grid-item-wrapper": "style-module-scss-module__obNWfW__grid-item-wrapper",
+  "info-side": "style-module-scss-module__obNWfW__info-side",
   "intro": "style-module-scss-module__obNWfW__intro",
   "intro-description": "style-module-scss-module__obNWfW__intro-description",
   "intro-header": "style-module-scss-module__obNWfW__intro-header",
-  "intro-part": "style-module-scss-module__obNWfW__intro-part",
   "intro-subtitle": "style-module-scss-module__obNWfW__intro-subtitle",
   "intro-title": "style-module-scss-module__obNWfW__intro-title",
   "service-description": "style-module-scss-module__obNWfW__service-description",
@@ -204,6 +204,8 @@ __turbopack_context__.v({
   "service-text": "style-module-scss-module__obNWfW__service-text",
   "service-title": "style-module-scss-module__obNWfW__service-title",
   "services-grid": "style-module-scss-module__obNWfW__services-grid",
+  "timeline-card": "style-module-scss-module__obNWfW__timeline-card",
+  "timeline-side": "style-module-scss-module__obNWfW__timeline-side",
   "title-accent": "style-module-scss-module__obNWfW__title-accent",
 });
 }),
@@ -221,6 +223,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$glowing$2d$effect$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/glowing-effect.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/src/containers/home/components/intro/style.module.scss [app-client] (css module)");
 "use client";
+;
 ;
 ;
 ;
@@ -245,86 +248,489 @@ const services = [
 const Intro = ({ activeIndex } = {})=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].intro,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-part"],
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-header"],
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-subtitle"],
-                            children: "What I Do"
-                        }, void 0, false, {
-                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                            lineNumber: 37,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-title"],
-                            children: [
-                                "Software Engineer",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["title-accent"],
-                                    children: "."
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["info-side"],
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-header"],
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-subtitle"],
+                                children: "What I Do"
+                            }, void 0, false, {
+                                fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                lineNumber: 40,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-title"],
+                                children: [
+                                    "Software Engineer",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["title-accent"],
+                                        children: "."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                        lineNumber: 43,
+                                        columnNumber: 13
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-description"],
+                                children: "Transforming ideas into powerful digital solutions through code, creativity, and cutting-edge technology."
+                            }, void 0, false, {
+                                fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                lineNumber: 45,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["services-grid"],
+                        children: services.map((service, index)=>{
+                            const IconComponent = service.icon;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(GridItem, {
+                                icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconComponent, {
+                                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["service-icon"]
                                 }, void 0, false, {
                                     fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                                    lineNumber: 40,
-                                    columnNumber: 13
+                                    lineNumber: 57,
+                                    columnNumber: 23
+                                }, void 0),
+                                title: service.title,
+                                description: service.description
+                            }, index, false, {
+                                fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                lineNumber: 55,
+                                columnNumber: 15
+                            }, ("TURBOPACK compile-time value", void 0));
+                        })
+                    }, void 0, false, {
+                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                lineNumber: 38,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["timeline-side"],
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "career",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                        className: "design-section",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "timeline",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-empty"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 72,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-middle top"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 73,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-component timeline-content animated animatedFadeInUp fadeInUp six",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lineCardCareer deadBlue"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 75,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "textCareer",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: "Junior Front-End Developer"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 77,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "Remote worker at AFB"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 78,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "2037"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 79,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 76,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 74,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-component timeline-content study animated animatedFadeInUp fadeInUp five",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "textCareer",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: "Masters Degree at Data Science"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 85,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "UNEC"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 86,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "2035-2037"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 87,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 84,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lineCardCareer deadOrange"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 89,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 83,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-middle",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "timeline-circle"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                        lineNumber: 92,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 91,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-empty"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 94,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-empty"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 96,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-middle",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "timeline-circle"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                        lineNumber: 98,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 97,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-component timeline-content animated animatedFadeInUp fadeInUp four",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lineCardCareer brightOrange"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 101,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "textCareer",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: "Help Desk"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 103,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "Azercell"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 104,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "2034-2035"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 105,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 102,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-component timeline-content study animated animatedFadeInUp fadeInUp three",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "textCareer",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: "Bachelor degree of Computer Science"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 111,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "Baku State University"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 112,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "2030-2034"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 113,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 110,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lineCardCareer deadOrange deadOrangeBorder"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 115,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 109,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-middle",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "timeline-circle"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                        lineNumber: 118,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 117,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-component timeline-content animated animatedFadeInUp fadeInUp two",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lineCardCareer neonBlue"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 121,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "textCareer",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: "Volunteer as Business Manager"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 123,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "Azercell"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 124,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "2030-2034"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 125,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 122,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 120,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-component timeline-content study animated animatedFadeInUp fadeInUp one",
+                                    style: {
+                                        paddingTop: 0,
+                                        paddingBottom: 0
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "textCareer",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    children: "School"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 131,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "School №32"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 132,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    children: "2019-2030"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                                    lineNumber: 133,
+                                                    columnNumber: 19
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 130,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "lineCardCareer deadGreen"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                            lineNumber: 135,
+                                            columnNumber: 17
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 129,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-middle bottom",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "timeline-circle"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                        lineNumber: 138,
+                                        columnNumber: 17
+                                    }, ("TURBOPACK compile-time value", void 0))
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 137,
+                                    columnNumber: 15
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "timeline-empty"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                                    lineNumber: 140,
+                                    columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                            lineNumber: 38,
-                            columnNumber: 11
-                        }, ("TURBOPACK compile-time value", void 0)),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["intro-description"],
-                            children: "Transforming ideas into powerful digital solutions through code, creativity, and cutting-edge technology."
-                        }, void 0, false, {
-                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                            lineNumber: 42,
-                            columnNumber: 11
+                            lineNumber: 70,
+                            columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, void 0, true, {
-                    fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                    lineNumber: 36,
-                    columnNumber: 9
-                }, ("TURBOPACK compile-time value", void 0)),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                    className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["services-grid"],
-                    children: services.map((service, index)=>{
-                        const IconComponent = service.icon;
-                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(GridItem, {
-                            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(IconComponent, {
-                                className: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$containers$2f$home$2f$components$2f$intro$2f$style$2e$module$2e$scss__$5b$app$2d$client$5d$__$28$css__module$29$__["default"]["service-icon"]
-                            }, void 0, false, {
-                                fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                                lineNumber: 54,
-                                columnNumber: 23
-                            }, void 0),
-                            title: service.title,
-                            description: service.description
-                        }, index, false, {
-                            fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                            lineNumber: 52,
-                            columnNumber: 15
-                        }, ("TURBOPACK compile-time value", void 0));
-                    })
+                    }, void 0, false, {
+                        fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                        lineNumber: 69,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                    lineNumber: 48,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/containers/home/components/intro/index.tsx",
-            lineNumber: 35,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0))
-    }, void 0, false, {
+            }, void 0, false, {
+                fileName: "[project]/src/containers/home/components/intro/index.tsx",
+                lineNumber: 67,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
         fileName: "[project]/src/containers/home/components/intro/index.tsx",
-        lineNumber: 34,
+        lineNumber: 36,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -344,7 +750,7 @@ const GridItem = ({ icon, title, description })=>{
                     borderWidth: 3
                 }, void 0, false, {
                     fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                    lineNumber: 76,
+                    lineNumber: 159,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -357,7 +763,7 @@ const GridItem = ({ icon, title, description })=>{
                                 children: icon
                             }, void 0, false, {
                                 fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                                lineNumber: 86,
+                                lineNumber: 169,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -368,7 +774,7 @@ const GridItem = ({ icon, title, description })=>{
                                         children: title
                                     }, void 0, false, {
                                         fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 171,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -376,35 +782,35 @@ const GridItem = ({ icon, title, description })=>{
                                         children: description
                                     }, void 0, false, {
                                         fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 172,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                                lineNumber: 87,
+                                lineNumber: 170,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                        lineNumber: 85,
+                        lineNumber: 168,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/src/containers/home/components/intro/index.tsx",
-                    lineNumber: 84,
+                    lineNumber: 167,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/src/containers/home/components/intro/index.tsx",
-            lineNumber: 75,
+            lineNumber: 158,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/src/containers/home/components/intro/index.tsx",
-        lineNumber: 74,
+        lineNumber: 157,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
