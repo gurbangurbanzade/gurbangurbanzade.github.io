@@ -604,6 +604,10 @@ img, video {
   animation: 3s ease-in-out infinite float;
 }
 
+.resize {
+  resize: both;
+}
+
 .flex-row {
   flex-direction: row;
 }

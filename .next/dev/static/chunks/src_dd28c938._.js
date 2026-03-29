@@ -1079,46 +1079,211 @@ __turbopack_context__.s([
     ()=>__TURBOPACK__default__export__
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
-const HomeBackground = ()=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+// ─── constants ────────────────────────────────────────────────────────────────
+const PALETTE = [
+    [
+        93,
+        248,
+        245
+    ],
+    [
+        162,
+        30,
+        255
+    ],
+    [
+        31,
+        234,
+        100
+    ],
+    [
+        102,
+        126,
+        234
+    ]
+];
+const COUNT = 110;
+const LINK_DIST = 130;
+const MOUSE_RADIUS = 160;
+const REPEL = 0.55;
+const MAX_SPEED = 1.2;
+// ─── component ────────────────────────────────────────────────────────────────
+const HomeBackground = ()=>{
+    _s();
+    const canvasRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const particles = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])([]);
+    const mouse = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])({
+        x: -9999,
+        y: -9999
+    });
+    const raf = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(0);
+    const make = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "HomeBackground.useCallback[make]": (w, h)=>Array.from({
+                length: COUNT
+            }, {
+                "HomeBackground.useCallback[make]": ()=>{
+                    const [r, g, b] = PALETTE[Math.floor(Math.random() * PALETTE.length)];
+                    return {
+                        x: Math.random() * w,
+                        y: Math.random() * h,
+                        vx: (Math.random() - 0.5) * 0.6,
+                        vy: (Math.random() - 0.5) * 0.6,
+                        radius: Math.random() * 1.4 + 0.6,
+                        r,
+                        g,
+                        b,
+                        alpha: Math.random() * 0.45 + 0.35
+                    };
+                }
+            }["HomeBackground.useCallback[make]"])
+    }["HomeBackground.useCallback[make]"], []);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "HomeBackground.useEffect": ()=>{
+            const canvas = canvasRef.current;
+            const ctx = canvas?.getContext("2d");
+            if (!canvas || !ctx) return;
+            const resize = {
+                "HomeBackground.useEffect.resize": ()=>{
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    particles.current = make(canvas.width, canvas.height);
+                }
+            }["HomeBackground.useEffect.resize"];
+            resize();
+            const onMove = {
+                "HomeBackground.useEffect.onMove": (e)=>{
+                    mouse.current = {
+                        x: e.clientX,
+                        y: e.clientY
+                    };
+                }
+            }["HomeBackground.useEffect.onMove"];
+            const onLeave = {
+                "HomeBackground.useEffect.onLeave": ()=>{
+                    mouse.current = {
+                        x: -9999,
+                        y: -9999
+                    };
+                }
+            }["HomeBackground.useEffect.onLeave"];
+            window.addEventListener("resize", resize);
+            window.addEventListener("mousemove", onMove);
+            window.addEventListener("mouseleave", onLeave);
+            // ── draw loop ─────────────────────────────────────────────────────────────
+            const loop = {
+                "HomeBackground.useEffect.loop": ()=>{
+                    const W = canvas.width;
+                    const H = canvas.height;
+                    const mx = mouse.current.x;
+                    const my = mouse.current.y;
+                    const ps = particles.current;
+                    ctx.clearRect(0, 0, W, H);
+                    for(let i = 0; i < ps.length; i++){
+                        const p = ps[i];
+                        // repel from mouse
+                        const mdx = p.x - mx;
+                        const mdy = p.y - my;
+                        const mDst = Math.hypot(mdx, mdy);
+                        if (mDst < MOUSE_RADIUS && mDst > 0) {
+                            const f = (MOUSE_RADIUS - mDst) / MOUSE_RADIUS * REPEL;
+                            p.vx += mdx / mDst * f;
+                            p.vy += mdy / mDst * f;
+                        }
+                        // dampen + clamp
+                        p.vx *= 0.97;
+                        p.vy *= 0.97;
+                        const spd = Math.hypot(p.vx, p.vy);
+                        if (spd > MAX_SPEED) {
+                            p.vx = p.vx / spd * MAX_SPEED;
+                            p.vy = p.vy / spd * MAX_SPEED;
+                        }
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        // wrap
+                        if (p.x < 0) p.x = W;
+                        else if (p.x > W) p.x = 0;
+                        if (p.y < 0) p.y = H;
+                        else if (p.y > H) p.y = 0;
+                        // draw dot
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${p.alpha})`;
+                        ctx.fill();
+                        // draw links
+                        for(let j = i + 1; j < ps.length; j++){
+                            const q = ps[j];
+                            const dx = p.x - q.x;
+                            const dy = p.y - q.y;
+                            const dst = Math.hypot(dx, dy);
+                            if (dst < LINK_DIST) {
+                                const t = 1 - dst / LINK_DIST;
+                                // gradient line from p color → q color
+                                const grad = ctx.createLinearGradient(p.x, p.y, q.x, q.y);
+                                grad.addColorStop(0, `rgba(${p.r},${p.g},${p.b},${t * 0.22})`);
+                                grad.addColorStop(1, `rgba(${q.r},${q.g},${q.b},${t * 0.22})`);
+                                ctx.beginPath();
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(q.x, q.y);
+                                ctx.strokeStyle = grad;
+                                ctx.lineWidth = t * 0.8;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    raf.current = requestAnimationFrame(loop);
+                }
+            }["HomeBackground.useEffect.loop"];
+            raf.current = requestAnimationFrame(loop);
+            return ({
+                "HomeBackground.useEffect": ()=>{
+                    cancelAnimationFrame(raf.current);
+                    window.removeEventListener("resize", resize);
+                    window.removeEventListener("mousemove", onMove);
+                    window.removeEventListener("mouseleave", onLeave);
+                }
+            })["HomeBackground.useEffect"];
+        }
+    }["HomeBackground.useEffect"], [
+        make
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "home-background",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "home-background__gradient-mesh"
             }, void 0, false, {
                 fileName: "[project]/src/components/HomeBackground/index.tsx",
-                lineNumber: 3,
-                columnNumber: 5
+                lineNumber: 155,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "home-background__shapes",
-                children: Array.from({
-                    length: 20
-                }).map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "home-background__shape"
-                    }, index, false, {
-                        fileName: "[project]/src/components/HomeBackground/index.tsx",
-                        lineNumber: 6,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)))
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("canvas", {
+                ref: canvasRef,
+                className: "home-background__canvas"
             }, void 0, false, {
                 fileName: "[project]/src/components/HomeBackground/index.tsx",
-                lineNumber: 4,
-                columnNumber: 5
+                lineNumber: 156,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "home-background__grid"
             }, void 0, false, {
                 fileName: "[project]/src/components/HomeBackground/index.tsx",
-                lineNumber: 9,
-                columnNumber: 5
+                lineNumber: 157,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/HomeBackground/index.tsx",
-        lineNumber: 2,
-        columnNumber: 3
+        lineNumber: 154,
+        columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
+};
+_s(HomeBackground, "lnfodEwnNn9jOiX5WxUGcxvWPpk=");
 _c = HomeBackground;
 const __TURBOPACK__default__export__ = HomeBackground;
 var _c;
