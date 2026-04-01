@@ -102,7 +102,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/calculator": {
+    "/projects/architecturaltrends": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -116,7 +116,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/calculator.rsc",
+      "dataRoute": "/projects/architecturaltrends.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -127,7 +127,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/dashboard": {
+    "/projects/bostonprocarservice": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -141,7 +141,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/dashboard.rsc",
+      "dataRoute": "/projects/bostonprocarservice.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -152,7 +152,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/mobile-ui": {
+    "/projects/cashi": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -166,7 +166,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/mobile-ui.rsc",
+      "dataRoute": "/projects/cashi.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -177,7 +177,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/phone-calc": {
+    "/projects/cmspanel": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -191,7 +191,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/phone-calc.rsc",
+      "dataRoute": "/projects/cmspanel.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -202,7 +202,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/pink-calculator": {
+    "/projects/docabostonkitchens": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -216,7 +216,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/pink-calculator.rsc",
+      "dataRoute": "/projects/docabostonkitchens.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -227,7 +227,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/portfolio": {
+    "/projects/ecomcontrolpanel": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -241,7 +241,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/portfolio.rsc",
+      "dataRoute": "/projects/ecomcontrolpanel.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -252,7 +252,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/sign-up-form": {
+    "/projects/haulcrafter": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -266,7 +266,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/sign-up-form.rsc",
+      "dataRoute": "/projects/haulcrafter.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -277,7 +277,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/snobella": {
+    "/projects/kenwoodbuilders": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -291,7 +291,7 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/snobella.rsc",
+      "dataRoute": "/projects/kenwoodbuilders.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",
@@ -302,7 +302,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects/stylish": {
+    "/projects/mfinancepanel": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -316,7 +316,132 @@
       ],
       "initialRevalidateSeconds": false,
       "srcRoute": "/projects/[slug]",
-      "dataRoute": "/projects/stylish.rsc",
+      "dataRoute": "/projects/mfinancepanel.rsc",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/projects/omspanel": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/projects/[slug]",
+      "dataRoute": "/projects/omspanel.rsc",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/projects/pimpanel": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/projects/[slug]",
+      "dataRoute": "/projects/pimpanel.rsc",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/projects/punkyai": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/projects/[slug]",
+      "dataRoute": "/projects/punkyai.rsc",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/projects/vitanur": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/projects/[slug]",
+      "dataRoute": "/projects/vitanur.rsc",
+      "prefetchDataRoute": null,
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/projects/yuvam": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/projects/[slug]",
+      "dataRoute": "/projects/yuvam.rsc",
       "prefetchDataRoute": null,
       "allowHeader": [
         "host",

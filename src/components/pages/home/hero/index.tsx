@@ -1,11 +1,11 @@
 "use client";
 import styles from "./style.module.scss";
-import Arrow1 from "../../../../assets/img/heroBannerImg/arrow1.png";
-import Arrow2 from "../../../../assets/img/heroBannerImg/arrow2.png";
-import Arrow3 from "../../../../assets/img/heroBannerImg/arrow3.png";
-import Arrow4 from "../../../../assets/img/heroBannerImg/arrow4.png";
-import Slash from "../../../../assets/img/heroBannerImg/slash.png";
-import Profile1 from "../../../../assets/img/heroBannerImg/profile1.png";
+import Arrow1 from "@/assets/images/heroBannerImg/arrow1.webp";
+import Arrow2 from "@/assets/images/heroBannerImg/arrow2.webp";
+import Arrow3 from "@/assets/images/heroBannerImg/arrow3.webp";
+import Arrow4 from "@/assets/images/heroBannerImg/arrow4.webp";
+import Slash from "@/assets/images/heroBannerImg/slash.webp";
+import Profile1 from "@/assets/images/heroBannerImg/profile1.webp";
 import { FaArrowRight } from "react-icons/fa";
 
 type TProps = {

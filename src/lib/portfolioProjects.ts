@@ -1,15 +1,19 @@
 import type { StaticImageData } from "next/image";
 import type { ProjectFrame } from "@/components/Projects/DynamicFrameLayout";
 
-import portfolioImg from "@/assets/img/portfolio.png";
-import snobellaImg from "@/assets/img/snobella.png";
-import signupImg from "@/assets/img/sign-up-form.png";
-import calculatorImg from "@/assets/img/calculator.png";
-import phoneImg from "@/assets/img/phone.png";
-import stylishImg from "@/assets/img/stylish.png";
-import macbookImg from "@/assets/img/macbook.png";
-import pinkCalculatorImg from "@/assets/img/PinkCaculator.png";
-import phoneCalcImg from "@/assets/img/phoneCalc.png";
+import yuvamImg from "@/assets/images/projects/yuvam.webp";
+import kenwoodbuildersImg from "@/assets/images/projects/kenwoodBuilders.webp";
+import haulcrafterImg from "@/assets/images/projects/haulCrafter.webp";
+import vitanurImg from "@/assets/images/projects/vitanur.webp";
+import bostonProImg from "@/assets/images/projects/bostonPro.webp";
+import punkyaiImg from "@/assets/images/projects/punkyAi.webp";
+import pimImg from "@/assets/images/projects/pim.webp";
+import cmsImg from "@/assets/images/projects/cms.webp";
+import omsImg from "@/assets/images/projects/oms.webp";
+import ecomImg from "@/assets/images/projects/ecom.webp";
+import atrendsImg from "@/assets/images/projects/atrends.webp";
+import docabostonkitchensImg from "@/assets/images/projects/docabostonkitchens.webp";
+import cashiImg from "@/assets/images/projects/cashi.webp";
 
 // ─────────────────────────────────────────────────────────────────
 //  LAYIHƏ SİYAHISI — yeni layihə əlavə etmək üçün yalnız bura bax
@@ -49,7 +53,7 @@ export const projects: Project[] = [
     description: "---",
     summary: "---",
     stack: ["Next.js", "TypeScript", "SCSS"],
-    image: portfolioImg,
+    image: yuvamImg,
     liveUrl: "https://yuvam.az/en",
   },
   {
@@ -58,7 +62,7 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["React", "UI/UX", "Responsive"],
-    image: snobellaImg,
+    image: kenwoodbuildersImg,
     liveUrl: "https://kenwoodbuilders.com/",
   },
   {
@@ -67,7 +71,7 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["React", "Forms", "Accessibility"],
-    image: signupImg,
+    image: haulcrafterImg,
     liveUrl: "https://haulcrafter.com/",
   },
   {
@@ -76,7 +80,7 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["JavaScript", "CSS", "HTML"],
-    image: calculatorImg,
+    image: vitanurImg,
     liveUrl: "https://vitanur.com/",
   },
   {
@@ -85,7 +89,7 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["React Native", "UI/UX", "Figma"],
-    image: phoneImg,
+    image: bostonProImg,
     liveUrl: "https://bostonprocarservice.com/",
   },
   {
@@ -94,26 +98,36 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["React", "GSAP", "SCSS"],
-    image: stylishImg,
+    image: punkyaiImg,
     liveUrl: "https://dashboard-with-vue.vercel.app/new-dashboard",
   },
   {
-    slug: "pimpanel",
-    title: "PIM Panel",
+    slug: "docabostonkitchens",
+    title: "DoCa Boston Kitchens",
     description: "",
     summary: "",
-    stack: ["Next.js", "TypeScript", "Recharts"],
-    image: macbookImg,
-    liveUrl: "https://pim-panel.machinarium.dev/",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: docabostonkitchensImg,
+    liveUrl: "https://docabostonkitchens.com/",
   },
+
   {
     slug: "cmspanel",
     title: "CMS Panel",
     description: "",
     summary: "",
     stack: ["React", "CSS Modules"],
-    image: pinkCalculatorImg,
+    image: cmsImg,
     liveUrl: "https://cms-panel.machinarium.dev/",
+  },
+  {
+    slug: "architecturaltrends",
+    title: "Architectural Trends",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: atrendsImg,
+    liveUrl: "https://architecturaltrends.com/",
   },
   {
     slug: "omspanel",
@@ -121,7 +135,7 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["React", "Framer Motion", "Tailwind"],
-    image: phoneCalcImg,
+    image: omsImg,
     liveUrl: "https://oms-panel.machinarium.dev/",
   },
   {
@@ -130,35 +144,17 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["React", "Framer Motion", "Tailwind"],
-    image: phoneCalcImg,
+    image: ecomImg,
     liveUrl: "https://ecom-control-panel.machinarium.dev/",
   },
   {
-    slug: "architecturaltrends",
-    title: "Architectural Trends",
+    slug: "pimpanel",
+    title: "PIM Panel",
     description: "",
     summary: "",
-    stack: ["Next.js", "TypeScript", "SCSS"],
-    image: phoneCalcImg,
-    liveUrl: "https://architecturaltrends.com/",
-  },
-  {
-    slug: "docabostonkitchens",
-    title: "DoCa Boston Kitchens",
-    description: "",
-    summary: "",
-    stack: ["Next.js", "TypeScript", "SCSS"],
-    image: phoneCalcImg,
-    liveUrl: "https://docabostonkitchens.com/",
-  },
-  {
-    slug: "mfinancepanel",
-    title: "M Finance Panel",
-    description: "",
-    summary: "",
-    stack: ["Next.js", "TypeScript", "SCSS"],
-    image: phoneCalcImg,
-    liveUrl: "https://mfinance-panel.machinarium.dev/",
+    stack: ["Next.js", "TypeScript", "Recharts"],
+    image: pimImg,
+    liveUrl: "https://pim-panel.machinarium.dev/",
   },
   {
     slug: "cashi",
@@ -166,7 +162,125 @@ export const projects: Project[] = [
     description: "",
     summary: "",
     stack: ["Next.js", "TypeScript", "SCSS"],
-    image: phoneCalcImg,
+    image: cashiImg,
+    liveUrl: "https://mfinance-panel.machinarium.dev/",
+  },
+  {
+    slug: "yuvam",
+    title: "Yuvam",
+    description: "---",
+    summary: "---",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: yuvamImg,
+    liveUrl: "https://yuvam.az/en",
+  },
+  {
+    slug: "kenwoodbuilders",
+    title: "Kenwood Builders",
+    description: "",
+    summary: "",
+    stack: ["React", "UI/UX", "Responsive"],
+    image: kenwoodbuildersImg,
+    liveUrl: "https://kenwoodbuilders.com/",
+  },
+  {
+    slug: "haulcrafter",
+    title: "Haul Crafter",
+    description: "",
+    summary: "",
+    stack: ["React", "Forms", "Accessibility"],
+    image: haulcrafterImg,
+    liveUrl: "https://haulcrafter.com/",
+  },
+  {
+    slug: "vitanur",
+    title: "Vitanur",
+    description: "",
+    summary: "",
+    stack: ["JavaScript", "CSS", "HTML"],
+    image: vitanurImg,
+    liveUrl: "https://vitanur.com/",
+  },
+  {
+    slug: "bostonprocarservice",
+    title: "Boston Pro Car Service",
+    description: "",
+    summary: "",
+    stack: ["React Native", "UI/UX", "Figma"],
+    image: bostonProImg,
+    liveUrl: "https://bostonprocarservice.com/",
+  },
+  {
+    slug: "punkyai",
+    title: "Punky AI Dashboard",
+    description: "",
+    summary: "",
+    stack: ["React", "GSAP", "SCSS"],
+    image: punkyaiImg,
+    liveUrl: "https://dashboard-with-vue.vercel.app/new-dashboard",
+  },
+  {
+    slug: "docabostonkitchens",
+    title: "DoCa Boston Kitchens",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: docabostonkitchensImg,
+    liveUrl: "https://docabostonkitchens.com/",
+  },
+
+  {
+    slug: "cmspanel",
+    title: "CMS Panel",
+    description: "",
+    summary: "",
+    stack: ["React", "CSS Modules"],
+    image: cmsImg,
+    liveUrl: "https://cms-panel.machinarium.dev/",
+  },
+  {
+    slug: "architecturaltrends",
+    title: "Architectural Trends",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: atrendsImg,
+    liveUrl: "https://architecturaltrends.com/",
+  },
+  {
+    slug: "omspanel",
+    title: "OMS Panel",
+    description: "",
+    summary: "",
+    stack: ["React", "Framer Motion", "Tailwind"],
+    image: omsImg,
+    liveUrl: "https://oms-panel.machinarium.dev/",
+  },
+  {
+    slug: "ecomcontrolpanel",
+    title: "E-com Control Panel",
+    description: "",
+    summary: "",
+    stack: ["React", "Framer Motion", "Tailwind"],
+    image: ecomImg,
+    liveUrl: "https://ecom-control-panel.machinarium.dev/",
+  },
+  {
+    slug: "pimpanel",
+    title: "PIM Panel",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "Recharts"],
+    image: pimImg,
+    liveUrl: "https://pim-panel.machinarium.dev/",
+  },
+  {
+    slug: "cashi",
+    title: "Cashi",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: cashiImg,
     liveUrl: "https://mfinance-panel.machinarium.dev/",
   },
 ];

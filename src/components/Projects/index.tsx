@@ -15,44 +15,74 @@ const SLIDE_COUNT = 3;
 const MOBILE_ROWS = 3;
 const MOBILE_COLS = 1;
 
+const DESKTOP_TOTAL = SLIDE_COUNT * GRID_ROWS * GRID_COLS; // 27
+const MOBILE_TOTAL = SLIDE_COUNT * MOBILE_ROWS;             // 9
+
 /**
- * `source` içindəki layihələri dövrə vura-vura tam rows×cols xanə yaradır.
- * Bu şəkildə şəbəkədə heç bir boş xanə qalmır.
+ * Real layihələri əvvəl sıraya düzür, qalan yerlər üçün
+ * mövcud layihələrdən pseudo-random seçim edir.
+ * Eyni indeksi ardıcıl iki dəfə seçməkdən qaçır.
  */
-function fillGrid(
-  source: ProjectFrame[],
-  rows: number,
-  cols: number,
-): ProjectFrame[] {
-  const total = rows * cols;
-  return Array.from({ length: total }, (_, i) => {
-    const src = source[i % source.length];
-    const row = Math.floor(i / cols);
-    const col = i % cols;
-    return {
-      ...src,
-      id: i + 1,
-      defaultPos: { x: col * 4, y: row * 4, w: 4, h: 4 },
-    };
-  });
+function buildFlatList(source: ProjectFrame[], total: number): ProjectFrame[] {
+  const result: ProjectFrame[] = source.slice(0, Math.min(source.length, total));
+  if (result.length >= total) return result;
+
+  // Sadə seeded-random: hər çağırış eyni nəticəni verir (SSR/hydration uyğunluğu)
+  let seed = 42;
+  const rand = () => {
+    seed = (seed * 1664525 + 1013904223) & 0xffffffff;
+    return Math.abs(seed) / 0xffffffff;
+  };
+
+  let lastIdx = result.length > 0 ? result.length - 1 : -1;
+  while (result.length < total) {
+    let idx: number;
+    do {
+      idx = Math.floor(rand() * source.length);
+    } while (idx === lastIdx && source.length > 1);
+    lastIdx = idx;
+    result.push(source[idx]);
+  }
+  return result;
 }
 
-/** Desktop: hər slayd 3×3 şəbəkə */
-const slidePages = Array.from({ length: SLIDE_COUNT }, (_, slideIdx) =>
-  fillGrid(showcaseFrames, GRID_ROWS, GRID_COLS).map((f) => ({
+function positionedFrames(
+  flat: ProjectFrame[],
+  cols: number,
+): ProjectFrame[] {
+  return flat.map((f, i) => ({
+    ...f,
+    id: i + 1,
+    defaultPos: {
+      x: (i % cols) * 4,
+      y: Math.floor(i / cols) * 4,
+      w: 4,
+      h: 4,
+    },
+  }));
+}
+
+/** Desktop: 27 kart — əvvəl real, sonra random doldurulan */
+const desktopFlat = positionedFrames(
+  buildFlatList(showcaseFrames, DESKTOP_TOTAL),
+  GRID_COLS,
+);
+const slidePages = Array.from({ length: SLIDE_COUNT }, (_, slideIdx) => {
+  const start = slideIdx * GRID_ROWS * GRID_COLS;
+  return desktopFlat.slice(start, start + GRID_ROWS * GRID_COLS).map((f) => ({
     ...f,
     id: slideIdx * GRID_ROWS * GRID_COLS + f.id,
-  })),
-);
+  }));
+});
 
 /**
- * Mobil: hər slayd ilk 9 layihənin müvafiq 3-lüyünü göstərir.
+ * Mobil: yalnız ilk 9 real layihə göstərilir.
  * Slayd 0 → item 0-2, Slayd 1 → item 3-5, Slayd 2 → item 6-8
  */
+const mobileFlat = showcaseFrames.slice(0, MOBILE_TOTAL);
 const mobileSlidePages = Array.from({ length: SLIDE_COUNT }, (_, slideIdx) => {
   const start = slideIdx * MOBILE_ROWS;
-  const chunk = showcaseFrames.slice(start, start + MOBILE_ROWS);
-  return chunk.map((f, i) => ({
+  return mobileFlat.slice(start, start + MOBILE_ROWS).map((f, i) => ({
     ...f,
     id: slideIdx * MOBILE_ROWS + i + 1,
     defaultPos: { x: 0, y: i * 4, w: 4, h: 4 },
