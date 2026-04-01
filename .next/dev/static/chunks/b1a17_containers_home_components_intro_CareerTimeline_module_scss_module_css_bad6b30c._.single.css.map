@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/src/containers/home/components/intro/CareerTimeline.module.scss"],"sourcesContent":[".timeline-side {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n\n  :global(.design-section) {\n    min-height: unset;\n    padding: 20px 0;\n    width: 100%;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;AAME"}}]
+}

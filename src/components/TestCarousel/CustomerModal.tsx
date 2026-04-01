@@ -72,185 +72,221 @@ function CustomerModal({ customer, isOpen, onClose }: CustomerModalProps) {
         justifyContent: "center",
         zIndex: 1000,
         pointerEvents: isOpen ? "auto" : "none",
+        padding: "20px",
       }}
       onClick={onClose}
     >
+      {/* Backdrop */}
       <div
         className="modal-overlay"
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.85)",
-          backdropFilter: "blur(10px)",
+          backgroundColor: "rgba(8, 6, 18, 0.75)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
         }}
-      ></div>
+      />
+
+      {/* Modal card */}
       <div
         ref={contentRef}
         onClick={(e) => e.stopPropagation()}
         style={{
           position: "relative",
-          width: "90%",
-          maxWidth: "900px",
+          width: "100%",
+          maxWidth: "560px",
           maxHeight: "90vh",
-          backgroundColor: "rgb(30, 24, 46)",
-          background:
-            "linear-gradient(135deg, rgba(30, 24, 46, 1) 0%, rgba(23, 30, 55, 1) 100%)",
-          borderRadius: "20px",
-          padding: "40px",
           overflowY: "auto",
-          border: "2px solid rgba(31, 234, 100, 0.2)",
-          boxShadow: "0 20px 60px rgba(0, 0, 0, 0.5)",
+          background: "rgba(18, 14, 32, 0.95)",
+          border: "1px solid rgba(255,255,255,0.08)",
+          borderTop: "2px solid #5df8f5",
+          borderRadius: "20px",
+          padding: "32px",
+          boxShadow: "0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(93,248,245,0.08)",
           transformOrigin: "center center",
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgba(255,255,255,0.1) transparent",
         }}
       >
+        {/* Close button */}
         <button
           onClick={onClose}
           style={{
             position: "absolute",
-            top: "20px",
-            right: "20px",
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-            background: "rgba(162, 30, 255, 0.2)",
-            border: "2px solid #a21eff",
-            color: "#a21eff",
-            fontSize: "28px",
+            top: "16px",
+            right: "16px",
+            width: "34px",
+            height: "34px",
+            borderRadius: "8px",
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.1)",
+            color: "rgba(249,245,255,0.6)",
+            fontSize: "18px",
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            transition: "all 0.3s ease",
+            transition: "all 0.2s ease",
+            lineHeight: 1,
           }}
           onMouseEnter={(e) => {
-            const target = e.currentTarget as HTMLButtonElement;
-            target.style.background = "#a21eff";
-            target.style.color = "white";
-            target.style.transform = "rotate(90deg)";
+            const t = e.currentTarget as HTMLButtonElement;
+            t.style.background = "rgba(255,255,255,0.1)";
+            t.style.color = "#f9f5ff";
           }}
           onMouseLeave={(e) => {
-            const target = e.currentTarget as HTMLButtonElement;
-            target.style.background = "rgba(162, 30, 255, 0.2)";
-            target.style.color = "#a21eff";
-            target.style.transform = "rotate(0deg)";
+            const t = e.currentTarget as HTMLButtonElement;
+            t.style.background = "rgba(255,255,255,0.05)";
+            t.style.color = "rgba(249,245,255,0.6)";
           }}
         >
           ×
         </button>
 
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "20px",
-            marginBottom: "30px",
-          }}
-        >
-          <Avatar
-            style={{
-              width: "80px",
-              height: "80px",
-            }}
-          >
-            <AvatarImage src={image} alt={fullName} />
-            <AvatarFallback style={{ fontSize: "32px" }}>
-              {name[0] || "U"}
-            </AvatarFallback>
-          </Avatar>
+        {/* Header: avatar + name */}
+        <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "24px" }}>
+          <div style={{ position: "relative", flexShrink: 0 }}>
+            <Avatar style={{ width: "68px", height: "68px" }}>
+              <AvatarImage src={image} alt={fullName} />
+              <AvatarFallback style={{ fontSize: "26px" }}>{name[0] || "U"}</AvatarFallback>
+            </Avatar>
+            {/* Glow ring */}
+            <div
+              style={{
+                position: "absolute",
+                inset: "-3px",
+                borderRadius: "50%",
+                background: "linear-gradient(135deg, #5df8f5, #667eea)",
+                zIndex: -1,
+                opacity: 0.6,
+              }}
+            />
+          </div>
+
           <div>
             <h2
               style={{
-                fontSize: "32px",
-                fontWeight: "bold",
-                color: "#1fea64",
-                marginBottom: "8px",
+                fontSize: "20px",
+                fontWeight: "800",
+                color: "#f9f5ff",
+                margin: "0 0 4px",
+                lineHeight: 1.2,
               }}
             >
               {fullName}
             </h2>
             {position && (
-              <p
+              <span
                 style={{
-                  fontSize: "18px",
-                  color: "#a21eff",
+                  display: "inline-block",
+                  fontSize: "11.5px",
+                  fontWeight: "600",
+                  color: "#5df8f5",
+                  background: "rgba(93,248,245,0.1)",
+                  border: "1px solid rgba(93,248,245,0.2)",
+                  borderRadius: "6px",
+                  padding: "2px 8px",
                   marginBottom: "4px",
                 }}
               >
                 {position}
-              </p>
+              </span>
             )}
             {country && (
-              <p style={{ fontSize: "14px", color: "#f9f5ff", opacity: 0.8 }}>
+              <p style={{ fontSize: "12px", color: "rgba(249,245,255,0.4)", margin: "4px 0 0" }}>
                 {country}
               </p>
             )}
           </div>
         </div>
 
+        {/* Divider */}
         <div
           style={{
-            marginBottom: "30px",
+            height: "1px",
+            background: "linear-gradient(90deg, #5df8f5, transparent)",
+            opacity: 0.3,
+            marginBottom: "24px",
           }}
-        >
-          <h3
+        />
+
+        {/* Review section */}
+        <div style={{ marginBottom: "28px" }}>
+          <p
             style={{
-              fontSize: "20px",
-              color: "#1fea64",
-              marginBottom: "15px",
+              fontSize: "10px",
+              fontWeight: "700",
+              letterSpacing: "1.5px",
+              textTransform: "uppercase",
+              color: "rgba(249,245,255,0.3)",
+              marginBottom: "14px",
             }}
           >
             Review
-          </h3>
+          </p>
+
+          {/* Big quote mark */}
+          <div
+            style={{
+              fontSize: "64px",
+              lineHeight: 0.8,
+              color: "#5df8f5",
+              opacity: 0.15,
+              fontFamily: "Georgia, serif",
+              userSelect: "none",
+              marginBottom: "8px",
+            }}
+          >
+            "
+          </div>
+
           <p
             style={{
-              fontSize: "18px",
-              color: "#f9f5ff",
-              lineHeight: "1.8",
+              fontSize: "15px",
+              color: "rgba(249,245,255,0.8)",
+              lineHeight: 1.75,
+              fontStyle: "italic",
+              margin: 0,
             }}
           >
             {text}
           </p>
         </div>
 
+        {/* Action buttons */}
         {(mapUrl || guideUrl) && (
-          <div
-            style={{
-              display: "flex",
-              gap: "20px",
-              flexWrap: "wrap",
-            }}
-          >
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
             {mapUrl && (
               <a
                 href={mapUrl}
                 target="_blank"
                 rel="noreferrer"
                 style={{
-                  display: "inline-block",
-                  padding: "15px 30px",
-                  background: "transparent",
-                  border: "2px solid #1fea64",
-                  color: "#1fea64",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  padding: "10px 20px",
+                  background: "rgba(93,248,245,0.08)",
+                  border: "1px solid rgba(93,248,245,0.25)",
+                  color: "#5df8f5",
                   borderRadius: "10px",
                   textDecoration: "none",
-                  fontWeight: "bold",
-                  fontSize: "16px",
-                  transition: "all 0.3s ease",
+                  fontWeight: "600",
+                  fontSize: "13px",
+                  transition: "all 0.2s ease",
                 }}
                 onMouseEnter={(e) => {
-                  const target = e.currentTarget as HTMLAnchorElement;
-                  target.style.background = "#1fea64";
-                  target.style.color = "#1d1e2c";
-                  target.style.transform = "translateY(-3px)";
-                  target.style.boxShadow =
-                    "0 10px 20px rgba(31, 234, 100, 0.3)";
+                  const t = e.currentTarget as HTMLAnchorElement;
+                  t.style.background = "rgba(93,248,245,0.15)";
+                  t.style.transform = "translateY(-2px)";
+                  t.style.boxShadow = "0 8px 20px rgba(93,248,245,0.15)";
                 }}
                 onMouseLeave={(e) => {
-                  const target = e.currentTarget as HTMLAnchorElement;
-                  target.style.background = "transparent";
-                  target.style.color = "#1fea64";
-                  target.style.transform = "translateY(0)";
-                  target.style.boxShadow = "none";
+                  const t = e.currentTarget as HTMLAnchorElement;
+                  t.style.background = "rgba(93,248,245,0.08)";
+                  t.style.transform = "translateY(0)";
+                  t.style.boxShadow = "none";
                 }}
               >
                 View Map
@@ -260,79 +296,73 @@ function CustomerModal({ customer, isOpen, onClose }: CustomerModalProps) {
               <button
                 onClick={() => setShowGuideLocation(!showGuideLocation)}
                 style={{
-                  display: "inline-block",
-                  padding: "15px 30px",
-                  background: showGuideLocation ? "transparent" : "#a21eff",
-                  border: "2px solid #a21eff",
-                  color: showGuideLocation ? "#a21eff" : "white",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "6px",
+                  padding: "10px 20px",
+                  background: showGuideLocation
+                    ? "rgba(162,30,255,0.15)"
+                    : "rgba(162,30,255,0.08)",
+                  border: "1px solid rgba(162,30,255,0.25)",
+                  color: "#a21eff",
                   borderRadius: "10px",
-                  textDecoration: "none",
-                  fontWeight: "bold",
-                  fontSize: "16px",
-                  transition: "all 0.3s ease",
+                  fontWeight: "600",
+                  fontSize: "13px",
                   cursor: "pointer",
+                  transition: "all 0.2s ease",
                 }}
                 onMouseEnter={(e) => {
-                  const target = e.currentTarget as HTMLButtonElement;
-                  if (!showGuideLocation) {
-                    target.style.background = "transparent";
-                    target.style.color = "#a21eff";
-                  }
-                  target.style.transform = "translateY(-3px)";
-                  target.style.boxShadow =
-                    "0 10px 20px rgba(162, 30, 255, 0.3)";
+                  const t = e.currentTarget as HTMLButtonElement;
+                  t.style.background = "rgba(162,30,255,0.18)";
+                  t.style.transform = "translateY(-2px)";
+                  t.style.boxShadow = "0 8px 20px rgba(162,30,255,0.15)";
                 }}
                 onMouseLeave={(e) => {
-                  const target = e.currentTarget as HTMLButtonElement;
-                  if (!showGuideLocation) {
-                    target.style.background = "#a21eff";
-                    target.style.color = "white";
-                  }
-                  target.style.transform = "translateY(0)";
-                  target.style.boxShadow = "none";
+                  const t = e.currentTarget as HTMLButtonElement;
+                  t.style.background = showGuideLocation
+                    ? "rgba(162,30,255,0.15)"
+                    : "rgba(162,30,255,0.08)";
+                  t.style.transform = "translateY(0)";
+                  t.style.boxShadow = "none";
                 }}
               >
-                {showGuideLocation
-                  ? "Hide Guide Location"
-                  : "Show Guide Location"}
+                {showGuideLocation ? "Hide Guide Location" : "Show Guide Location"}
               </button>
             )}
           </div>
         )}
+
+        {/* Guide iframe */}
         {showGuideLocation && guideUrl && (
           <div
             style={{
-              marginTop: "30px",
-              padding: "20px",
-              backgroundColor: "rgba(162, 30, 255, 0.1)",
-              borderRadius: "10px",
-              border: "1px solid rgba(162, 30, 255, 0.3)",
+              marginTop: "20px",
+              borderRadius: "12px",
+              overflow: "hidden",
+              border: "1px solid rgba(162,30,255,0.2)",
+              background: "rgba(162,30,255,0.05)",
             }}
           >
-            <h4
+            <p
               style={{
-                fontSize: "18px",
-                color: "#a21eff",
-                marginBottom: "15px",
+                fontSize: "10px",
+                fontWeight: "700",
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                color: "rgba(162,30,255,0.6)",
+                padding: "12px 16px 0",
+                margin: 0,
               }}
             >
               Guide Location
-            </h4>
-            <div
-              style={{
-                width: "100%",
-                height: "400px",
-                borderRadius: "8px",
-                overflow: "hidden",
-                border: "2px solid rgba(162, 30, 255, 0.2)",
-              }}
-            >
+            </p>
+            <div style={{ width: "100%", height: "320px" }}>
               {guideUrl.startsWith("http") ? (
                 <iframe
                   src={guideUrl}
                   width="100%"
                   height="100%"
-                  style={{ border: "none" }}
+                  style={{ border: "none", display: "block" }}
                   title="Guide Location"
                 />
               ) : (
@@ -343,18 +373,13 @@ function CustomerModal({ customer, isOpen, onClose }: CustomerModalProps) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "#f9f5ff",
                   }}
                 >
                   <a
                     href={guideUrl}
                     target="_blank"
                     rel="noreferrer"
-                    style={{
-                      color: "#1fea64",
-                      textDecoration: "none",
-                      fontSize: "18px",
-                    }}
+                    style={{ color: "#5df8f5", textDecoration: "none", fontSize: "14px" }}
                   >
                     Open Guide: {guideUrl}
                   </a>

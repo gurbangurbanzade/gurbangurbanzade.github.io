@@ -1,8 +1,7 @@
 /* [project]/src/containers/home/components/feedback/style.scss.css [app-client] (css) */
 .flexer {
-  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
+  background: #1e182e;
   height: 100vh;
-  padding: 10vh 0;
 }
 
 .flexer .mediaIconsBox {

@@ -178,12 +178,6 @@ ul li.active {
   display: flex;
 }
 
-@media screen and (max-width: 1000px) {
-  .Main1 {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 1000px) {
   .Main2 {
     display: none;

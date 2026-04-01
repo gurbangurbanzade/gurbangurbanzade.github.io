@@ -85,38 +85,65 @@
 }
 
 @media screen and (max-width: 768px) {
+  /* Horizontal scroll layout */
   .timeline {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch;
+    width: max-content;
+    gap: 12px;
+    padding: 8px 16px 16px;
+    overflow: visible;
   }
 
+  .timeline-empty,
   .timeline-middle {
-    display: none;
+    display: none !important;
   }
 
   .timeline-component {
-    padding: 0 10px 0 10px;
+    flex: 0 0 200px;
+    width: 200px;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .deadGreen,
-  .neonBlue {
-    border-top-left-radius: 0px !important;
-    border-top-right-radius: 0px !important;
+  .timeline-content {
+    flex: 1;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1rem !important;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  .deadOrangeBorder,
-  .brightOrange {
-    border-bottom-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
+  /* Rəngli çubuq kart üstündə horizontal bar kimi */
+  .lineCardCareer {
+    width: 100% !important;
+    height: 4px !important;
+    margin: 0 0 12px 0 !important;
+    border-radius: 4px !important;
+  }
+
+  .textCareer {
+    text-align: left !important;
+  }
+
+  .study {
+    text-align: left !important;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
-  .career {
-    p {
-      font-size: 14px;
-    }
+
+  .career p {
+    font-size: 13px;
   }
 }
 

@@ -109,7 +109,7 @@
   z-index: 1;
   opacity: 0;
   height: 450px;
-  animation: .75s cubic-bezier(.22, 1, .36, 1) .1s forwards style-module-scss-module__l_86eG__flyFromTop;
+  animation: .75s cubic-bezier(.22, 1, .36, 1) .1s both style-module-scss-module__l_86eG__flyFromTop;
   position: absolute;
   top: 30px;
   left: 265px;
@@ -119,7 +119,7 @@
   z-index: 2;
   opacity: 0;
   height: 400px;
-  animation: .75s cubic-bezier(.22, 1, .36, 1) .35s forwards style-module-scss-module__l_86eG__flyFromBottom;
+  animation: .75s cubic-bezier(.22, 1, .36, 1) .35s both style-module-scss-module__l_86eG__flyFromBottom;
   position: absolute;
   top: 20px;
   left: 200px;
@@ -129,7 +129,7 @@
   z-index: 1;
   opacity: 0;
   height: 130px;
-  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromLeft;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s both style-module-scss-module__l_86eG__flyFromLeft;
   position: absolute;
   top: 150px;
   left: 100px;
@@ -139,7 +139,7 @@
   z-index: 3;
   opacity: 0;
   height: 130px;
-  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromLeft;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s both style-module-scss-module__l_86eG__flyFromLeft;
   position: absolute;
   top: 273px;
   left: 100px;
@@ -149,7 +149,7 @@
   z-index: 1;
   opacity: 0;
   height: 130px;
-  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromRight;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s both style-module-scss-module__l_86eG__flyFromRight;
   position: absolute;
   top: 229px;
   left: 370px;
@@ -159,7 +159,7 @@
   z-index: 3;
   opacity: 0;
   height: 130px;
-  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s forwards style-module-scss-module__l_86eG__flyFromRight;
+  animation: .65s cubic-bezier(.22, 1, .36, 1) .6s both style-module-scss-module__l_86eG__flyFromRight;
   position: absolute;
   top: 353px;
   left: 370px;
@@ -172,7 +172,7 @@
   width: 50vw;
   height: 100vh;
   padding-left: 30px;
-  animation: .7s cubic-bezier(.22, 1, .36, 1) 1s forwards style-module-scss-module__l_86eG__fadeSlideIn;
+  animation: .7s cubic-bezier(.22, 1, .36, 1) 1s both style-module-scss-module__l_86eG__fadeSlideIn;
   display: flex;
 }
 

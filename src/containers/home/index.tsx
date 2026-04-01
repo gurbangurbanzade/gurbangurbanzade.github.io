@@ -2,7 +2,7 @@
 import "./homePage.scss";
 import Intro from "./components/intro/index";
 import Footer from "../../components/Footer";
-import HomeBackground from "../../components/HomeBackground";
+import HomeBackground from "../../components/pages/home/home-background";
 import "animate.css";
 import Hero from "../../components/pages/home/hero";
 import Projects from "../../components/Projects";
@@ -61,18 +61,14 @@ function HomePage() {
     // Scroll progress tracking for all sections except projects (index 2)
     // Sections order: 0=Hero, 1=Intro, 2=Projects, 3=Feedback, 4=Footer
     sections.forEach((section, index) => {
-      if (index === 2) return; // Projects öz horizontal scroll setup-una sahib, buradan keç
+      if (index === 2) return;
 
       ScrollTrigger.create({
         trigger: section,
         start: "top 80%",
         end: "bottom 20%",
-        onEnter: () => {
-          setActiveIndex(index);
-        },
-        onEnterBack: () => {
-          setActiveIndex(index);
-        },
+        onEnter: () => setActiveIndex(index),
+        onEnterBack: () => setActiveIndex(index),
         markers: false,
         invalidateOnRefresh: true,
       });
@@ -83,12 +79,9 @@ function HomePage() {
       const setupHorizontalScroll = () => {
         if (!projectsContainer) return;
 
-        // 3 slides, each 100vw, container is 300vw wide
-        // We need to scroll 200vw (from first slide to third slide)
         const totalWidth = projectsContainer.scrollWidth - window.innerWidth;
 
         if (totalWidth <= 0) {
-          // Retry if container not ready
           setTimeout(setupHorizontalScroll, 100);
           return;
         }
@@ -102,36 +95,21 @@ function HomePage() {
           anticipatePin: 1,
           markers: false,
           onUpdate: (self) => {
-            // Scroll horizontally: progress 0 = first slide, progress 1 = third slide
             const scrollX = -totalWidth * self.progress;
-            gsap.set(projectsContainer, {
-              x: scrollX,
-            });
+            gsap.set(projectsContainer, { x: scrollX });
           },
-          onEnter: () => {
-            setActiveIndex(2); // Projects is at index 2
-          },
-          onLeave: () => {
-            setActiveIndex(3); // Next section after Projects
-          },
-          onEnterBack: () => {
-            setActiveIndex(2); // Projects is at index 2
-          },
-          onLeaveBack: () => {
-            setActiveIndex(1); // Previous section before Projects
-          },
+          onEnter: () => setActiveIndex(2),
+          onLeave: () => setActiveIndex(3),
+          onEnterBack: () => setActiveIndex(2),
+          onLeaveBack: () => setActiveIndex(1),
           invalidateOnRefresh: true,
         });
       };
 
-      // Wait for container to be fully rendered
       setTimeout(setupHorizontalScroll, 200);
     }
 
-    // Refresh ScrollTrigger after a short delay to ensure proper calculation
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
+    setTimeout(() => ScrollTrigger.refresh(), 100);
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -194,13 +172,13 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="Main2">
+          {/* <div className="Main2">
             <Hero />
             <Intro />
             <Projects />
             <Feedback />
             <Footer context="main2" />
-          </div>
+          </div> */}
         </>
       )}
     </>

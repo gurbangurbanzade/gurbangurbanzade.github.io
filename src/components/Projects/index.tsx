@@ -16,7 +16,11 @@ const SLIDE_COUNT = 4;
  * `source` içindəki layihələri dövrə vura-vura tam rows×cols xanə yaradır.
  * Bu şəkildə şəbəkədə heç bir boş xanə qalmır.
  */
-function fillGrid(source: ProjectFrame[], rows: number, cols: number): ProjectFrame[] {
+function fillGrid(
+  source: ProjectFrame[],
+  rows: number,
+  cols: number,
+): ProjectFrame[] {
   const total = rows * cols;
   return Array.from({ length: total }, (_, i) => {
     const src = source[i % source.length];
@@ -35,7 +39,7 @@ const slidePages = Array.from({ length: SLIDE_COUNT }, (_, slideIdx) =>
   fillGrid(showcaseFrames, GRID_ROWS, GRID_COLS).map((f) => ({
     ...f,
     id: slideIdx * GRID_ROWS * GRID_COLS + f.id,
-  }))
+  })),
 );
 
 type Slide =
@@ -136,8 +140,7 @@ function Projects({
                   </div>
                 </div>
                 <p>
-                  {slide.description}{" "}
-                  <Link href="/contact">contact me!</Link>
+                  {slide.description} <Link href="/contact">contact me!</Link>
                 </p>
 
                 <a

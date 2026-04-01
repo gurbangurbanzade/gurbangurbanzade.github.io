@@ -49,77 +49,107 @@ function TestimonialCard({
       ref={cardRef}
       onClick={handleClick}
       style={{
-        width: "300px",
+        width: "280px",
         minWidth: "200px",
         cursor: "pointer",
-        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+        background: "rgba(255,255,255,0.04)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        border: "1px solid rgba(255,255,255,0.08)",
+        borderRadius: "16px",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.25)",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "translateY(-5px) scale(1.02)";
-        e.currentTarget.style.boxShadow = "0 10px 30px rgba(31, 234, 100, 0.3)";
+        e.currentTarget.style.transform = "translateY(-6px)";
+        e.currentTarget.style.boxShadow = "0 16px 40px rgba(93, 248, 245, 0.15)";
+        e.currentTarget.style.borderColor = "rgba(93, 248, 245, 0.25)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "translateY(0) scale(1)";
-        e.currentTarget.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
+        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.boxShadow = "0 4px 24px rgba(0,0,0,0.25)";
+        e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
       }}
     >
-      <CardContent
-        style={{
-          padding: "24px",
-          paddingTop: "0",
-        }}
-      >
+      <CardContent style={{ padding: "20px" }}>
+        {/* Quote mark */}
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
+            fontSize: "40px",
+            lineHeight: 1,
+            color: "#5df8f5",
+            opacity: 0.25,
+            fontFamily: "Georgia, serif",
+            marginBottom: "8px",
+            userSelect: "none",
           }}
         >
+          "
+        </div>
+
+        {/* Review text */}
+        <blockquote
+          style={{
+            margin: "0 0 16px",
+            fontSize: "13px",
+            color: "rgba(249, 245, 255, 0.75)",
+            lineHeight: 1.65,
+            display: "-webkit-box",
+            WebkitLineClamp: 4,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
+        >
+          {text}
+        </blockquote>
+
+        {/* Divider */}
+        <div
+          style={{
+            height: "1px",
+            background: "rgba(255,255,255,0.06)",
+            marginBottom: "14px",
+          }}
+        />
+
+        {/* Author row */}
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Avatar
             style={{
-              width: "36px",
-              height: "36px",
+              width: "38px",
+              height: "38px",
+              outline: "2px solid rgba(93, 248, 245, 0.3)",
+              outlineOffset: "2px",
             }}
           >
             <AvatarImage src={image} alt={fullName} />
             <AvatarFallback>{name[0] || "U"}</AvatarFallback>
           </Avatar>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
+          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
             <figcaption
               style={{
-                fontSize: "14px",
-                fontWeight: "500",
+                fontSize: "13px",
+                fontWeight: "700",
                 color: "#f9f5ff",
-                display: "flex",
-                alignItems: "center",
-                gap: "4px",
+                lineHeight: 1.2,
               }}
             >
               {fullName}
-              {position && (
-                <span style={{ fontSize: "12px", opacity: 0.7 }}>
-                  ({position})
-                </span>
-              )}
             </figcaption>
+            {position && (
+              <span
+                style={{
+                  fontSize: "11px",
+                  color: "#5df8f5",
+                  opacity: 0.8,
+                  fontWeight: "500",
+                }}
+              >
+                {position}
+              </span>
+            )}
           </div>
         </div>
-        <blockquote
-          style={{
-            marginTop: "12px",
-            fontSize: "14px",
-            color: "#f9f5ff",
-            opacity: 0.9,
-          }}
-        >
-          {text}
-        </blockquote>
       </CardContent>
     </Card>
   );
@@ -146,7 +176,7 @@ export default function TestCarousel({
   customers?: Customer[];
 }) {
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(
-    null
+    null,
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -179,11 +209,10 @@ export default function TestCarousel({
   return (
     <div
       style={{
-        border: "1px solid rgba(255, 255, 255, 0.1)",
         borderRadius: "8px",
         position: "relative",
         display: "flex",
-        height: "90vh",
+        height: "100dvh",
         width: "100vw",
         // maxWidth: "800px",
         flexDirection: "row",
@@ -324,6 +353,6 @@ TestCarousel.propTypes = {
       text: PropTypes.string,
       position: PropTypes.string,
       country: PropTypes.string,
-    })
+    }),
   ),
 };

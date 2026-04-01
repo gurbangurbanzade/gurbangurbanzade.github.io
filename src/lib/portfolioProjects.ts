@@ -1,4 +1,6 @@
+import type { StaticImageData } from "next/image";
 import type { ProjectFrame } from "@/components/Projects/DynamicFrameLayout";
+
 import portfolioImg from "@/assets/img/portfolio.png";
 import snobellaImg from "@/assets/img/snobella.png";
 import signupImg from "@/assets/img/sign-up-form.png";
@@ -9,169 +11,191 @@ import macbookImg from "@/assets/img/macbook.png";
 import pinkCalculatorImg from "@/assets/img/PinkCaculator.png";
 import phoneCalcImg from "@/assets/img/phoneCalc.png";
 
-/** Layihə şəbəkəsi və detal səhifələri üçün ortaq məlumat */
-export const showcaseFrames: ProjectFrame[] = [
+// ─────────────────────────────────────────────────────────────────
+//  LAYIHƏ SİYAHISI — yeni layihə əlavə etmək üçün yalnız bura bax
+//  Yeni bir obekt əlavə et, qalanını sistem avtomatik idarə edər.
+// ─────────────────────────────────────────────────────────────────
+
+export interface Project {
+  /** URL slug-u  (məs. "my-app" → /projects/my-app) */
+  slug: string;
+
+  /** Şəbəkədə görünən başlıq */
+  title: string;
+
+  /** Şəbəkə kartındakı qısa açıqlama */
+  description: string;
+
+  /** Detal səhifəsindəki tam açıqlama */
+  summary: string;
+
+  /** İstifadə olunan texnologiyalar */
+  stack: string[];
+
+  /** Layihə şəkli (import edilmiş asset və ya URL) */
+  image?: StaticImageData | string;
+
+  /** Canlı URL */
+  liveUrl?: string;
+
+  /** GitHub və ya başqa kod linki */
+  githubUrl?: string;
+}
+
+export const projects: Project[] = [
   {
-    id: 1,
-    defaultPos: { x: 0, y: 0, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "yuvam",
+    title: "Yuvam",
+    description: "---",
+    summary: "---",
+    stack: ["Next.js", "TypeScript", "SCSS"],
     image: portfolioImg,
-    title: "Portfolio",
-    description: "Şəxsi brend, layihə nümayişi və əlaqə bölməsi olan müasir portfolio saytı.",
-    detailHref: "/projects/portfolio",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://yuvam.az/en",
   },
   {
-    id: 2,
-    defaultPos: { x: 4, y: 0, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "kenwoodbuilders",
+    title: "Kenwood Builders",
+    description: "",
+    summary: "",
+    stack: ["React", "UI/UX", "Responsive"],
     image: snobellaImg,
-    title: "Snobella",
-    description: "E-ticarət üçün məhsul kataloqu, səbət və istifadəçi axını ilə UI nümunəsi.",
-    detailHref: "/projects/snobella",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://kenwoodbuilders.com/",
   },
   {
-    id: 3,
-    defaultPos: { x: 8, y: 0, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "haulcrafter",
+    title: "Haul Crafter",
+    description: "",
+    summary: "",
+    stack: ["React", "Forms", "Accessibility"],
     image: signupImg,
-    title: "Qeydiyyat forması",
-    description: "Form validasiyası, əlçatanlıq və təmiz vizual ierarxiya ilə qeydiyyat axını.",
-    detailHref: "/projects/sign-up-form",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://haulcrafter.com/",
   },
   {
-    id: 4,
-    defaultPos: { x: 0, y: 4, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "vitanur",
+    title: "Vitanur",
+    description: "",
+    summary: "",
+    stack: ["JavaScript", "CSS", "HTML"],
     image: calculatorImg,
-    title: "Kalkulyator",
-    description: "Bütün əsas riyazi əməliyyatları dəstəkləyən sadə və sürətli kalkulyator tətbiqi.",
-    detailHref: "/projects/calculator",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://vitanur.com/",
   },
   {
-    id: 5,
-    defaultPos: { x: 4, y: 4, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "bostonprocarservice",
+    title: "Boston Pro Car Service",
+    description: "",
+    summary: "",
+    stack: ["React Native", "UI/UX", "Figma"],
     image: phoneImg,
-    title: "Mobil UI",
-    description: "Mobil cihazlar üçün optimallaşdırılmış interfeys nümunəsi və komponent kitabxanası.",
-    detailHref: "/projects/mobile-ui",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://bostonprocarservice.com/",
   },
   {
-    id: 6,
-    defaultPos: { x: 8, y: 4, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "punkyai",
+    title: "Punky AI Dashboard",
+    description: "",
+    summary: "",
+    stack: ["React", "GSAP", "SCSS"],
     image: stylishImg,
-    title: "Stylish",
-    description: "Moda sahəsi üçün vizual cəhətdən zəngin brend identifikasiyası və UI sistemi.",
-    detailHref: "/projects/stylish",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://dashboard-with-vue.vercel.app/new-dashboard",
   },
   {
-    id: 7,
-    defaultPos: { x: 0, y: 8, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "pimpanel",
+    title: "PIM Panel",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "Recharts"],
     image: macbookImg,
-    title: "Dashboard",
-    description: "Analitika və idarəetmə paneli üçün responsiv masa üstü tətbiqi nümunəsi.",
-    detailHref: "/projects/dashboard",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://pim-panel.machinarium.dev/",
   },
   {
-    id: 8,
-    defaultPos: { x: 4, y: 8, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "cmspanel",
+    title: "CMS Panel",
+    description: "",
+    summary: "",
+    stack: ["React", "CSS Modules"],
     image: pinkCalculatorImg,
-    title: "Pink Calculator",
-    description: "Minimalizmə söykənən rəngli kalkulyator — UI detallarına diqqətin nümunəsi.",
-    detailHref: "/projects/pink-calculator",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://cms-panel.machinarium.dev/",
   },
   {
-    id: 9,
-    defaultPos: { x: 8, y: 8, w: 4, h: 4 },
-    mediaSize: 1,
+    slug: "omspanel",
+    title: "OMS Panel",
+    description: "",
+    summary: "",
+    stack: ["React", "Framer Motion", "Tailwind"],
     image: phoneCalcImg,
-    title: "Phone Calc",
-    description: "Mobil əsaslı kalkulyator: toxunuşa cavab verən düymələr və canlı animasiyalar.",
-    detailHref: "/projects/phone-calc",
-    liveUrl: "https://gurbangurbanzada.github.io/",
+    liveUrl: "https://oms-panel.machinarium.dev/",
+  },
+  {
+    slug: "ecomcontrolpanel",
+    title: "E-com Control Panel",
+    description: "",
+    summary: "",
+    stack: ["React", "Framer Motion", "Tailwind"],
+    image: phoneCalcImg,
+    liveUrl: "https://ecom-control-panel.machinarium.dev/",
+  },
+  {
+    slug: "architecturaltrends",
+    title: "Architectural Trends",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: phoneCalcImg,
+    liveUrl: "https://architecturaltrends.com/",
+  },
+  {
+    slug: "docabostonkitchens",
+    title: "DoCa Boston Kitchens",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: phoneCalcImg,
+    liveUrl: "https://docabostonkitchens.com/",
+  },
+  {
+    slug: "mfinancepanel",
+    title: "M Finance Panel",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: phoneCalcImg,
+    liveUrl: "https://mfinance-panel.machinarium.dev/",
+  },
+  {
+    slug: "cashi",
+    title: "Cashi",
+    description: "",
+    summary: "",
+    stack: ["Next.js", "TypeScript", "SCSS"],
+    image: phoneCalcImg,
+    liveUrl: "https://mfinance-panel.machinarium.dev/",
   },
 ];
 
-export type ProjectDetail = {
-  slug: string;
-  title: string;
-  summary: string;
-  stack: string[];
-};
+// ─────────────────────────────────────────────────────────────────
+//  Aşağıdakıları əl ilə redaktə etmə — `projects`-dən avtomatik yaranır
+// ─────────────────────────────────────────────────────────────────
 
-export const projectDetails: Record<string, ProjectDetail> = {
-  portfolio: {
-    slug: "portfolio",
-    title: "Portfolio",
-    summary:
-      "Bu layihə şəxsi portfolio üçün əsas səhifə, layihələr bölməsi və əlaqə forması birləşdirir. Məqsəd sürətli yüklənmə və aydın vizual ierarxiyadır.",
-    stack: ["Next.js", "TypeScript", "SCSS"],
-  },
-  snobella: {
-    slug: "snobella",
-    title: "Snobella",
-    summary:
-      "E-ticarət interfeysi üçün məhsul şəbəkəsi, filtrlər və mobil uyğun düzgün boşluqlar ilə hazırlanmış nümunə.",
-    stack: ["React", "UI/UX", "Responsive"],
-  },
-  "sign-up-form": {
-    slug: "sign-up-form",
-    title: "Qeydiyyat forması",
-    summary:
-      "İstifadəçi qeydiyyatı üçün addım-addım forma, xəta mesajları və fokus vəziyyətləri üçün aydın dizayn.",
-    stack: ["React", "Forms", "Accessibility"],
-  },
-  calculator: {
-    slug: "calculator",
-    title: "Kalkulyator",
-    summary:
-      "Bütün əsas riyazi əməliyyatları dəstəkləyən sadə, sürətli və istifadəçi dostu kalkulyator tətbiqi.",
-    stack: ["JavaScript", "CSS", "HTML"],
-  },
-  "mobile-ui": {
-    slug: "mobile-ui",
-    title: "Mobil UI",
-    summary:
-      "Mobil cihazlar üçün diqqətlə optimallaşdırılmış interfeys nümunəsi: toxunuş hədəfləri, rəng sistemi və komponent kitabxanası.",
-    stack: ["React Native", "UI/UX", "Figma"],
-  },
-  stylish: {
-    slug: "stylish",
-    title: "Stylish",
-    summary:
-      "Moda sahəsi üçün güclü tipografiya, isti rəng palitri və animasiyalı keçidlərlə brend UI sistemi.",
-    stack: ["React", "GSAP", "SCSS"],
-  },
-  dashboard: {
-    slug: "dashboard",
-    title: "Dashboard",
-    summary:
-      "Analitika məlumatlarını real vaxtda vizuallaşdıran idarəetmə paneli. Qrafiklər, cədvəllər və filtr sistemi daxildir.",
-    stack: ["Next.js", "TypeScript", "Recharts"],
-  },
-  "pink-calculator": {
-    slug: "pink-calculator",
-    title: "Pink Calculator",
-    summary:
-      "Minimalizmə söykənən, rəngli kalkulyator — düymə animasiyaları və UI detallarına xüsusi diqqətin nümunəsi.",
-    stack: ["React", "CSS Modules"],
-  },
-  "phone-calc": {
-    slug: "phone-calc",
-    title: "Phone Calc",
-    summary:
-      "Mobil əsaslı kalkulyator tətbiqi: toxunuşa cavab verən böyük düymələr, canlı keçid animasiyaları və yüngül arxitektura.",
-    stack: ["React", "Framer Motion", "Tailwind"],
-  },
-};
+/** Şəbəkə komponenti üçün `ProjectFrame` massivi */
+export const showcaseFrames: ProjectFrame[] = projects.map((p, i) => ({
+  id: i + 1,
+  defaultPos: { x: (i % 3) * 4, y: Math.floor(i / 3) * 4, w: 4, h: 4 },
+  mediaSize: 1,
+  image: p.image,
+  title: p.title,
+  description: p.description,
+  detailHref: `/projects/${p.slug}`,
+  liveUrl: p.liveUrl,
+}));
+
+/** Detal səhifəsi üçün slug-keyed map */
+export type ProjectDetail = Pick<
+  Project,
+  "slug" | "title" | "summary" | "stack"
+>;
+
+export const projectDetails: Record<string, ProjectDetail> = Object.fromEntries(
+  projects.map((p) => [
+    p.slug,
+    { slug: p.slug, title: p.title, summary: p.summary, stack: p.stack },
+  ]),
+);

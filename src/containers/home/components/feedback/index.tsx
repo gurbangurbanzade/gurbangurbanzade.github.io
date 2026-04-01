@@ -100,22 +100,6 @@ function Feedback({ activeIndex }: FeedbackProps = {}) {
 
   return (
     <div className="flexer">
-      {/* <Carousel
-        cols={3}
-        rows={2}
-        gap={10}
-        loop={true}
-        autoplay={3000}
-        // scrollSnap={true}
-        // scroll-snap
-      >
-        {feedBacks &&
-          feedBacks.map((elem) => (
-            <Carousel.Item key={elem.id}>
-              <FeedbackCard user={elem} className="cardFeed slide" />
-            </Carousel.Item>
-          ))}
-      </Carousel> */}
       <TestCarousel customers={feedBacks} />
       <div className="mediaIconsBox">
         <GithubLoginButton
