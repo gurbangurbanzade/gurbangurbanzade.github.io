@@ -10,7 +10,10 @@ import { showcaseFrames } from "@/lib/portfolioProjects";
 
 const GRID_ROWS = 3;
 const GRID_COLS = 3;
-const SLIDE_COUNT = 4;
+const SLIDE_COUNT = 3;
+
+const MOBILE_ROWS = 3;
+const MOBILE_COLS = 1;
 
 /**
  * `source` içindəki layihələri dövrə vura-vura tam rows×cols xanə yaradır.
@@ -34,13 +37,27 @@ function fillGrid(
   });
 }
 
-/** Hər slayd üçün unikal ID-lər — React key konfliktinin qarşısını alır */
+/** Desktop: hər slayd 3×3 şəbəkə */
 const slidePages = Array.from({ length: SLIDE_COUNT }, (_, slideIdx) =>
   fillGrid(showcaseFrames, GRID_ROWS, GRID_COLS).map((f) => ({
     ...f,
     id: slideIdx * GRID_ROWS * GRID_COLS + f.id,
   })),
 );
+
+/**
+ * Mobil: hər slayd ilk 9 layihənin müvafiq 3-lüyünü göstərir.
+ * Slayd 0 → item 0-2, Slayd 1 → item 3-5, Slayd 2 → item 6-8
+ */
+const mobileSlidePages = Array.from({ length: SLIDE_COUNT }, (_, slideIdx) => {
+  const start = slideIdx * MOBILE_ROWS;
+  const chunk = showcaseFrames.slice(start, start + MOBILE_ROWS);
+  return chunk.map((f, i) => ({
+    ...f,
+    id: slideIdx * MOBILE_ROWS + i + 1,
+    defaultPos: { x: 0, y: i * 4, w: 4, h: 4 },
+  }));
+});
 
 type Slide =
   | { id: number; type: "video-grid"; frames: ProjectFrame[] }
@@ -109,7 +126,7 @@ function Projects({
         className="projects-wrapper projects-horizontal-container"
         style={{ display: "flex", width: `${totalSlides * 100}vw` }}
       >
-        {slides.map((slide) => (
+        {slides.map((slide, slideIdx) => (
           <div
             key={slide.id}
             className="project-slide"
@@ -165,14 +182,14 @@ function Projects({
                   <DynamicFrameLayout
                     frames={
                       compactGrid
-                        ? fillGrid(showcaseFrames, GRID_ROWS * GRID_COLS, 1)
+                        ? mobileSlidePages[slideIdx]
                         : slide.frames
                     }
                     className="h-full min-h-[280px] w-full"
                     hoverSize={6}
                     gapSize={compactGrid ? 8 : 4}
-                    gridRows={compactGrid ? GRID_ROWS * GRID_COLS : GRID_ROWS}
-                    gridCols={compactGrid ? 1 : GRID_COLS}
+                    gridRows={compactGrid ? MOBILE_ROWS : GRID_ROWS}
+                    gridCols={compactGrid ? MOBILE_COLS : GRID_COLS}
                   />
                 </div>
               </div>

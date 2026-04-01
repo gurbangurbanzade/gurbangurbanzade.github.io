@@ -2856,7 +2856,9 @@ var _s = __turbopack_context__.k.signature();
 ;
 const GRID_ROWS = 3;
 const GRID_COLS = 3;
-const SLIDE_COUNT = 4;
+const SLIDE_COUNT = 3;
+const MOBILE_ROWS = 3;
+const MOBILE_COLS = 1;
 /**
  * `source` içindəki layihələri dövrə vura-vura tam rows×cols xanə yaradır.
  * Bu şəkildə şəbəkədə heç bir boş xanə qalmır.
@@ -2880,12 +2882,31 @@ const SLIDE_COUNT = 4;
         };
     });
 }
-/** Hər slayd üçün unikal ID-lər — React key konfliktinin qarşısını alır */ const slidePages = Array.from({
+/** Desktop: hər slayd 3×3 şəbəkə */ const slidePages = Array.from({
     length: SLIDE_COUNT
 }, (_, slideIdx)=>fillGrid(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$portfolioProjects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["showcaseFrames"], GRID_ROWS, GRID_COLS).map((f)=>({
             ...f,
             id: slideIdx * GRID_ROWS * GRID_COLS + f.id
         })));
+/**
+ * Mobil: hər slayd ilk 9 layihənin müvafiq 3-lüyünü göstərir.
+ * Slayd 0 → item 0-2, Slayd 1 → item 3-5, Slayd 2 → item 6-8
+ */ const mobileSlidePages = Array.from({
+    length: SLIDE_COUNT
+}, (_, slideIdx)=>{
+    const start = slideIdx * MOBILE_ROWS;
+    const chunk = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$portfolioProjects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["showcaseFrames"].slice(start, start + MOBILE_ROWS);
+    return chunk.map((f, i)=>({
+            ...f,
+            id: slideIdx * MOBILE_ROWS + i + 1,
+            defaultPos: {
+                x: 0,
+                y: i * 4,
+                w: 4,
+                h: 4
+            }
+        }));
+});
 function Projects({ activeIndex: propActiveIndex, containerRef: externalContainerRef }) {
     _s();
     const [animationPlayed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -2928,7 +2949,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                 children: letter === " " ? "\u00A0" : letter
             }, idx, false, {
                 fileName: "[project]/src/components/Projects/index.tsx",
-                lineNumber: 99,
+                lineNumber: 116,
                 columnNumber: 7
             }, this));
     };
@@ -2940,7 +2961,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                 display: "flex",
                 width: `${totalSlides * 100}vw`
             },
-            children: slides.map((slide)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            children: slides.map((slide, slideIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "project-slide",
                     style: {
                         width: "100vw",
@@ -2966,28 +2987,28 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                     children: renderProjectName("Portfolio")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 128,
+                                                    lineNumber: 145,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: " "
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 131,
+                                                    lineNumber: 148,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                                     children: " & "
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 132,
+                                                    lineNumber: 149,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: " "
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 133,
+                                                    lineNumber: 150,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2995,13 +3016,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                     children: renderProjectName("Previous")
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 134,
+                                                    lineNumber: 151,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 127,
+                                            lineNumber: 144,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3009,13 +3030,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             children: renderProjectName(slide.name)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 138,
+                                            lineNumber: 155,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 137,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3027,13 +3048,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             children: "contact me!"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 143,
+                                            lineNumber: 160,
                                             columnNumber: 39
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 159,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3055,19 +3076,19 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 155,
+                                            lineNumber: 172,
                                             columnNumber: 32
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 163,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Projects/index.tsx",
-                            lineNumber: 119,
+                            lineNumber: 136,
                             columnNumber: 15
                         }, this),
                         slide.type === "video-grid" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3078,25 +3099,25 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "min-h-0 flex-1 p-3 md:p-6",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Projects$2f$DynamicFrameLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DynamicFrameLayout"], {
-                                    frames: compactGrid ? fillGrid(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$portfolioProjects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["showcaseFrames"], GRID_ROWS * GRID_COLS, 1) : slide.frames,
+                                    frames: compactGrid ? mobileSlidePages[slideIdx] : slide.frames,
                                     className: "h-full min-h-[280px] w-full",
                                     hoverSize: 6,
                                     gapSize: compactGrid ? 8 : 4,
-                                    gridRows: compactGrid ? GRID_ROWS * GRID_COLS : GRID_ROWS,
-                                    gridCols: compactGrid ? 1 : GRID_COLS
+                                    gridRows: compactGrid ? MOBILE_ROWS : GRID_ROWS,
+                                    gridCols: compactGrid ? MOBILE_COLS : GRID_COLS
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                    lineNumber: 165,
+                                    lineNumber: 182,
                                     columnNumber: 19
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Projects/index.tsx",
-                                lineNumber: 164,
+                                lineNumber: 181,
                                 columnNumber: 17
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Projects/index.tsx",
-                            lineNumber: 160,
+                            lineNumber: 177,
                             columnNumber: 15
                         }, this),
                         slide.type === "legacy" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3109,7 +3130,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             children: "legacy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 206,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3117,19 +3138,19 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             children: renderProjectName(slide.name)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 207,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             children: slide.description
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 210,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 194,
+                                            lineNumber: 211,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3141,7 +3162,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                     children: "Built with:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 196,
+                                                    lineNumber: 213,
                                                     columnNumber: 21
                                                 }, this),
                                                 " ",
@@ -3150,12 +3171,12 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 212,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 216,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3172,13 +3193,13 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                             children: ">"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                                            lineNumber: 207,
+                                                            lineNumber: 224,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 201,
+                                                    lineNumber: 218,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3191,7 +3212,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                             children: ">"
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                                            lineNumber: 214,
+                                                            lineNumber: 231,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
@@ -3199,25 +3220,25 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                                             alt: ""
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                                            lineNumber: 215,
+                                                            lineNumber: 232,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                                    lineNumber: 209,
+                                                    lineNumber: 226,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 200,
+                                            lineNumber: 217,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 205,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3229,34 +3250,34 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                             alt: slide.name
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Projects/index.tsx",
-                                            lineNumber: 221,
+                                            lineNumber: 238,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Projects/index.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 237,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects/index.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 236,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Projects/index.tsx",
-                            lineNumber: 181,
+                            lineNumber: 198,
                             columnNumber: 15
                         }, this)
                     ]
                 }, slide.id, true, {
                     fileName: "[project]/src/components/Projects/index.tsx",
-                    lineNumber: 113,
+                    lineNumber: 130,
                     columnNumber: 11
                 }, this))
         }, void 0, false, {
             fileName: "[project]/src/components/Projects/index.tsx",
-            lineNumber: 107,
+            lineNumber: 124,
             columnNumber: 7
         }, this)
     }, void 0, false);
