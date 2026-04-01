@@ -115,34 +115,57 @@ body {
 
 @media screen and (max-width: 768px) {
   .timeline {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
+    align-items: stretch;
+    gap: 12px;
+    width: max-content;
+    padding: 8px 16px 16px;
+    overflow: visible;
+    flex-direction: row !important;
+    display: flex !important;
   }
 
-  .timeline-middle {
-    display: none;
+  .timeline-empty, .timeline-middle {
+    display: none !important;
   }
 
   .timeline-component {
-    padding: 0 10px;
+    flex-direction: column;
+    flex: 0 0 200px;
+    align-items: stretch;
+    width: 200px;
+    display: flex;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
-  .deadGreen, .neonBlue {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
+  .timeline-content {
+    background: #ffffff0a;
+    border: 1px solid #ffffff14;
+    border-radius: 10px;
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+    margin: 0 !important;
+    padding: 1rem !important;
   }
 
-  .deadOrangeBorder, .brightOrange {
-    border-bottom-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+  .lineCardCareer {
+    border-radius: 4px !important;
+    width: 100% !important;
+    height: 4px !important;
+    margin: 0 0 12px !important;
+  }
+
+  .textCareer, .study {
+    text-align: left !important;
   }
 
   h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .career p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 

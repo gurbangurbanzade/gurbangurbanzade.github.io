@@ -1092,7 +1092,6 @@ footer {
   transform-style: preserve-3d;
   letter-spacing: .02em;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #1e182e 42%, #171e37 77%);
   padding-right: 50px;
   font-size: 8.8vw;
   font-weight: 900;
@@ -3917,6 +3916,30 @@ footer .footerItems .rightFooter .line:hover {
 .flexer .mediaIconsBox .mediaIconsBoxItem {
   text-align: center !important;
   width: 300px !important;
+}
+
+.carousel-desktop {
+  display: block;
+}
+
+.carousel-mobile {
+  width: 100dvw;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .flexer {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .carousel-desktop {
+    display: none;
+  }
+
+  .carousel-mobile {
+    display: block;
+  }
 }
 
 /* [project]/src/components/TestCarousel/style.module.scss.module.css [app-client] (css) */

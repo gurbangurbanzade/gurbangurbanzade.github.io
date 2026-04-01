@@ -16,4 +16,28 @@
   width: 300px !important;
 }
 
+.carousel-desktop {
+  display: block;
+}
+
+.carousel-mobile {
+  width: 100dvw;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .flexer {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .carousel-desktop {
+    display: none;
+  }
+
+  .carousel-mobile {
+    display: block;
+  }
+}
+
 /*# sourceMappingURL=src_containers_home_components_feedback_style_scss_css_bad6b30c._.single.css.map*/

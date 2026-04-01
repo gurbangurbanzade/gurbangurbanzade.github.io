@@ -4558,6 +4558,304 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
 }),
+"[project]/src/lib/utils.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "cn",
+    ()=>cn
+]);
+function cn(...classes) {
+    return classes.filter(Boolean).join(" ");
+}
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/components/ui/stagger-testimonials.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "StaggerTestimonials",
+    ()=>StaggerTestimonials
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-client] (ecmascript) <export default as ChevronLeft>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-client] (ecmascript) <export default as ChevronRight>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/utils.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+const SQRT_5000 = Math.sqrt(5000);
+const TestimonialCard = ({ position, testimonial, handleMove, cardSize })=>{
+    const isCenter = position === 0;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        onClick: ()=>handleMove(position),
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("absolute left-1/2 top-1/2 cursor-pointer border-2 p-8 transition-all duration-500 ease-in-out", isCenter ? "z-10 border-[#5df8f5] bg-[#1e182e] text-[#f9f5ff]" : "z-0 border-white/10 bg-white/5 text-[#f9f5ff] hover:border-[#5df8f5]/40"),
+        style: {
+            width: cardSize,
+            height: cardSize,
+            clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
+            transform: `
+          translate(-50%, -50%)
+          translateX(${cardSize / 1.5 * position}px)
+          translateY(${isCenter ? -65 : position % 2 ? 15 : -15}px)
+          rotate(${isCenter ? 0 : position % 2 ? 2.5 : -2.5}deg)
+        `,
+            boxShadow: isCenter ? "0px 8px 0px 4px rgba(93,248,245,0.18)" : "0px 0px 0px 0px transparent",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)"
+        },
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "absolute block origin-top-right rotate-45 bg-white/10",
+                style: {
+                    right: -2,
+                    top: 48,
+                    width: SQRT_5000,
+                    height: 2
+                }
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                lineNumber: 58,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            testimonial.imgSrc ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                src: testimonial.imgSrc,
+                alt: testimonial.by.split(",")[0],
+                className: "mb-4 h-14 w-12 bg-white/10 object-cover object-top",
+                style: {
+                    boxShadow: "3px 3px 0px rgba(30,24,46,0.8)"
+                }
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                lineNumber: 70,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mb-4 flex h-14 w-12 items-center justify-center text-xl font-bold",
+                style: {
+                    background: "rgba(93,248,245,0.12)",
+                    color: "#5df8f5",
+                    boxShadow: "3px 3px 0px rgba(30,24,46,0.8)"
+                },
+                children: testimonial.by[0]?.toUpperCase() || "U"
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                lineNumber: 77,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-base font-medium sm:text-lg", isCenter ? "text-[#f9f5ff]" : "text-[#f9f5ff]/70"),
+                children: [
+                    "“",
+                    testimonial.testimonial,
+                    "”"
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                lineNumber: 90,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("absolute bottom-8 left-8 right-8 mt-2 text-sm italic", isCenter ? "text-[#5df8f5]/80" : "text-[#f9f5ff]/35"),
+                children: [
+                    "— ",
+                    testimonial.by
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                lineNumber: 100,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+        lineNumber: 32,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_c = TestimonialCard;
+const StaggerTestimonials = ({ items })=>{
+    _s();
+    const source = items && items.length > 0 ? items : [];
+    const [cardSize, setCardSize] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(365);
+    const [list, setList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(source);
+    /* Sync if parent data arrives after mount (e.g. async fetch) */ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "StaggerTestimonials.useEffect": ()=>{
+            if (items && items.length > 0) setList(items);
+        }
+    }["StaggerTestimonials.useEffect"], [
+        items
+    ]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "StaggerTestimonials.useEffect": ()=>{
+            const update = {
+                "StaggerTestimonials.useEffect.update": ()=>{
+                    const { matches } = window.matchMedia("(min-width: 640px)");
+                    setCardSize(matches ? 365 : 290);
+                }
+            }["StaggerTestimonials.useEffect.update"];
+            update();
+            window.addEventListener("resize", update);
+            return ({
+                "StaggerTestimonials.useEffect": ()=>window.removeEventListener("resize", update)
+            })["StaggerTestimonials.useEffect"];
+        }
+    }["StaggerTestimonials.useEffect"], []);
+    const handleMove = (steps)=>{
+        setList((prev)=>{
+            const next = [
+                ...prev
+            ];
+            if (steps > 0) {
+                for(let i = steps; i > 0; i--){
+                    const item = next.shift();
+                    if (!item) break;
+                    next.push({
+                        ...item,
+                        tempId: Math.random()
+                    });
+                }
+            } else {
+                for(let i = steps; i < 0; i++){
+                    const item = next.pop();
+                    if (!item) break;
+                    next.unshift({
+                        ...item,
+                        tempId: Math.random()
+                    });
+                }
+            }
+            return next;
+        });
+    };
+    if (!list.length) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "relative w-full overflow-hidden",
+        style: {
+            height: 600,
+            background: "rgb(30, 24, 46)"
+        },
+        children: [
+            list.map((testimonial, index)=>{
+                const position = list.length % 2 ? index - (list.length + 1) / 2 : index - list.length / 2;
+                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(TestimonialCard, {
+                    testimonial: testimonial,
+                    handleMove: handleMove,
+                    position: position,
+                    cardSize: cardSize
+                }, testimonial.tempId, false, {
+                    fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                    lineNumber: 178,
+                    columnNumber: 11
+                }, ("TURBOPACK compile-time value", void 0));
+            }),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>handleMove(-1),
+                        className: "flex h-14 w-14 items-center justify-center border-2 border-white/10 bg-white/5 text-2xl text-[#5df8f5] transition-colors hover:border-[#5df8f5]/50 hover:bg-[#5df8f5]/10 focus-visible:outline-none",
+                        "aria-label": "Previous testimonial",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {}, void 0, false, {
+                            fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                            lineNumber: 195,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                        lineNumber: 190,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>handleMove(1),
+                        className: "flex h-14 w-14 items-center justify-center border-2 border-white/10 bg-white/5 text-2xl text-[#5df8f5] transition-colors hover:border-[#5df8f5]/50 hover:bg-[#5df8f5]/10 focus-visible:outline-none",
+                        "aria-label": "Next testimonial",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {}, void 0, false, {
+                            fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                            lineNumber: 202,
+                            columnNumber: 11
+                        }, ("TURBOPACK compile-time value", void 0))
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                        lineNumber: 197,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+                lineNumber: 189,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/stagger-testimonials.tsx",
+        lineNumber: 165,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_s(StaggerTestimonials, "av1S/89P7oenZQg6XeNPWeJr3HM=");
+_c1 = StaggerTestimonials;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "TestimonialCard");
+__turbopack_context__.k.register(_c1, "StaggerTestimonials");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/src/components/TestCarousel/MobileCarousel.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>MobileCarousel
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$stagger$2d$testimonials$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/stagger-testimonials.tsx [app-client] (ecmascript)");
+"use client";
+;
+;
+function MobileCarousel({ customers = [] }) {
+    const items = customers.map((c, i)=>{
+        const name = `${c.name || ""} ${c.surname || ""}`.trim();
+        const byParts = [
+            name,
+            c.position,
+            c.country
+        ].filter(Boolean);
+        return {
+            tempId: c.id ?? i,
+            testimonial: c.text || c.body || "",
+            by: byParts.join(", ") || "Anonymous",
+            imgSrc: c.image || c.img || undefined
+        };
+    });
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex h-screen w-full items-center justify-center",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$stagger$2d$testimonials$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StaggerTestimonials"], {
+            items: items
+        }, void 0, false, {
+            fileName: "[project]/src/components/TestCarousel/MobileCarousel.tsx",
+            lineNumber: 39,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/TestCarousel/MobileCarousel.tsx",
+        lineNumber: 38,
+        columnNumber: 5
+    }, this);
+}
+_c = MobileCarousel;
+var _c;
+__turbopack_context__.k.register(_c, "MobileCarousel");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
 "[project]/src/containers/home/components/feedback/index.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
@@ -4575,9 +4873,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/axios/lib/axios.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$firebase$2f$config$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/firebase/config.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TestCarousel$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/TestCarousel/index.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TestCarousel$2f$MobileCarousel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/TestCarousel/MobileCarousel.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -4657,11 +4957,32 @@ function Feedback({ activeIndex } = {}) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flexer",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TestCarousel$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                customers: feedBacks
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "carousel-desktop",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TestCarousel$2f$index$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    customers: feedBacks
+                }, void 0, false, {
+                    fileName: "[project]/src/containers/home/components/feedback/index.tsx",
+                    lineNumber: 105,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "[project]/src/containers/home/components/feedback/index.tsx",
                 lineNumber: 104,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "carousel-mobile",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$TestCarousel$2f$MobileCarousel$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    customers: feedBacks
+                }, void 0, false, {
+                    fileName: "[project]/src/containers/home/components/feedback/index.tsx",
+                    lineNumber: 108,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/containers/home/components/feedback/index.tsx",
+                lineNumber: 107,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4674,12 +4995,12 @@ function Feedback({ activeIndex } = {}) {
                             children: "Send feedback with Github"
                         }, void 0, false, {
                             fileName: "[project]/src/containers/home/components/feedback/index.tsx",
-                            lineNumber: 110,
+                            lineNumber: 115,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/containers/home/components/feedback/index.tsx",
-                        lineNumber: 106,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$social$2d$login$2d$buttons$2f$dist$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["GoogleLoginButton"], {
@@ -4689,18 +5010,18 @@ function Feedback({ activeIndex } = {}) {
                             children: "Send feedback with Google"
                         }, void 0, false, {
                             fileName: "[project]/src/containers/home/components/feedback/index.tsx",
-                            lineNumber: 116,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/containers/home/components/feedback/index.tsx",
-                        lineNumber: 112,
+                        lineNumber: 117,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/containers/home/components/feedback/index.tsx",
-                lineNumber: 105,
+                lineNumber: 110,
                 columnNumber: 7
             }, this)
         ]
@@ -5034,4 +5355,4 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 }),
 ]);
 
-//# sourceMappingURL=src_632f396a._.js.map
+//# sourceMappingURL=src_abdb8a33._.js.map

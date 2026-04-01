@@ -164,21 +164,9 @@ function HomePage() {
               <Feedback activeIndex={activeIndex} />
             </div>
             <div className="scroll-section">
-              <Footer
-                onButtonClick={slideToProjects}
-                activeIndex={activeIndex}
-                context="main1"
-              />
+              <Footer onButtonClick={slideToProjects} />
             </div>
           </div>
-
-          {/* <div className="Main2">
-            <Hero />
-            <Intro />
-            <Projects />
-            <Feedback />
-            <Footer context="main2" />
-          </div> */}
         </>
       )}
     </>

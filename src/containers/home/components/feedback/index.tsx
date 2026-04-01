@@ -18,6 +18,7 @@ import axios from "axios";
 import FeedbackCard from "../../../../components/feedbackCard";
 import app from "../../../../firebase/config";
 import TestCarousel from "../../../../components/TestCarousel";
+import MobileCarousel from "../../../../components/TestCarousel/MobileCarousel";
 
 interface FeedbackProps {
   activeIndex?: number;
@@ -100,8 +101,13 @@ function Feedback({ activeIndex }: FeedbackProps = {}) {
 
   return (
     <div className="flexer">
-      <TestCarousel customers={feedBacks} />
-      <div className="mediaIconsBox">
+      <div className="carousel-desktop">
+        <TestCarousel customers={feedBacks} />
+      </div>
+      <div className="carousel-mobile">
+        <MobileCarousel customers={feedBacks} />
+      </div>
+      {/* <div className="mediaIconsBox">
         <GithubLoginButton
           className="mediaIconsBoxItem"
           onClick={sendWithGithub}
@@ -114,7 +120,7 @@ function Feedback({ activeIndex }: FeedbackProps = {}) {
         >
           <span>Send feedback with Google</span>
         </GoogleLoginButton>
-      </div>
+      </div> */}
     </div>
   );
 }
