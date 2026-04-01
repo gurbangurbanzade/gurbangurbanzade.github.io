@@ -33,7 +33,6 @@ function HomePage() {
         behavior: "smooth",
       });
 
-      // Update active index immediately for better UX
       setActiveIndex(index);
     }
   };
@@ -138,7 +137,6 @@ function HomePage() {
         </div>
       ) : (
         <>
-          {/* <Navbar /> */}
           <HomeBackground />
           <div
             ref={containerRef}

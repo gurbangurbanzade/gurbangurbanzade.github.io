@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import "./projects.scss";
-import MacbookImage from "./../../assets/img/macbook.png";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import PropTypes from "prop-types";
@@ -16,7 +15,7 @@ const MOBILE_ROWS = 3;
 const MOBILE_COLS = 1;
 
 const DESKTOP_TOTAL = SLIDE_COUNT * GRID_ROWS * GRID_COLS; // 27
-const MOBILE_TOTAL = SLIDE_COUNT * MOBILE_ROWS;             // 9
+const MOBILE_TOTAL = SLIDE_COUNT * MOBILE_ROWS; // 9
 
 /**
  * Real layihələri əvvəl sıraya düzür, qalan yerlər üçün
@@ -24,7 +23,10 @@ const MOBILE_TOTAL = SLIDE_COUNT * MOBILE_ROWS;             // 9
  * Eyni indeksi ardıcıl iki dəfə seçməkdən qaçır.
  */
 function buildFlatList(source: ProjectFrame[], total: number): ProjectFrame[] {
-  const result: ProjectFrame[] = source.slice(0, Math.min(source.length, total));
+  const result: ProjectFrame[] = source.slice(
+    0,
+    Math.min(source.length, total),
+  );
   if (result.length >= total) return result;
 
   // Sadə seeded-random: hər çağırış eyni nəticəni verir (SSR/hydration uyğunluğu)
@@ -46,10 +48,7 @@ function buildFlatList(source: ProjectFrame[], total: number): ProjectFrame[] {
   return result;
 }
 
-function positionedFrames(
-  flat: ProjectFrame[],
-  cols: number,
-): ProjectFrame[] {
+function positionedFrames(flat: ProjectFrame[], cols: number): ProjectFrame[] {
   return flat.map((f, i) => ({
     ...f,
     id: i + 1,
@@ -211,9 +210,7 @@ function Projects({
                 <div className="min-h-0 flex-1 p-3 md:p-6">
                   <DynamicFrameLayout
                     frames={
-                      compactGrid
-                        ? mobileSlidePages[slideIdx]
-                        : slide.frames
+                      compactGrid ? mobileSlidePages[slideIdx] : slide.frames
                     }
                     className="h-full min-h-[280px] w-full"
                     hoverSize={6}
@@ -265,10 +262,7 @@ function Projects({
                 </div>
                 <div className="right">
                   <div className="img-wrapper">
-                    <img
-                      src={slide.image || MacbookImage.src}
-                      alt={slide.name}
-                    />
+                    <img src={slide.image} alt={slide.name} />
                   </div>
                 </div>
               </div>

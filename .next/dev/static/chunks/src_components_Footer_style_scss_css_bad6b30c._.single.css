@@ -13,6 +13,13 @@ footer {
   font-family: Orbitron !important;
 }
 
+@media (max-width: 768px) {
+  footer {
+    padding-right: 10px;
+    font-size: 15.8vw;
+  }
+}
+
 footer .container {
   margin: 0 auto;
 }

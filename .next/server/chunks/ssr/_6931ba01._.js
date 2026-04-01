@@ -1,3 +1,0 @@
-module.exports=[50645,a=>{a.n(a.i(27572))},17537,a=>{a.n(a.i(3363))},13718,a=>{a.n(a.i(85523))},18198,a=>{a.n(a.i(45518))},62212,a=>{a.n(a.i(66114))},40390,a=>{a.v("/_next/static/media/portfolio.2ee3ae68.png")},99941,a=>{a.v("/_next/static/media/snobella.068082bb.png")},22503,a=>{a.v("/_next/static/media/sign-up-form.1d886525.png")},38188,a=>{a.v("/_next/static/media/calculator.3bbac3bd.png")},85825,a=>{a.v("/_next/static/media/phone.90ccc04e.png")},39622,a=>{a.v("/_next/static/media/stylish.dc4e0a61.png")},5106,a=>{a.v("/_next/static/media/macbook.23e8a561.png")},88797,a=>{a.v("/_next/static/media/PinkCaculator.2b84e44c.png")},24902,a=>{a.v("/_next/static/media/phoneCalc.07765d36.png")}];
-
-//# sourceMappingURL=_6931ba01._.js.map

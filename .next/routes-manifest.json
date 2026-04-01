@@ -19,16 +19,7 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [
-    {
-      "page": "/projects/[slug]",
-      "regex": "^/projects/([^/]+?)(?:/)?$",
-      "routeKeys": {
-        "nxtPslug": "nxtPslug"
-      },
-      "namedRegex": "^/projects/(?<nxtPslug>[^/]+?)(?:/)?$"
-    }
-  ],
+  "dynamicRoutes": [],
   "staticRoutes": [
     {
       "page": "/",
@@ -47,24 +38,6 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
-    },
-    {
-      "page": "/career",
-      "regex": "^/career(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/career(?:/)?$"
-    },
-    {
-      "page": "/projects",
-      "regex": "^/projects(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/projects(?:/)?$"
-    },
-    {
-      "page": "/skills",
-      "regex": "^/skills(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/skills(?:/)?$"
     }
   ],
   "dataRoutes": [],

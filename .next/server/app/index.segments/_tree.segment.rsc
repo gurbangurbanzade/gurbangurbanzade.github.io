@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/990724c3865a905c.css","style"]
+:HL["/_next/static/chunks/2398be68b2ff3156.css","style"]
 :HL["/_next/static/media/Druk%20Wide%20Web%20Bold%20Regular-s.p.507252fa.ttf","font",{"crossOrigin":"","type":"font/ttf"}]
 :HL["/_next/static/chunks/fbeb88c6b121dec8.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap","style"]
@@ -8,4 +8,4 @@
 :HL["http://salehriaz.com/404Page/img/moon.svg","image"]
 :HL["http://salehriaz.com/404Page/img/astronaut.svg","image"]
 :HL["/_next/static/chunks/086ac3ae3af4a5a7.css","style"]
-0:{"buildId":"gZw77NfIGtTbq6PtyCaap","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"Um_w2u3AUaCRl3Frgjr-A","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
