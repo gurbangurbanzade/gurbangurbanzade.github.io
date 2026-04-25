@@ -207,7 +207,7 @@ function Projects({
                 className="box-border flex h-full min-h-0 w-full flex-col"
                 style={{ backgroundColor: "#18181b" }}
               >
-                <div className="min-h-0 flex-1 p-3 md:p-6">
+                <div className="min-h-0 flex-1 ">
                   <DynamicFrameLayout
                     frames={
                       compactGrid ? mobileSlidePages[slideIdx] : slide.frames

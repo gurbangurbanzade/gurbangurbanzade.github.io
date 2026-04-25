@@ -1882,10 +1882,10 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
             transition: "width 0.3s ease-in-out, height 0.3s ease-in-out"
         },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "relative h-full w-full overflow-hidden rounded-xl",
+            className: "relative h-full w-full overflow-hidden ",
             children: [
                 image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "absolute inset-0 overflow-hidden rounded-xl",
+                    className: "absolute inset-0 overflow-hidden ",
                     style: {
                         transition: "transform 0.45s cubic-bezier(0.33, 1, 0.68, 1)",
                         transform: isHovered ? "scale(1.04)" : "scale(1)"
@@ -1899,12 +1899,12 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                         priority: frame.id <= 3
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                        lineNumber: 83,
+                        lineNumber: 76,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                    lineNumber: 76,
+                    lineNumber: 69,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(VideoInner, {
                     video: video,
@@ -1915,7 +1915,7 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                     isHovered: isHovered
                 }, void 0, false, {
                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                    lineNumber: 93,
+                    lineNumber: 86,
                     columnNumber: 11
                 }, this),
                 showFrame && corner && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FrameDecorations, {
@@ -1924,7 +1924,7 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                     edgeVertical: edgeVertical
                 }, void 0, false, {
                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                    lineNumber: 104,
+                    lineNumber: 97,
                     columnNumber: 11
                 }, this),
                 hasOverlay && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1935,7 +1935,7 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                             "aria-hidden": true
                         }, void 0, false, {
                             fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                            lineNumber: 117,
+                            lineNumber: 110,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1946,7 +1946,7 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                                     children: title
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                    lineNumber: 129,
+                                    lineNumber: 122,
                                     columnNumber: 17
                                 }, this) : null,
                                 description ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1954,7 +1954,7 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                                     children: description
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 127,
                                     columnNumber: 17
                                 }, this) : null,
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1968,14 +1968,14 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                                                     className: "h-3.5 w-3.5 opacity-90"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                                    lineNumber: 144,
+                                                    lineNumber: 137,
                                                     columnNumber: 21
                                                 }, this),
                                                 "Ətraflı"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                            lineNumber: 140,
+                                            lineNumber: 133,
                                             columnNumber: 19
                                         }, this) : null,
                                         liveUrl ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1989,42 +1989,42 @@ function FrameComponent({ frame, width, height, className = "", corner = "", edg
                                                     className: "h-3.5 w-3.5 opacity-90"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                                    lineNumber: 156,
+                                                    lineNumber: 149,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                            lineNumber: 149,
+                                            lineNumber: 142,
                                             columnNumber: 19
                                         }, this) : null
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 131,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                            lineNumber: 121,
+                            lineNumber: 114,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                    lineNumber: 112,
+                    lineNumber: 105,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-            lineNumber: 74,
+            lineNumber: 67,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-        lineNumber: 66,
+        lineNumber: 59,
         columnNumber: 5
     }, this);
 }
@@ -2074,22 +2074,22 @@ function VideoInner({ video, mediaSize, showFrame, borderThickness, borderSize, 
                     playsInline: true
                 }, void 0, false, {
                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                    lineNumber: 217,
+                    lineNumber: 210,
                     columnNumber: 13
                 }, this) : null
             }, void 0, false, {
                 fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                lineNumber: 208,
+                lineNumber: 201,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-            lineNumber: 196,
+            lineNumber: 189,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-        lineNumber: 195,
+        lineNumber: 188,
         columnNumber: 5
     }, this);
 }
@@ -2109,7 +2109,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                lineNumber: 243,
+                lineNumber: 236,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2120,7 +2120,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                lineNumber: 247,
+                lineNumber: 240,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2131,7 +2131,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                lineNumber: 254,
+                lineNumber: 247,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2142,7 +2142,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                 }
             }, void 0, false, {
                 fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                lineNumber: 261,
+                lineNumber: 254,
                 columnNumber: 7
             }, this),
             edgeHorizontal ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -2156,7 +2156,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                        lineNumber: 271,
+                        lineNumber: 264,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2169,7 +2169,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                        lineNumber: 279,
+                        lineNumber: 272,
                         columnNumber: 11
                     }, this)
                 ]
@@ -2185,7 +2185,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                        lineNumber: 293,
+                        lineNumber: 286,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2198,7 +2198,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                        lineNumber: 301,
+                        lineNumber: 294,
                         columnNumber: 11
                     }, this)
                 ]
@@ -2206,7 +2206,7 @@ function FrameDecorations({ corner, edgeHorizontal, edgeVertical }) {
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-        lineNumber: 242,
+        lineNumber: 235,
         columnNumber: 5
     }, this);
 }
@@ -2285,18 +2285,18 @@ function DynamicFrameLayout({ frames, className = "", style, showFrames = false,
                     isHovered: hovered?.row === row && hovered?.col === col
                 }, void 0, false, {
                     fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                    lineNumber: 407,
+                    lineNumber: 400,
                     columnNumber: 13
                 }, this)
             }, frame.id, false, {
                 fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-                lineNumber: 397,
+                lineNumber: 390,
                 columnNumber: 11
             }, this);
         })
     }, void 0, false, {
         fileName: "[project]/src/components/Projects/DynamicFrameLayout.tsx",
-        lineNumber: 377,
+        lineNumber: 370,
         columnNumber: 5
     }, this);
 }
@@ -3312,7 +3312,7 @@ function Projects({ activeIndex: propActiveIndex, containerRef: externalContaine
                                 backgroundColor: "#18181b"
                             },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "min-h-0 flex-1 p-3 md:p-6",
+                                className: "min-h-0 flex-1 ",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Projects$2f$DynamicFrameLayout$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DynamicFrameLayout"], {
                                     frames: compactGrid ? mobileSlidePages[slideIdx] : slide.frames,
                                     className: "h-full min-h-[280px] w-full",

@@ -51,14 +51,7 @@ function FrameComponent({
   showFrame = false,
   isHovered = false,
 }: FrameComponentProps) {
-  const {
-    video,
-    image,
-    title,
-    description,
-    detailHref,
-    liveUrl,
-  } = frame;
+  const { video, image, title, description, detailHref, liveUrl } = frame;
 
   const hasOverlay = Boolean(title || description);
 
@@ -71,10 +64,10 @@ function FrameComponent({
         transition: "width 0.3s ease-in-out, height 0.3s ease-in-out",
       }}
     >
-      <div className="relative h-full w-full overflow-hidden rounded-xl">
+      <div className="relative h-full w-full overflow-hidden ">
         {image ? (
           <div
-            className="absolute inset-0 overflow-hidden rounded-xl"
+            className="absolute inset-0 overflow-hidden "
             style={{
               transition: "transform 0.45s cubic-bezier(0.33, 1, 0.68, 1)",
               transform: isHovered ? "scale(1.04)" : "scale(1)",
@@ -336,7 +329,7 @@ export function DynamicFrameLayout({
   gridCols = 3,
 }: DynamicFrameLayoutProps) {
   const [hovered, setHovered] = useState<{ row: number; col: number } | null>(
-    null
+    null,
   );
 
   const unit = 12 / gridCols;
@@ -350,7 +343,7 @@ export function DynamicFrameLayout({
     const { row } = hovered;
     const nonHoveredSize = (12 - hoverSize) / (gridRows - 1);
     return Array.from({ length: gridRows }, (_, r) =>
-      r === row ? `${hoverSize}fr` : `${nonHoveredSize}fr`
+      r === row ? `${hoverSize}fr` : `${nonHoveredSize}fr`,
     ).join(" ");
   };
 
@@ -361,7 +354,7 @@ export function DynamicFrameLayout({
     const { col } = hovered;
     const nonHoveredSize = (12 - hoverSize) / (gridCols - 1);
     return Array.from({ length: gridCols }, (_, c) =>
-      c === col ? `${hoverSize}fr` : `${nonHoveredSize}fr`
+      c === col ? `${hoverSize}fr` : `${nonHoveredSize}fr`,
     ).join(" ");
   };
 
@@ -390,7 +383,7 @@ export function DynamicFrameLayout({
         const col = Math.floor(frame.defaultPos.x / 4);
         const transformOrigin = getTransformOrigin(
           frame.defaultPos.x,
-          frame.defaultPos.y
+          frame.defaultPos.y,
         );
 
         return (
