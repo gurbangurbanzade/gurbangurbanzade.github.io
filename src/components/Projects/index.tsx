@@ -161,47 +161,6 @@ function Projects({
             className="project-slide"
             style={{ width: "100vw", height: "100vh", flexShrink: 0 }}
           >
-            {slide.type === "intro" && (
-              <div id="projects" style={{ width: "100%", height: "100%" }}>
-                <div
-                  className={`${
-                    animationPlayed
-                      ? " animate__animated animate__slideInUp"
-                      : " "
-                  } projectsInfo`}
-                >
-                  <div className="portfolio-box">
-                    <div className="portfolio">
-                      {renderProjectName("Portfolio")}
-                    </div>
-                    <span> </span>
-                    <h1> & </h1>
-                    <span> </span>
-                    <div className="previous">
-                      {renderProjectName("Previous")}
-                    </div>
-                  </div>
-                  <div className="projects">
-                    {renderProjectName(slide.name)}
-                  </div>
-                </div>
-                <p>
-                  {slide.description} <Link href="/contact">contact me!</Link>
-                </p>
-
-                <a
-                  className="seeProj"
-                  href=""
-                  onClick={(e) => {
-                    e.preventDefault();
-                    router.push("/projects");
-                  }}
-                >
-                  {" "}
-                  See Projects <span className="projSpan"> {">"} </span>
-                </a>
-              </div>
-            )}
             {slide.type === "video-grid" && (
               <div
                 className="box-border flex h-full min-h-0 w-full flex-col"
@@ -218,52 +177,6 @@ function Projects({
                     gridRows={compactGrid ? MOBILE_ROWS : GRID_ROWS}
                     gridCols={compactGrid ? MOBILE_COLS : GRID_COLS}
                   />
-                </div>
-              </div>
-            )}
-            {slide.type === "legacy" && (
-              <div
-                className={`${
-                  animationPlayed
-                    ? " animate__animated animate__slideInLeft"
-                    : " "
-                } Snobella`}
-              >
-                <div className="left">
-                  <p>legacy</p>
-                  <div className="snobella">
-                    {renderProjectName(slide.name)}
-                  </div>
-                  <p>{slide.description}</p>
-                  <br />
-                  <p>
-                    <span style={{ fontWeight: "bold" }}>Built with:</span>{" "}
-                    {(slide.technologies || []).join(", ")}.
-                  </p>
-                  <br />
-                  <div className="viewCodes">
-                    <a
-                      href={slide.githubUrl || "#"}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {" "}
-                      View the code <span>{">"}</span>
-                    </a>
-                    <a
-                      href={slide.liveUrl || "#"}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Visit the App <span>{">"}</span>
-                      <img src="" alt="" />
-                    </a>
-                  </div>
-                </div>
-                <div className="right">
-                  <div className="img-wrapper">
-                    <img src={slide.image} alt={slide.name} />
-                  </div>
                 </div>
               </div>
             )}

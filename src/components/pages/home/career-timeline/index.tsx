@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Briefcase,
   GraduationCap,
@@ -198,6 +198,26 @@ const timelineItems: TimelineItem[] = [
 
 const CareerTimeline = () => {
   const [active, setActive] = useState<TimelineItem | null>(null);
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = timelineRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -206,7 +226,10 @@ const CareerTimeline = () => {
         Career<span className={styles["heading-accent"]}>.</span>
       </h2>
 
-      <div className={styles["v-timeline"]}>
+      <div
+        ref={timelineRef}
+        className={`${styles["v-timeline"]} ${visible ? styles["v-timeline--visible"] : ""}`}
+      >
         <div className={styles["v-line"]} />
         {timelineItems.map((item, i) => {
           const isRight = i % 2 === 0;
@@ -215,6 +238,7 @@ const CareerTimeline = () => {
             <div
               key={i}
               className={`${styles["v-item"]} ${isRight ? styles["v-item--right"] : styles["v-item--left"]}`}
+              style={{ "--i": i } as React.CSSProperties}
             >
               <div
                 className={styles["v-dot"]}

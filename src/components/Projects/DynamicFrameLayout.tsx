@@ -47,7 +47,7 @@ function FrameComponent({
   edgeVertical = "",
   mediaSize = 1,
   borderThickness = 0,
-  borderSize = 100,
+  borderSize = 0,
   showFrame = false,
   isHovered = false,
 }: FrameComponentProps) {
@@ -103,12 +103,12 @@ function FrameComponent({
 
         {hasOverlay && (
           <div
-            className={`pointer-events-none absolute inset-0 z-[5] flex flex-col justify-end rounded-xl p-4 transition-all duration-300 ease-out md:p-6 ${
+            className={`pointer-events-none absolute inset-0 z-[5] flex flex-col justify-end  p-4 transition-all duration-300 ease-out md:p-6 ${
               isHovered ? "opacity-100" : "opacity-0 max-md:opacity-100"
             }`}
           >
             <div
-              className="absolute inset-0 rounded-xl bg-gradient-to-t from-zinc-950/95 via-zinc-950/45 to-transparent max-md:from-zinc-950/85"
+              className="absolute inset-0  bg-gradient-to-t from-zinc-950/95 via-zinc-950/45 to-transparent max-md:from-zinc-950/85"
               aria-hidden
             />
             <div
@@ -135,7 +135,8 @@ function FrameComponent({
                     className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-medium text-white shadow-sm backdrop-blur-md transition hover:border-white/25 hover:bg-white/18 md:px-4 md:text-sm"
                   >
                     <LayoutTemplate className="h-3.5 w-3.5 opacity-90" />
-                    Ətraflı
+                    {/* See more details */}
+                    <span>See details</span>
                   </Link>
                 ) : null}
                 {liveUrl ? (
@@ -145,7 +146,7 @@ function FrameComponent({
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 rounded-full border border-[var(--accent-color,#a855f7)]/35 bg-[var(--accent-color,#a855f7)]/20 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-md transition hover:bg-[var(--accent-color,#a855f7)]/35 md:px-4 md:text-sm"
                   >
-                    Saytı aç
+                    Open site
                     <ExternalLink className="h-3.5 w-3.5 opacity-90" />
                   </a>
                 ) : null}
