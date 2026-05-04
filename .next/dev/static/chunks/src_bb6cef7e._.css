@@ -707,10 +707,6 @@ img, video {
   border-radius: .5rem;
 }
 
-.rounded-xl {
-  border-radius: .75rem;
-}
-
 .border {
   border-width: 1px;
 }

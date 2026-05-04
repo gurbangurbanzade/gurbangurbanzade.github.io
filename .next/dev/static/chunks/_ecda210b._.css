@@ -461,10 +461,12 @@ ul li.active {
 
 .style-module-scss-module__tdKrtq__v-card-left {
   border-right: 3px solid var(--accent, #5df8f5);
+  min-width: 210px;
 }
 
 .style-module-scss-module__tdKrtq__v-card-right {
   border-left: 3px solid var(--accent, #5df8f5);
+  min-width: 210px;
 }
 
 .style-module-scss-module__tdKrtq__v-period {
